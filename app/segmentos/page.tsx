@@ -15,9 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default function SegmentosPage() {
-  const core = segments.filter((s) => s.tier === "core");
-  const emerging = segments.filter((s) => s.tier === "emerging");
-
   return (
     <>
       <BreadcrumbJsonLd
@@ -43,40 +40,25 @@ export default function SegmentosPage() {
 
       <section className="bg-off-white py-16 sm:py-20">
         <Container>
-          <Reveal>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-cobre">
-              Segmentos prioritários
-            </h2>
-          </Reveal>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {core.map((segment, index) => (
-              <Reveal key={segment.name} delay={index * 0.05}>
-                <div className="h-full rounded-[var(--radius-card-md)] border border-[var(--color-border)] bg-white p-6">
-                  <h3 className="text-base font-semibold text-grafite">{segment.name}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-cinza-pedra">
-                    {segment.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal>
-            <h2 className="mt-14 text-sm font-semibold uppercase tracking-wide text-cobre">
-              Também atuamos em
-            </h2>
-          </Reveal>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {emerging.map((segment, index) => (
-              <Reveal key={segment.name} delay={index * 0.05}>
-                <div className="h-full rounded-[var(--radius-card-md)] border border-[var(--color-border)] bg-azul-nevoa/20 p-6">
-                  <h3 className="text-base font-semibold text-grafite">{segment.name}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-cinza-pedra">
-                    {segment.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {segments.map((segment, index) => {
+              const Icon = segment.icon;
+              return (
+                <Reveal key={segment.name} delay={index * 0.04}>
+                  <div className="h-full rounded-[var(--radius-card-md)] border border-[var(--color-border)] bg-white p-6">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-card-sm)] bg-azul-nevoa/60 text-azul-profundo">
+                      <Icon size={22} aria-hidden="true" />
+                    </span>
+                    <h2 className="mt-4 text-base font-semibold text-grafite">
+                      {segment.name}
+                    </h2>
+                    <p className="mt-2.5 text-sm leading-relaxed text-cinza-pedra">
+                      {segment.description}
+                    </p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </section>

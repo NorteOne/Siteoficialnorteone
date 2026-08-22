@@ -5,7 +5,7 @@ import { methodology } from "@/content/methodology";
 
 export function Methodology() {
   return (
-    <section className="bg-off-white py-20 sm:py-24" aria-labelledby="metodologia-heading">
+    <section className="bg-off-white py-14 sm:py-20 lg:py-24" aria-labelledby="metodologia-heading">
       <Container>
         <Reveal>
           <SectionHeading

@@ -4,8 +4,16 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export function FinalCTA() {
   return (
-    <section className="bg-azul-profundo py-20 text-off-white sm:py-24">
-      <Container narrow className="text-center">
+    <section className="relative overflow-hidden bg-azul-profundo py-14 text-off-white sm:py-20 lg:py-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-40"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 50% 0%, rgba(184,121,69,0.12), transparent 55%)",
+        }}
+      />
+      <Container narrow className="relative text-center">
         <Reveal>
           <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
             Qual problema da sua empresa deveríamos resolver primeiro?

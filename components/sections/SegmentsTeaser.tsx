@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { segments } from "@/content/segments";
 
 export function SegmentsTeaser() {
-  const core = segments.filter((segment) => segment.tier === "core");
+  const featured = segments.slice(0, 6);
 
   return (
-    <section className="bg-azul-profundo py-20 text-off-white sm:py-24">
+    <section className="bg-azul-profundo py-16 text-off-white sm:py-24">
       <Container>
         <Reveal>
           <SectionHeading
@@ -21,7 +21,7 @@ export function SegmentsTeaser() {
         </Reveal>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          {core.map((segment, index) => (
+          {featured.map((segment, index) => (
             <Reveal key={segment.name} delay={index * 0.04}>
               <Badge tone="dark">{segment.name}</Badge>
             </Reveal>

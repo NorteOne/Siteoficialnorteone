@@ -7,7 +7,7 @@ import { CircleAlert } from "lucide-react";
 
 export function Problems() {
   return (
-    <section className="bg-azul-nevoa/40 py-20 sm:py-24">
+    <section className="bg-azul-nevoa/40 py-14 sm:py-20 lg:py-24">
       <Container>
         <Reveal>
           <SectionHeading

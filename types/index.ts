@@ -15,7 +15,7 @@ export type Solution = {
 export type Segment = {
   name: string;
   description: string;
-  tier: "core" | "emerging";
+  icon: LucideIcon;
 };
 
 export type MethodologyStep = {

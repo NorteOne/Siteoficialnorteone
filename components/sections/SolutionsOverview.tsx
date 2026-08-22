@@ -8,7 +8,7 @@ import { solutions } from "@/content/solutions";
 
 export function SolutionsOverview() {
   return (
-    <section className="bg-off-white py-20 sm:py-24" id="solucoes" aria-labelledby="solucoes-heading">
+    <section className="bg-off-white py-14 sm:py-20 lg:py-24" id="solucoes" aria-labelledby="solucoes-heading">
       <Container>
         <Reveal>
           <SectionHeading

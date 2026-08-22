@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export function AboutTeaser() {
   return (
-    <section className="bg-off-white py-20 sm:py-24">
+    <section className="bg-off-white py-14 sm:py-20 lg:py-24">
       <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_auto] lg:gap-16">
         <Reveal>
           <SectionHeading

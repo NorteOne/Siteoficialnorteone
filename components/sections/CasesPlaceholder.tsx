@@ -7,7 +7,7 @@ import { cases } from "@/content/cases";
 
 export function CasesPlaceholder() {
   return (
-    <section className="bg-off-white py-20 sm:py-24" aria-labelledby="cases-heading">
+    <section className="bg-off-white py-14 sm:py-20 lg:py-24" aria-labelledby="cases-heading">
       <Container>
         <Reveal>
           <SectionHeading
