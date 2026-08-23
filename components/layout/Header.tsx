@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { Container } from "@/components/ui/Container";
@@ -11,9 +12,27 @@ import { Button } from "@/components/ui/Button";
 import { primaryNav } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
+function subscribeNoop() {
+  return () => {};
+}
+
+/**
+ * Verdadeiro apenas depois da hidratação no cliente. Usado para só
+ * criar o portal do menu mobile quando `document` existe, sem cair no
+ * anti-padrão de setState dentro de useEffect.
+ */
+function useMounted() {
+  return useSyncExternalStore(
+    subscribeNoop,
+    () => true,
+    () => false
+  );
+}
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const mounted = useMounted();
   const pathname = usePathname();
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -43,6 +62,81 @@ export function Header() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
+
+  // Renderizado fora do <header>: um ancestral com backdrop-blur/transform
+  // cria um novo containing block para elementos "fixed", o que quebrava o
+  // posicionamento em tela cheia deste painel quando o header tinha o efeito
+  // de vidro ativo (rolagem). Um portal para o <body> evita esse problema.
+  const mobileMenu = (
+    <AnimatePresence>
+      {menuOpen ? (
+        <motion.div
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu de navegação"
+          className="fixed inset-0 z-[100] flex flex-col bg-azul-profundo lg:hidden"
+          initial={{ y: -16 }}
+          animate={{ y: 0 }}
+          exit={{ y: -16 }}
+          transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="flex h-16 items-center justify-between px-5 sm:h-20 sm:px-6">
+            <Image
+              src="/logo/lockup.png"
+              alt="Norte One"
+              width={675}
+              height={197}
+              className="h-7 w-auto"
+            />
+            <button
+              ref={closeButtonRef}
+              type="button"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card-sm)] text-off-white"
+              aria-label="Fechar menu"
+              onClick={() => setMenuOpen(false)}
+            >
+              <X size={26} aria-hidden="true" />
+            </button>
+          </div>
+
+          <nav
+            aria-label="Navegação móvel"
+            className="flex flex-1 flex-col justify-center gap-2 px-6"
+          >
+            {primaryNav.map((item, index) => (
+              <motion.div
+                key={item.href}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.03 * index, duration: 0.25 }}
+              >
+                <Link
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block border-b border-[var(--color-border-on-dark)] py-4 text-2xl font-medium text-off-white"
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+
+          <div className="px-6 pb-10 pt-4">
+            <Button
+              href="/contato"
+              variant="accent"
+              size="lg"
+              className="w-full"
+              onClick={() => setMenuOpen(false)}
+            >
+              Fale com a Norte One
+            </Button>
+          </div>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  );
 
   return (
     <header
@@ -106,74 +200,7 @@ export function Header() {
         </button>
       </Container>
 
-      <AnimatePresence>
-        {menuOpen ? (
-          <motion.div
-            id="mobile-menu"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Menu de navegação"
-            className="fixed inset-0 z-[60] flex flex-col bg-azul-profundo lg:hidden"
-            initial={{ y: -16 }}
-            animate={{ y: 0 }}
-            exit={{ y: -16 }}
-            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="flex h-16 items-center justify-between px-5 sm:h-20 sm:px-6">
-              <Image
-                src="/logo/lockup.png"
-                alt="Norte One"
-                width={675}
-                height={197}
-                className="h-7 w-auto"
-              />
-              <button
-                ref={closeButtonRef}
-                type="button"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card-sm)] text-off-white"
-                aria-label="Fechar menu"
-                onClick={() => setMenuOpen(false)}
-              >
-                <X size={26} aria-hidden="true" />
-              </button>
-            </div>
-
-            <nav
-              aria-label="Navegação móvel"
-              className="flex flex-1 flex-col justify-center gap-2 px-6"
-            >
-              {primaryNav.map((item, index) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.03 * index, duration: 0.25 }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="block border-b border-[var(--color-border-on-dark)] py-4 text-2xl font-medium text-off-white"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-
-            <div className="px-6 pb-10 pt-4">
-              <Button
-                href="/contato"
-                variant="accent"
-                size="lg"
-                className="w-full"
-                onClick={() => setMenuOpen(false)}
-              >
-                Fale com a Norte One
-              </Button>
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      {mounted ? createPortal(mobileMenu, document.body) : null}
     </header>
   );
 }
