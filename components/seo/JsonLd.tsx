@@ -18,6 +18,23 @@ export function OrganizationJsonLd() {
         name: siteConfig.name,
         url: siteConfig.url,
         description: siteConfig.description,
+        logo: `${siteConfig.url}/logo/icon.png`,
+        email: siteConfig.contact.email,
+        taxID: siteConfig.contact.cnpj,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Sinop",
+          addressRegion: "MT",
+          addressCountry: "BR",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          email: siteConfig.contact.email,
+          telephone: `+${siteConfig.contact.whatsappNumber}`,
+          areaServed: "BR",
+          availableLanguage: "Portuguese",
+        },
       }}
     />
   );

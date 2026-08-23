@@ -17,13 +17,13 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.norteone.com.br",
   locale: "pt_BR",
   contact: {
-    email: PLACEHOLDER,
-    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",
-    whatsappDisplay: PLACEHOLDER,
+    email: "norteone@protonmail.com",
+    whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5566992204744",
+    whatsappDisplay: "+55 (66) 9 9220-4744",
     whatsappDefaultMessage:
       "Olá, conheci a Norte One pelo site e gostaria de conversar sobre uma solução para minha empresa.",
-    address: PLACEHOLDER,
-    cnpj: PLACEHOLDER,
+    address: "Sinop, MT",
+    cnpj: "67.853.026/0001-53",
   },
   social: {
     instagram: PLACEHOLDER,

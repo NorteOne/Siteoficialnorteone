@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { footerNav, siteConfig } from "@/lib/site-config";
+import { footerNav, siteConfig, PLACEHOLDER } from "@/lib/site-config";
 
 export function Footer() {
   return (
@@ -8,13 +9,14 @@ export function Footer() {
       <Container className="py-16 sm:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-xs">
-            <span
-              className="text-xl font-semibold"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              Norte<span className="text-cobre">One</span>
-            </span>
-            <p className="mt-4 text-sm leading-relaxed text-azul-nevoa/80">
+            <Image
+              src="/logo/full.png"
+              alt="Norte One — Estratégia, Tecnologia, Crescimento"
+              width={850}
+              height={198}
+              className="h-12 w-auto"
+            />
+            <p className="mt-5 text-sm leading-relaxed text-azul-nevoa/80">
               Tecnologia aplicada ao que realmente importa: o seu negócio.
               Identificamos desafios empresariais e desenvolvemos soluções
               digitais sob medida.
@@ -35,14 +37,21 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-[var(--color-border-on-dark)] pt-8 text-xs text-azul-nevoa/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Norte One. Todos os direitos reservados.</p>
-          <div className="flex gap-5">
-            <Link href={siteConfig.social.instagram} className="hover:text-off-white">
-              Instagram
-            </Link>
-            <Link href={siteConfig.social.linkedin} className="hover:text-off-white">
-              LinkedIn
-            </Link>
-          </div>
+          {(siteConfig.social.instagram !== PLACEHOLDER ||
+            siteConfig.social.linkedin !== PLACEHOLDER) ? (
+            <div className="flex gap-5">
+              {siteConfig.social.instagram !== PLACEHOLDER ? (
+                <Link href={siteConfig.social.instagram} className="hover:text-off-white">
+                  Instagram
+                </Link>
+              ) : null}
+              {siteConfig.social.linkedin !== PLACEHOLDER ? (
+                <Link href={siteConfig.social.linkedin} className="hover:text-off-white">
+                  LinkedIn
+                </Link>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </Container>
     </footer>

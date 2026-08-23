@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -55,12 +56,17 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <Link
           href="/"
-          className="flex items-center gap-2 text-off-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cobre"
+          className="flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cobre"
           aria-label="Norte One — página inicial"
         >
-          <span className="text-lg font-semibold tracking-tight sm:text-xl" style={{ fontFamily: "var(--font-display)" }}>
-            Norte<span className="text-cobre">One</span>
-          </span>
+          <Image
+            src="/logo/lockup.png"
+            alt="Norte One"
+            width={675}
+            height={197}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">
@@ -87,7 +93,10 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card-sm)] text-off-white lg:hidden"
+          className={cn(
+            "inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card-sm)] text-off-white lg:hidden",
+            menuOpen && "invisible"
+          )}
           aria-label="Abrir menu de navegação"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -105,18 +114,19 @@ export function Header() {
             aria-modal="true"
             aria-label="Menu de navegação"
             className="fixed inset-0 z-[60] flex flex-col bg-azul-profundo lg:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ y: -16 }}
+            animate={{ y: 0 }}
+            exit={{ y: -16 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex h-16 items-center justify-between px-5 sm:h-20 sm:px-6">
-              <span
-                className="text-lg font-semibold text-off-white"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                Norte<span className="text-cobre">One</span>
-              </span>
+              <Image
+                src="/logo/lockup.png"
+                alt="Norte One"
+                width={675}
+                height={197}
+                className="h-7 w-auto"
+              />
               <button
                 ref={closeButtonRef}
                 type="button"
@@ -135,9 +145,9 @@ export function Header() {
               {primaryNav.map((item, index) => (
                 <motion.div
                   key={item.href}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * index, duration: 0.4 }}
+                  transition={{ delay: 0.03 * index, duration: 0.25 }}
                 >
                   <Link
                     href={item.href}
