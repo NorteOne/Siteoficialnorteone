@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/segmentos",
     "/como-trabalhamos",
     "/sobre",
-    "/cases",
     "/insights",
     "/contato",
     "/politica-de-privacidade",

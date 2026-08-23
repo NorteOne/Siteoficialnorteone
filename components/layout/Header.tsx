@@ -85,8 +85,8 @@ export function Header() {
             <Image
               src="/logo/lockup.png"
               alt="Norte One"
-              width={675}
-              height={197}
+              width={691}
+              height={213}
               className="h-7 w-auto"
             />
             <button
@@ -156,8 +156,8 @@ export function Header() {
           <Image
             src="/logo/lockup.png"
             alt="Norte One"
-            width={675}
-            height={197}
+            width={691}
+            height={213}
             priority
             className="h-8 w-auto sm:h-9"
           />

@@ -6,7 +6,6 @@ import { SolutionsOverview } from "@/components/sections/SolutionsOverview";
 import { SegmentsTeaser } from "@/components/sections/SegmentsTeaser";
 import { Methodology } from "@/components/sections/Methodology";
 import { Differentiators } from "@/components/sections/Differentiators";
-import { CasesPlaceholder } from "@/components/sections/CasesPlaceholder";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
@@ -24,7 +23,6 @@ export default function HomePage() {
       <SegmentsTeaser />
       <Methodology />
       <Differentiators />
-      <CasesPlaceholder />
       <AboutTeaser />
       <FinalCTA />
     </>

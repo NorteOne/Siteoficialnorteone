@@ -12,8 +12,8 @@ export function Footer() {
             <Image
               src="/logo/full.png"
               alt="Norte One — Estratégia, Tecnologia, Crescimento"
-              width={850}
-              height={198}
+              width={843}
+              height={213}
               className="h-12 w-auto"
             />
             <p className="mt-5 text-sm leading-relaxed text-azul-nevoa/80">
