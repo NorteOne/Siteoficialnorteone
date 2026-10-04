@@ -1,40 +1,41 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Reveal } from "@/components/motion/Reveal";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-azul-profundo py-14 text-off-white sm:py-20 lg:py-24">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 50% 0%, rgba(184,121,69,0.12), transparent 55%)",
-        }}
-      />
-      <Container narrow className="relative text-center">
-        <Reveal>
-          <h2 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl">
-            Qual problema da sua empresa deveríamos resolver primeiro?
-          </h2>
-        </Reveal>
-        <Reveal delay={0.08}>
-          <p className="mx-auto mt-5 max-w-xl text-balance text-base leading-relaxed text-azul-nevoa/90 sm:text-lg">
-            Conte brevemente o cenário da sua operação. A partir daí, podemos
-            entender onde a tecnologia realmente pode gerar impacto.
+    <section
+      id="cta-final"
+      className="section-space-generous bg-azul-noturno text-off-white"
+      aria-labelledby="cta-final-heading"
+    >
+      <Container>
+        <p className="editorial-kicker">
+          A conversa começa pelo contexto
+        </p>
+        <h2
+          id="cta-final-heading"
+          className="mt-8 max-w-[72rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] sm:text-[4rem] lg:text-[5.5rem]"
+        >
+          Existe algo na sua empresa que poderia funcionar melhor?
+        </h2>
+
+        <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:pt-12">
+          <p className="max-w-[39rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-6">
+            Conte o que está acontecendo na sua operação. Antes de propor uma
+            resposta, precisamos entender o contexto.
           </p>
-        </Reveal>
-        <Reveal delay={0.16}>
-          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <Button href="/contato" size="lg" variant="accent" data-event="cta_final_click">
-              Falar com a Norte One
-            </Button>
-            <Button href="/contato#whatsapp" size="lg" variant="ghost">
-              WhatsApp
+          <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
+            <Button
+              href="/contato"
+              size="lg"
+              variant="accent"
+              className="w-full min-[375px]:w-auto"
+              data-event="cta_final_click"
+            >
+              Conversar sobre um problema
             </Button>
           </div>
-        </Reveal>
+        </div>
       </Container>
     </section>
   );

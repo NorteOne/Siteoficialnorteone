@@ -16,6 +16,28 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  images: {
+    qualities: [75, 84],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/solucoes/atendimento-inteligente",
+        destination: "/solucoes",
+        permanent: true,
+      },
+      {
+        source: "/solucoes/gestao-operacional",
+        destination: "/solucoes",
+        permanent: true,
+      },
+      {
+        source: "/solucoes/experiencias-digitais",
+        destination: "/solucoes",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

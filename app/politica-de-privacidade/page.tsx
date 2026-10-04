@@ -5,11 +5,27 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { siteConfig, PLACEHOLDER } from "@/lib/site-config";
 
+const pageTitle = "Política de Privacidade";
+const pageDescription =
+  "Como a Norte One coleta, utiliza e protege dados pessoais, em conformidade com a LGPD (Lei Geral de Proteção de Dados).";
+
 export const metadata: Metadata = {
-  title: "Política de Privacidade",
-  description:
-    "Como a Norte One coleta, utiliza e protege dados pessoais, em conformidade com a LGPD (Lei Geral de Proteção de Dados).",
+  title: pageTitle,
+  description: pageDescription,
   alternates: { canonical: "/politica-de-privacidade" },
+  openGraph: {
+    type: "website",
+    url: "/politica-de-privacidade",
+    title: `Norte One — ${pageTitle}`,
+    description: pageDescription,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Norte One — soluções para empresas funcionarem melhor" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Norte One — ${pageTitle}`,
+    description: pageDescription,
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function PoliticaDePrivacidadePage() {
@@ -52,8 +68,8 @@ export default function PoliticaDePrivacidadePage() {
             <p>
               Coletamos apenas os dados fornecidos voluntariamente pelo
               visitante através do formulário de contato: nome, empresa,
-              WhatsApp, e-mail corporativo, segmento de atuação e a descrição
-              do desafio relatado. Não solicitamos dados sensíveis.
+              e-mail, a descrição da situação relatada e, quando informado,
+              WhatsApp. Não solicitamos dados sensíveis.
             </p>
           </Block>
 

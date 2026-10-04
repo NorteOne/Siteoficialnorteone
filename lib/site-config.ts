@@ -11,17 +11,16 @@ export const PLACEHOLDER = "[INFORMAÇÃO REAL A SER INSERIDA]";
 export const siteConfig = {
   name: "Norte One",
   shortName: "Norte One",
-  tagline: "Transformamos desafios empresariais em soluções digitais.",
+  tagline: "Soluções para empresas funcionarem melhor.",
   description:
-    "A Norte One une visão de negócio e tecnologia para estruturar processos, automatizar operações e desenvolver soluções sob medida para empresas.",
+    "A Norte One entende processos, identifica gargalos e constrói soluções para ajudar empresas a operar melhor, usando tecnologia quando ela realmente faz sentido.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.norteone.com.br",
   locale: "pt_BR",
   contact: {
-    email: "norteone@protonmail.com",
+    email: "contato@norteone.com.br",
     whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5566992204744",
-    whatsappDisplay: "+55 (66) 9 9220-4744",
     whatsappDefaultMessage:
-      "Olá, conheci a Norte One pelo site e gostaria de conversar sobre uma solução para minha empresa.",
+      "Olá, conheci a Norte One pelo site e gostaria de conversar sobre um problema na operação da minha empresa.",
     address: "Sinop, MT",
     cnpj: "67.853.026/0001-53",
   },
@@ -58,13 +57,9 @@ export const footerNav = {
     { label: "Como trabalhamos", href: "/como-trabalhamos" },
     { label: "Contato", href: "/contato" },
   ],
-  solucoes: [
-    { label: "Automação de processos", href: "/solucoes/automacao-de-processos" },
-    { label: "Soluções sob medida", href: "/solucoes/solucoes-sob-medida" },
-    { label: "Atendimento inteligente", href: "/solucoes/atendimento-inteligente" },
-    { label: "Integrações e conectividade", href: "/solucoes/integracoes" },
-    { label: "Gestão operacional", href: "/solucoes/gestao-operacional" },
-    { label: "Experiências digitais", href: "/solucoes/experiencias-digitais" },
+  atuacao: [
+    { label: "Soluções", href: "/solucoes" },
+    { label: "Segmentos", href: "/segmentos" },
   ],
   legal: [
     { label: "Política de Privacidade", href: "/politica-de-privacidade" },

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { solutions } from "@/content/solutions";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -15,7 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/politica-de-privacidade",
   ];
 
-  const solutionRoutes = solutions.map((solution) => `/solucoes/${solution.slug}`);
+  const solutionRoutes = [
+    "/solucoes/automacao-de-processos",
+    "/solucoes/integracoes",
+    "/solucoes/solucoes-sob-medida",
+  ];
 
   return [...staticRoutes, ...solutionRoutes].map((path) => ({
     url: `${base}${path}`,

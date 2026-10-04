@@ -1,57 +1,53 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { footerNav, siteConfig, PLACEHOLDER } from "@/lib/site-config";
+import { footerNav, getWhatsAppLink, siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   return (
-    <footer className="bg-azul-profundo text-off-white">
-      <Container className="py-16 sm:py-20">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-          <div className="max-w-xs">
+    <footer className="border-t border-[var(--color-border-on-dark)] bg-azul-noturno text-off-white">
+      <Container className="pb-20 pt-14 sm:pb-16 sm:pt-16 lg:pb-12 lg:pt-16">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-x-8">
+          <div className="lg:col-span-7">
             <Image
-              src="/logo/full.png"
-              alt="Norte One — Estratégia, Tecnologia, Crescimento"
-              width={843}
+              src="/logo/lockup.png"
+              alt="Norte One"
+              width={691}
               height={213}
-              className="h-12 w-auto"
+              className="h-8 w-auto sm:h-9"
             />
-            <p className="mt-5 text-sm leading-relaxed text-azul-nevoa/80">
-              Tecnologia aplicada ao que realmente importa: o seu negócio.
-              Identificamos desafios empresariais e desenvolvemos soluções
-              digitais sob medida.
+            <p className="mt-7 max-w-[43rem] font-display text-[1.5rem] font-semibold leading-[1.3] text-off-white sm:text-[1.85rem] lg:text-[2rem]">
+              A Norte One entende operações, identifica problemas e constrói
+              respostas adequadas ao negócio.
             </p>
           </div>
 
-          <FooterColumn title="Empresa" links={footerNav.empresa} />
-          <FooterColumn title="Soluções" links={footerNav.solucoes} />
-          <FooterColumn title="Legal" links={footerNav.legal} />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:col-span-5 lg:self-end">
+            <FooterColumn title="Norte One" links={footerNav.empresa} />
+            <FooterColumn title="Atuação" links={footerNav.atuacao} />
+            <FooterColumn title="Legal" links={footerNav.legal} />
+          </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 border-t border-[var(--color-border-on-dark)] pt-8 text-sm text-azul-nevoa/80 sm:grid-cols-2 lg:grid-cols-4">
-          <FooterInfo label="E-mail" value={siteConfig.contact.email} />
-          <FooterInfo label="WhatsApp" value={siteConfig.contact.whatsappDisplay} />
+        <address className="mt-12 grid grid-cols-1 gap-7 border-y border-[var(--color-border-on-dark)] py-7 text-sm not-italic text-azul-nevoa/75 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+          <FooterLink
+            label="E-mail"
+            value={siteConfig.contact.email}
+            href={`mailto:${siteConfig.contact.email}`}
+          />
+          <FooterLink
+            label="WhatsApp"
+            value="Iniciar conversa"
+            href={getWhatsAppLink()}
+            external
+          />
           <FooterInfo label="Localização" value={siteConfig.contact.address} />
           <FooterInfo label="CNPJ" value={siteConfig.contact.cnpj} />
-        </div>
+        </address>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-[var(--color-border-on-dark)] pt-8 text-xs text-azul-nevoa/60 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 text-xs text-azul-nevoa/55 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Norte One. Todos os direitos reservados.</p>
-          {(siteConfig.social.instagram !== PLACEHOLDER ||
-            siteConfig.social.linkedin !== PLACEHOLDER) ? (
-            <div className="flex gap-5">
-              {siteConfig.social.instagram !== PLACEHOLDER ? (
-                <Link href={siteConfig.social.instagram} className="hover:text-off-white">
-                  Instagram
-                </Link>
-              ) : null}
-              {siteConfig.social.linkedin !== PLACEHOLDER ? (
-                <Link href={siteConfig.social.linkedin} className="hover:text-off-white">
-                  LinkedIn
-                </Link>
-              ) : null}
-            </div>
-          ) : null}
+          <p>Sinop, Mato Grosso</p>
         </div>
       </Container>
     </footer>
@@ -65,32 +61,59 @@ function FooterColumn({
   title: string;
   links: readonly { label: string; href: string }[];
 }) {
+  const headingId = `footer-${title.toLowerCase().replace(" ", "-")}`;
+
   return (
-    <div>
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-azul-nevoa/60">
+    <nav aria-labelledby={headingId}>
+      <h2 id={headingId} className="text-xs font-semibold uppercase text-cobre">
         {title}
-      </h3>
+      </h2>
       <ul className="mt-4 space-y-3">
         {links.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-sm text-off-white/85 transition-colors hover:text-cobre"
+              className="text-sm text-off-white/80 underline-offset-4 transition-colors hover:text-off-white hover:underline"
             >
               {link.label}
             </Link>
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }
 
 function FooterInfo({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-[11px] uppercase tracking-wide text-azul-nevoa/50">{label}</p>
+      <p className="text-[11px] uppercase text-azul-nevoa/50">{label}</p>
       <p className="mt-1">{value}</p>
+    </div>
+  );
+}
+
+function FooterLink({
+  label,
+  value,
+  href,
+  external = false,
+}: {
+  label: string;
+  value: string;
+  href: string;
+  external?: boolean;
+}) {
+  return (
+    <div>
+      <p className="text-[11px] uppercase text-azul-nevoa/50">{label}</p>
+      <a
+        href={href}
+        className="mt-1 inline-block text-off-white/85 underline-offset-4 transition-colors hover:text-off-white hover:underline"
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
+        {value}
+      </a>
     </div>
   );
 }

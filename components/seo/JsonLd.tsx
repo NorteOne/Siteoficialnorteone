@@ -31,7 +31,6 @@ export function OrganizationJsonLd() {
           "@type": "ContactPoint",
           contactType: "customer service",
           email: siteConfig.contact.email,
-          telephone: `+${siteConfig.contact.whatsappNumber}`,
           areaServed: "BR",
           availableLanguage: "Portuguese",
         },
@@ -49,48 +48,6 @@ export function WebSiteJsonLd() {
         name: siteConfig.name,
         url: siteConfig.url,
         inLanguage: "pt-BR",
-      }}
-    />
-  );
-}
-
-export function ProfessionalServiceJsonLd() {
-  return (
-    <JsonLdScript
-      data={{
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        name: siteConfig.name,
-        url: siteConfig.url,
-        description: siteConfig.description,
-        areaServed: "BR",
-      }}
-    />
-  );
-}
-
-export function ServiceJsonLd({
-  name,
-  description,
-  url,
-}: {
-  name: string;
-  description: string;
-  url: string;
-}) {
-  return (
-    <JsonLdScript
-      data={{
-        "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: name,
-        description,
-        provider: {
-          "@type": "Organization",
-          name: siteConfig.name,
-          url: siteConfig.url,
-        },
-        url,
       }}
     />
   );

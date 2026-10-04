@@ -14,24 +14,27 @@ export const contactFormSchema = z.object({
   whatsapp: z
     .string()
     .trim()
-    .min(8, "Informe um WhatsApp válido com DDD.")
-    .max(20),
+    .max(20)
+    .refine(
+      (value) => value.length === 0 || value.length >= 8,
+      "Informe um WhatsApp válido com DDD."
+    ),
   email: z
     .string()
     .trim()
-    .email("Informe um e-mail corporativo válido."),
-  segment: z.string().trim().min(1, "Selecione um segmento."),
+    .max(254, "Informe um e-mail válido.")
+    .email("Informe um e-mail válido."),
   challenge: z
     .string()
     .trim()
-    .min(10, "Descreva brevemente o seu desafio (mínimo 10 caracteres).")
+    .min(10, "Conte um pouco mais sobre o que está acontecendo.")
     .max(2000),
   consent: z
     .boolean()
     .refine((value) => value === true, {
       message: "É necessário aceitar a Política de Privacidade para enviar.",
     }),
-  website: z.string().max(0).optional().or(z.literal("")),
-});
+  website: z.string().max(200).optional(),
+}).strict();
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;

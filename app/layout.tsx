@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/manrope";
-import "@fontsource-variable/inter";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -43,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className="h-full antialiased"
     >
-      <body className="flex min-h-full flex-col bg-off-white text-grafite">
+      <body className="flex min-h-full flex-col bg-[var(--color-paper)] text-grafite">
         <a
           href="#conteudo-principal"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-azul-profundo focus:px-4 focus:py-2 focus:text-off-white"

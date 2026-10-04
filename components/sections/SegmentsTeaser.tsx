@@ -1,40 +1,80 @@
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Badge } from "@/components/ui/Badge";
-import { Reveal } from "@/components/motion/Reveal";
-import { Button } from "@/components/ui/Button";
-import { segments } from "@/content/segments";
+
+const operationalContexts = [
+  {
+    title: "Atendimento que precisa de continuidade",
+    description:
+      "Conversas, agenda, acompanhamento e relacionamento precisam compartilhar contexto para que nada se perca pelo caminho.",
+  },
+  {
+    title: "Processos ainda manuais",
+    description:
+      "Tarefas importantes dependem de planilhas, mensagens, conferências e ações que se repetem todos os dias.",
+  },
+  {
+    title: "Ferramentas desconectadas",
+    description:
+      "A empresa já usa sistemas, mas as pessoas ainda movem informação manualmente de um lugar para outro.",
+  },
+  {
+    title: "Crescimento operacional",
+    description:
+      "O volume aumentou mais rápido do que os processos, as responsabilidades e os controles.",
+  },
+];
 
 export function SegmentsTeaser() {
-  const featured = segments.slice(0, 6);
-
   return (
-    <section className="bg-azul-profundo py-16 text-off-white sm:py-24">
-      <Container>
-        <Reveal>
-          <SectionHeading
-            tone="dark"
-            eyebrow="Segmentos"
-            title="Tecnologia adaptada à realidade de cada operação."
-            description="Trabalhamos com empresas de diferentes segmentos, sempre partindo da mesma pergunta: como a operação funciona hoje, e onde a tecnologia pode gerar impacto real."
-          />
-        </Reveal>
+    <section
+      id="contextos"
+      className="section-space bg-azul-noturno text-off-white"
+      aria-labelledby="contextos-heading"
+    >
+      <Container className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-x-8">
+        <div className="lg:col-span-5 lg:flex lg:flex-col">
+          <div>
+            <p className="editorial-kicker">
+              Contextos de operação
+            </p>
+            <h2
+              id="contextos-heading"
+              className="mt-6 max-w-[39rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] sm:text-[3.5rem] lg:text-[4.25rem]"
+            >
+              Os setores mudam. Alguns desafios se repetem.
+            </h2>
+            <p className="mt-7 max-w-[32rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8">
+              Não é o nome do mercado que define onde podemos ajudar. É a forma
+              como a operação funciona e onde ela perde ritmo.
+            </p>
+          </div>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          {featured.map((segment, index) => (
-            <Reveal key={segment.name} delay={index * 0.04}>
-              <Badge tone="dark">{segment.name}</Badge>
-            </Reveal>
-          ))}
+          <aside className="mt-12 border-l border-cobre pl-5 lg:mt-auto lg:max-w-[30rem]">
+            <p className="text-xs font-semibold uppercase text-cobre">
+              Um contexto em foco
+            </p>
+            <p className="mt-3 text-sm leading-6 text-azul-nevoa/80 sm:text-base sm:leading-7">
+              Operações de saúde e clínicas são um contexto de atenção da Norte
+              One. Nelas, atendimento, agenda, relacionamento e informação
+              precisam funcionar de forma coordenada.
+            </p>
+          </aside>
         </div>
 
-        <Reveal delay={0.2}>
-          <div className="mt-10">
-            <Button href="/segmentos" variant="ghost">
-              Ver todos os segmentos
-            </Button>
-          </div>
-        </Reveal>
+        <ul className="editorial-rule border-t border-[var(--color-border-on-dark)] lg:col-span-6 lg:col-start-7">
+          {operationalContexts.map((context) => (
+            <li
+              key={context.title}
+              className="border-b border-[var(--color-border-on-dark)] py-8 sm:py-10 lg:py-12"
+            >
+              <h3 className="max-w-[36rem] font-display text-[1.6rem] font-semibold leading-[1.2] sm:text-[2rem]">
+                {context.title}
+              </h3>
+              <p className="mt-3 max-w-[35rem] text-sm leading-6 text-azul-nevoa/75 sm:text-base sm:leading-7">
+                {context.description}
+              </p>
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   );

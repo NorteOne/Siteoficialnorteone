@@ -1,60 +1,97 @@
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/motion/Reveal";
-import { Target, Wrench, LineChart } from "lucide-react";
 
-const pillars = [
+const thinkingSteps = [
   {
-    icon: Target,
-    title: "Entendemos antes de propor",
-    description: "Nenhuma solução é sugerida antes de conhecermos a operação.",
+    number: "01",
+    title: "Entender",
+    description:
+      "Observar como a empresa funciona, o que mudou e onde a operação perde ritmo.",
   },
   {
-    icon: Wrench,
-    title: "Tecnologia como caminho",
-    description: "A ferramenta certa depende do problema, nunca o contrário.",
+    number: "02",
+    title: "Diagnosticar",
+    description:
+      "Separar sintomas de causas e definir o que realmente precisa melhorar.",
   },
   {
-    icon: LineChart,
-    title: "Resultado acompanhado de perto",
-    description: "Seguimos com a operação até o impacto aparecer no dia a dia.",
+    number: "03",
+    title: "Desenhar",
+    description:
+      "Organizar uma resposta adequada ao processo, às pessoas e ao momento da empresa.",
+  },
+  {
+    number: "04",
+    title: "Construir",
+    description:
+      "Transformar a direção escolhida em uma solução aplicável ao trabalho real.",
+  },
+  {
+    number: "05",
+    title: "Integrar",
+    description:
+      "Conectar a solução à rotina, às ferramentas e às equipes que já existem.",
+  },
+  {
+    number: "06",
+    title: "Medir",
+    description:
+      "Acompanhar o efeito na operação e ajustar o que ainda limita o resultado.",
   },
 ];
 
 export function Positioning() {
   return (
-    <section className="bg-off-white py-14 sm:py-20 lg:py-24">
-      <Container className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Como pensamos"
-            title="Não começamos pela tecnologia. Começamos pelo problema."
-            description="Antes de falar em sistemas, automações ou integrações, buscamos entender o que está travando a operação da sua empresa. A tecnologia entra depois — como caminho, não como ponto de partida."
-          />
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="space-y-4">
-            {pillars.map((pillar) => {
-              const Icon = pillar.icon;
-              return (
-                <div
-                  key={pillar.title}
-                  className="flex items-start gap-4 rounded-[var(--radius-card-md)] border border-[var(--color-border)] bg-white p-5"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-azul-profundo text-off-white">
-                    <Icon size={18} aria-hidden="true" />
-                  </span>
-                  <div>
-                    <h3 className="text-base font-semibold text-grafite">{pillar.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-cinza-pedra">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+    <section
+      id="como-pensamos"
+      className="section-space-generous scroll-mt-[4.5rem] bg-[var(--color-paper)] sm:scroll-mt-20 lg:scroll-mt-[5.5rem]"
+      aria-labelledby="como-pensamos-heading"
+    >
+      <Container>
+        <div className="editorial-reveal grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end lg:gap-x-8">
+          <div className="lg:col-span-7">
+            <p className="editorial-kicker">
+              Como pensamos
+            </p>
+            <h2
+              id="como-pensamos-heading"
+              className="mt-6 max-w-[55rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] text-grafite sm:text-[3.5rem] lg:text-[4.5rem]"
+            >
+              Não começamos pela tecnologia.
+              <span className="block">Começamos pela operação.</span>
+            </h2>
+            <p className="mt-7 max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+              Antes de propor qualquer ferramenta, entendemos como o trabalho
+              acontece, onde a operação perde eficiência e o que precisa mudar
+              para a empresa avançar com mais clareza.
+            </p>
           </div>
-        </Reveal>
+
+          <aside className="border-t border-[var(--color-border)] pt-6 lg:col-span-4 lg:col-start-9">
+            <p className="text-xs font-semibold uppercase text-cobre">
+              Independência tecnológica
+            </p>
+            <p className="mt-4 font-display text-2xl font-semibold leading-[1.3] text-azul-profundo sm:text-[1.85rem]">
+              Se uma nova ferramenta não for necessária, essa também é uma boa decisão.
+            </p>
+          </aside>
+        </div>
+
+        <ol className="mt-14 grid border-t border-[var(--color-border)] sm:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24">
+          {thinkingSteps.map((step) => (
+            <li
+              key={step.number}
+              className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3.5rem_1fr] sm:py-9"
+            >
+              <span className="text-xs font-semibold text-cobre">{step.number}</span>
+              <h3 className="font-display text-2xl leading-none text-grafite sm:text-[2rem]">
+                {step.title}
+              </h3>
+              <p className="col-start-2 mt-4 max-w-[29rem] text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">
+                {step.description}
+              </p>
+            </li>
+          ))}
+        </ol>
       </Container>
     </section>
   );
