@@ -54,12 +54,12 @@ export function Positioning() {
             </p>
             <h2
               id="como-pensamos-heading"
-              className="mt-6 max-w-[55rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] text-grafite sm:text-[3.5rem] lg:text-[4.5rem]"
+              className="type-section-title mt-6 max-w-[55rem] text-balance text-grafite"
             >
               Não começamos pela tecnologia.
               <span className="block">Começamos pela operação.</span>
             </h2>
-            <p className="mt-7 max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+            <p className="type-lead mt-7 max-w-[40rem] text-grafite/70">
               Antes de propor qualquer ferramenta, entendemos como o trabalho
               acontece, onde a operação perde eficiência e o que precisa mudar
               para a empresa avançar com mais clareza.
@@ -70,7 +70,7 @@ export function Positioning() {
             <p className="text-xs font-semibold uppercase text-cobre">
               Independência tecnológica
             </p>
-            <p className="mt-4 font-display text-2xl font-semibold leading-[1.3] text-azul-profundo sm:text-[1.85rem]">
+            <p className="type-statement mt-4 text-azul-profundo">
               Se uma nova ferramenta não for necessária, essa também é uma boa decisão.
             </p>
           </aside>
@@ -83,7 +83,7 @@ export function Positioning() {
               className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3.5rem_1fr] sm:py-9"
             >
               <span className="text-xs font-semibold text-cobre">{step.number}</span>
-              <h3 className="font-display text-2xl leading-none text-grafite sm:text-[2rem]">
+              <h3 className="type-item-title text-grafite">
                 {step.title}
               </h3>
               <p className="col-start-2 mt-4 max-w-[29rem] text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">

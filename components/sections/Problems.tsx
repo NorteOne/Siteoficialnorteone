@@ -46,13 +46,13 @@ export function Problems() {
             </p>
             <h2
               id="problemas-heading"
-              className="mt-6 max-w-[52rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] sm:text-[3.5rem] lg:text-[4.5rem]"
+              className="type-section-title mt-6 max-w-[52rem] text-balance"
             >
               O que limita uma empresa nem sempre parece urgente.
             </h2>
           </div>
 
-          <p className="max-w-[32rem] self-end text-base leading-7 text-azul-nevoa/85 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
+          <p className="type-lead max-w-[32rem] self-end text-azul-nevoa/85 lg:col-span-4 lg:col-start-9">
             Os sinais aparecem no tempo perdido, no retrabalho e no esforço
             necessário para manter a rotina funcionando.
           </p>
@@ -70,7 +70,7 @@ export function Problems() {
               <p className="text-xs font-semibold uppercase text-azul-nevoa/70 lg:col-span-2">
                 {problem.category}
               </p>
-              <h3 className="col-span-2 max-w-[38rem] font-display text-[1.5rem] font-semibold leading-[1.2] sm:col-start-2 sm:text-[1.8rem] lg:col-span-5 lg:col-start-4 lg:text-[2rem]">
+              <h3 className="type-item-title col-span-2 max-w-[38rem] sm:col-start-2 lg:col-span-5 lg:col-start-4">
                 {problem.statement}
               </h3>
               <p className="col-span-2 max-w-[30rem] text-sm leading-6 text-azul-nevoa/75 sm:col-start-2 sm:text-base sm:leading-7 lg:col-span-4 lg:col-start-9">

@@ -13,7 +13,7 @@ export function Hero() {
         </div>
 
         <div className="self-center lg:col-span-7 lg:row-start-2">
-          <h1 className="max-w-[49rem] text-balance font-display text-[3rem] font-bold leading-[1.03] text-off-white min-[375px]:text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem]">
+          <h1 className="type-hero max-w-[49rem] text-balance text-off-white">
             <span className="block">Sua empresa</span>
             <span className="block">pode funcionar</span>
             <span className="block">melhor.</span>
@@ -21,7 +21,7 @@ export function Hero() {
         </div>
 
         <div className="grid items-end gap-6 sm:grid-cols-2 sm:gap-8 lg:col-span-7 lg:row-start-3">
-          <p className="max-w-[37rem] text-base leading-7 text-azul-nevoa/82 sm:text-lg sm:leading-8">
+          <p className="type-lead max-w-[37rem] text-azul-nevoa/82">
             A Norte One entende processos, identifica gargalos e constrói
             soluções para melhorar a operação — usando tecnologia apenas
             quando ela realmente faz sentido.

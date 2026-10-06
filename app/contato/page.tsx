@@ -78,13 +78,13 @@ export default function ContatoPage() {
               </p>
               <h1
                 id="contato-hero-heading"
-                className="mt-8 max-w-[68rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]"
+                className="type-page-title mt-8 max-w-[68rem] text-balance"
               >
                 Comece pelo que está acontecendo.
               </h1>
             </div>
 
-            <p className="max-w-[37rem] border-t border-[var(--color-border-on-dark)] pt-7 text-base leading-7 text-azul-nevoa/85 sm:text-lg sm:leading-8 lg:col-span-5 lg:col-start-8 lg:mt-4 lg:pt-8">
+            <p className="type-lead max-w-[37rem] border-t border-[var(--color-border-on-dark)] pt-7 text-azul-nevoa/85 lg:col-span-5 lg:col-start-8 lg:mt-4 lg:pt-8">
               Você não precisa saber se a resposta é software, automação,
               integração ou outra coisa. Primeiro precisamos compreender o
               contexto da sua operação.
@@ -104,7 +104,7 @@ export default function ContatoPage() {
               <p className="editorial-kicker">
                 Antes de pensar em solução
               </p>
-              <p className="mt-6 max-w-[28rem] font-display text-[1.75rem] font-semibold leading-[1.25] text-azul-profundo sm:text-[2.25rem]">
+              <p className="type-statement mt-6 max-w-[28rem] text-azul-profundo">
                 Descreva a situação como ela aparece hoje. Nós ajudamos a
                 organizar o restante.
               </p>
@@ -154,11 +154,11 @@ export default function ContatoPage() {
               </p>
               <h2
                 id="formulario-heading"
-                className="mt-6 font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3.25rem]"
+                className="type-section-title mt-6 text-grafite"
               >
                 Conte o que precisa funcionar melhor.
               </h2>
-              <p className="mt-5 max-w-[41rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+              <p className="type-lead mt-5 max-w-[41rem] text-grafite/70">
                 Não é preciso definir tecnologia, orçamento ou prazo. Um relato
                 direto do problema já é suficiente para iniciar a conversa.
               </p>
@@ -182,7 +182,7 @@ export default function ContatoPage() {
               </p>
               <h2
                 id="depois-do-envio-heading"
-                className="mt-6 max-w-[29rem] font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3.25rem]"
+                className="type-section-title mt-6 max-w-[29rem] text-grafite"
               >
                 A conversa avança com critério.
               </h2>
@@ -198,7 +198,7 @@ export default function ContatoPage() {
                     {step.number}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-semibold leading-8 text-azul-profundo sm:text-2xl">
+                    <h3 className="type-item-title text-azul-profundo">
                       {step.title}
                     </h3>
                     <p className="mt-2 max-w-[37rem] text-sm leading-6 text-grafite/65 sm:text-base sm:leading-7">

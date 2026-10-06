@@ -38,11 +38,11 @@ export function SegmentsTeaser() {
             </p>
             <h2
               id="contextos-heading"
-              className="mt-6 max-w-[39rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] sm:text-[3.5rem] lg:text-[4.25rem]"
+              className="type-section-title mt-6 max-w-[39rem] text-balance"
             >
               Os setores mudam. Alguns desafios se repetem.
             </h2>
-            <p className="mt-7 max-w-[32rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8">
+            <p className="type-lead mt-7 max-w-[32rem] text-azul-nevoa/80">
               Não é o nome do mercado que define onde podemos ajudar. É a forma
               como a operação funciona e onde ela perde ritmo.
             </p>
@@ -66,7 +66,7 @@ export function SegmentsTeaser() {
               key={context.title}
               className="border-b border-[var(--color-border-on-dark)] py-8 sm:py-10 lg:py-12"
             >
-              <h3 className="max-w-[36rem] font-display text-[1.6rem] font-semibold leading-[1.2] sm:text-[2rem]">
+              <h3 className="type-item-title max-w-[36rem]">
                 {context.title}
               </h3>
               <p className="mt-3 max-w-[35rem] text-sm leading-6 text-azul-nevoa/75 sm:text-base sm:leading-7">

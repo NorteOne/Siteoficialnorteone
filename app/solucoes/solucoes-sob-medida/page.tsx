@@ -141,12 +141,12 @@ export default function SolucoesSobMedidaPage() {
           <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-9">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Software sob medida</p>
-              <h1 id="software-heading" className="mt-8 max-w-[68rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]">
+              <h1 id="software-heading" className="type-page-title mt-8 max-w-[68rem] text-balance">
                 Quando vale construir uma ferramenta própria?
               </h1>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] pt-7 lg:col-span-5 lg:col-start-8 lg:mt-8">
-              <p className="font-display text-xl font-medium leading-8 sm:text-2xl sm:leading-9">
+              <p className="type-lead font-medium">
                 Construir do zero deve ser uma decisão, não um ponto de partida.
               </p>
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
@@ -162,7 +162,7 @@ export default function SolucoesSobMedidaPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Primeira responsabilidade</p>
-              <h2 id="nao-construir-heading" className="mt-5 max-w-[43rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem] lg:text-[3.5rem]">
+              <h2 id="nao-construir-heading" className="type-section-title mt-5 max-w-[43rem] text-balance text-grafite">
                 Tentar não construir.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
@@ -175,7 +175,7 @@ export default function SolucoesSobMedidaPage() {
                 <li key={alternative.title} className="grid gap-3 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3rem_1fr] sm:gap-x-5">
                   <span className="text-xs font-semibold text-cobre">{String(index + 1).padStart(2, "0")}</span>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-grafite sm:text-2xl">{alternative.title}</h3>
+                    <h3 className="type-item-title text-grafite">{alternative.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">{alternative.description}</p>
                   </div>
                 </li>
@@ -190,7 +190,7 @@ export default function SolucoesSobMedidaPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Quando não construir</p>
-              <h2 id="quando-nao-heading" className="mt-5 max-w-[42rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-[2.8rem] lg:text-[3.5rem]">
+              <h2 id="quando-nao-heading" className="type-section-title mt-5 max-w-[42rem] text-balance">
                 Dizer não também protege a operação.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8">
@@ -214,7 +214,7 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="max-w-[57rem]">
             <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Quando considerar</p>
-            <h2 id="quando-sim-heading" className="mt-5 text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem] lg:text-[3.5rem]">
+            <h2 id="quando-sim-heading" className="type-section-title mt-5 text-balance text-grafite">
               Uma necessidade específica pode justificar uma resposta própria.
             </h2>
           </div>
@@ -223,7 +223,7 @@ export default function SolucoesSobMedidaPage() {
             {reasonsToConsider.map((reason, index) => (
               <div key={reason.title} className="grid gap-4 border-b border-[var(--color-border)] py-8 sm:grid-cols-12 sm:gap-x-8 sm:py-9">
                 <span className="text-xs font-semibold text-cobre sm:col-span-1">{String(index + 1).padStart(2, "0")}</span>
-                <dt className="font-display text-xl font-semibold leading-8 text-grafite sm:col-span-5 sm:text-2xl sm:leading-9">{reason.title}</dt>
+                <dt className="type-item-title text-grafite sm:col-span-5">{reason.title}</dt>
                 <dd className="max-w-[36rem] text-sm leading-6 text-grafite/70 sm:col-span-5 sm:col-start-8 sm:text-base sm:leading-7">{reason.description}</dd>
               </div>
             ))}
@@ -236,7 +236,7 @@ export default function SolucoesSobMedidaPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="min-w-0 lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Custo total</p>
-              <h2 id="custo-heading" className="mt-5 max-w-[42rem] text-balance font-display text-[2rem] font-semibold leading-[1.08] text-grafite min-[375px]:text-[2.25rem] sm:text-[2.8rem]">
+              <h2 id="custo-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
                 O desenvolvimento é só o começo da conta.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
@@ -247,7 +247,7 @@ export default function SolucoesSobMedidaPage() {
             <dl className="min-w-0 border-t border-[var(--color-border)] lg:col-span-6 lg:col-start-7">
               {ownershipCosts.map((cost) => (
                 <div key={cost.title} className="grid gap-3 border-b border-[var(--color-border)] py-7 sm:grid-cols-5 sm:gap-x-8">
-                  <dt className="font-display text-xl font-semibold text-grafite sm:col-span-2">{cost.title}</dt>
+                  <dt className="type-item-title text-grafite sm:col-span-2">{cost.title}</dt>
                   <dd className="text-sm leading-6 text-grafite/70 sm:col-span-3 sm:text-base sm:leading-7">{cost.description}</dd>
                 </div>
               ))}
@@ -261,7 +261,7 @@ export default function SolucoesSobMedidaPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Situação hipotética</p>
-              <h2 id="perguntas-heading" className="mt-5 max-w-[42rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem]">
+              <h2 id="perguntas-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
                 Um fluxo central vive em cinco controles paralelos.
               </h2>
             </div>
@@ -273,7 +273,7 @@ export default function SolucoesSobMedidaPage() {
 
           <div className="mt-16 border-t border-[var(--color-border)] pt-10">
             <p className="text-xs font-semibold uppercase text-azul-profundo/55">Perguntas antes da decisão</p>
-            <ul className="mt-7 grid gap-6 font-display text-xl font-medium leading-8 text-grafite sm:grid-cols-2 sm:text-2xl sm:leading-9 lg:grid-cols-3">
+            <ul className="type-item-title mt-7 grid gap-6 text-grafite sm:grid-cols-2 lg:grid-cols-3">
               <li>O problema continuará importante daqui a alguns anos?</li>
               <li>Quem será responsável pelo produto depois do lançamento?</li>
               <li>Qual alternativa menor foi descartada, e por quê?</li>
@@ -285,7 +285,7 @@ export default function SolucoesSobMedidaPage() {
       <section className="section-space border-t border-[var(--color-border)] bg-[var(--color-paper-deep)]" aria-labelledby="software-cta-heading">
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Conversa</p>
-          <h2 id="software-cta-heading" className="mt-6 max-w-[67rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]">
+          <h2 id="software-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
             Antes de pensar no software, vale explicar o que nenhuma alternativa resolveu.
           </h2>
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">

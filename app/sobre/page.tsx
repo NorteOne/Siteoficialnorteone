@@ -75,18 +75,18 @@ export default function SobrePage() {
               </p>
               <h1
                 id="sobre-hero-heading"
-                className="mt-8 max-w-[69rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]"
+                className="type-page-title mt-8 max-w-[69rem] text-balance"
               >
                 Uma empresa que permanece perto do problema.
               </h1>
-              <p className="mt-7 max-w-[52rem] text-base leading-7 text-azul-nevoa/85 sm:mt-8 sm:text-xl sm:leading-9">
+              <p className="type-lead mt-7 max-w-[52rem] text-azul-nevoa/85 sm:mt-8">
                 A Norte One existe para compreender como uma empresa funciona,
                 decidir o que realmente precisa mudar e acompanhar a resposta
                 até ela entrar na rotina.
               </p>
             </div>
 
-            <p className="border-t border-[var(--color-border-on-dark)] pt-7 font-display text-xl font-medium leading-8 text-off-white sm:text-2xl sm:leading-9 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
+            <p className="type-lead border-t border-[var(--color-border-on-dark)] pt-7 font-medium text-off-white lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
               Uma empresa em que entender, decidir e executar
               continuam próximos.
             </p>
@@ -107,14 +107,14 @@ export default function SobrePage() {
               </p>
               <h2
                 id="origem-heading"
-                className="mt-6 max-w-[57rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[57rem] text-balance text-grafite"
               >
                 Entre o problema e a ferramenta, existe uma decisão que exige
                 contexto.
               </h2>
             </div>
 
-            <div className="max-w-[34rem] space-y-6 text-base leading-7 text-grafite/75 sm:text-lg sm:leading-8 lg:col-span-5 lg:self-end">
+            <div className="type-lead max-w-[34rem] space-y-6 text-grafite/75 lg:col-span-5 lg:self-end">
               <p>
                 Empresas costumam compensar falhas de processo com esforço
                 manual, controles paralelos e conhecimento concentrado. O
@@ -132,7 +132,7 @@ export default function SobrePage() {
             <p className="text-xs font-semibold uppercase text-cobre lg:col-span-3">
               O que não nos orienta
             </p>
-            <p className="mt-5 max-w-[50rem] font-display text-xl font-medium leading-8 text-azul-profundo sm:text-2xl sm:leading-9 lg:col-span-7 lg:col-start-5 lg:mt-0">
+            <p className="type-statement mt-5 max-w-[50rem] text-azul-profundo lg:col-span-7 lg:col-start-5 lg:mt-0">
               Não medimos a qualidade de uma resposta pela quantidade de
               tecnologia envolvida.
             </p>
@@ -152,13 +152,13 @@ export default function SobrePage() {
               </p>
               <h2
                 id="visao-heading"
-                className="mt-6 max-w-[65rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] max-[374px]:text-[2rem] sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[65rem] text-balance"
               >
                 Decisões melhores combinam contexto, critério e
                 responsabilidade pela execução.
               </h2>
             </div>
-            <p className="max-w-[29rem] self-end text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
+            <p className="type-lead max-w-[29rem] self-end text-azul-nevoa/80 lg:col-span-4 lg:col-start-9">
               Essa visão orienta como a Norte One avalia alternativas, escolhe
               o que faz sentido e acompanha cada resposta até a prática.
             </p>
@@ -170,7 +170,7 @@ export default function SobrePage() {
                 key={principle.title}
                 className="grid gap-5 border-b border-[var(--color-border-on-dark)] py-8 sm:py-9 lg:grid-cols-12 lg:gap-x-8 lg:py-10"
               >
-                <h3 className="max-w-[32rem] font-display text-2xl font-semibold leading-9 sm:text-3xl sm:leading-10 lg:col-span-5">
+                <h3 className="type-item-title max-w-[32rem] lg:col-span-5">
                   {principle.title}
                 </h3>
                 <p className="max-w-[42rem] text-sm leading-6 text-azul-nevoa/80 sm:text-base sm:leading-7 lg:col-span-6 lg:col-start-7">
@@ -194,12 +194,12 @@ export default function SobrePage() {
               </p>
               <h2
                 id="responsabilidade-heading"
-                className="mt-6 max-w-[60rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[60rem] text-balance text-grafite"
               >
                 Quem decide também acompanha a resposta até a prática.
               </h2>
             </div>
-            <div className="max-w-[31rem] space-y-5 self-end text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-4">
+            <div className="type-lead max-w-[31rem] space-y-5 self-end text-grafite/70 lg:col-span-4">
               <p>
                 Diagnóstico, decisão e execução permanecem próximos. Isso
                 reduz a distância entre o que foi compreendido e o que precisa
@@ -241,13 +241,13 @@ export default function SobrePage() {
                 </figure>
 
                 <div className="sm:col-span-4 sm:pb-1 lg:col-span-3">
-                  <h3 className="font-display text-[2rem] leading-[1.08] text-grafite sm:text-[2.75rem]">
+                  <h3 className="type-item-title text-grafite">
                     Fábio Campos Magalhães
                   </h3>
                   <p className="mt-2 text-sm font-medium text-cobre sm:text-base">
                     Fundador da Norte One
                   </p>
-                  <p className="mt-7 max-w-[44rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+                  <p className="type-lead mt-7 max-w-[44rem] text-grafite/70">
                     Participa diretamente do diagnóstico, das decisões de
                     produto e da execução. Sua presença nesta página identifica
                     quem responde pela direção da empresa e pelas escolhas que
@@ -270,13 +270,13 @@ export default function SobrePage() {
           </p>
           <h2
             id="construcao-heading"
-            className="mt-8 max-w-[70rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] max-[374px]:text-[2rem] sm:text-[3.5rem] lg:text-[4.25rem]"
+            className="type-section-title mt-8 max-w-[70rem] text-balance"
           >
             A responsabilidade não termina na recomendação.
           </h2>
 
           <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="max-w-[41rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-6">
+            <p className="type-lead max-w-[41rem] text-azul-nevoa/80 lg:col-span-6">
               Nem toda resposta precisa virar software. A Norte One avalia o
               que precisa mudar, aproveita o que já funciona e constrói somente
               quando isso contribui para uma resposta melhor.

@@ -131,18 +131,18 @@ export default function SegmentosPage() {
               </p>
               <h1
                 id="segmentos-hero-heading"
-                className="mt-8 max-w-[70rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]"
+                className="type-page-title mt-8 max-w-[70rem] text-balance"
               >
                 Empresas diferentes esbarram nos mesmos problemas de operação.
               </h1>
-              <p className="mt-7 max-w-[51rem] text-base leading-7 text-azul-nevoa/85 sm:mt-8 sm:text-xl sm:leading-9">
+              <p className="type-lead mt-7 max-w-[51rem] text-azul-nevoa/85 sm:mt-8">
                 O setor e o porte mudam. O que define onde podemos ajudar é a
                 forma como atendimento, processos, informação e pessoas
                 precisam funcionar juntos.
               </p>
             </div>
 
-            <p className="border-t border-[var(--color-border-on-dark)] pt-7 font-display text-xl font-medium leading-8 text-off-white sm:text-2xl sm:leading-9 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
+            <p className="type-lead border-t border-[var(--color-border-on-dark)] pt-7 font-medium text-off-white lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
               A pergunta não é em qual lista a empresa entra. É onde a rotina
               perdeu continuidade.
             </p>
@@ -162,12 +162,12 @@ export default function SegmentosPage() {
               </p>
               <h2
                 id="contextos-heading"
-                className="mt-6 max-w-[61rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[61rem] text-balance text-grafite"
               >
                 O problema aparece primeiro no esforço que a rotina exige.
               </h2>
             </div>
-            <p className="max-w-[31rem] self-end text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-4">
+            <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4">
               Estes contextos existem em empresas de tamanhos diferentes. A
               escala muda; a necessidade de entender a causa permanece.
             </p>
@@ -183,10 +183,10 @@ export default function SegmentosPage() {
                   <p className="text-xs font-semibold text-cobre">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-5 max-w-[42rem] text-balance font-display text-[2rem] leading-[1.08] text-grafite sm:text-[2.75rem] lg:text-[3.25rem]">
+                  <h3 className="type-item-title mt-5 max-w-[42rem] text-balance text-grafite">
                     {context.title}
                   </h3>
-                  <p className="mt-5 max-w-[37rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+                  <p className="type-lead mt-5 max-w-[37rem] text-grafite/70">
                     {context.situation}
                   </p>
                 </div>
@@ -218,12 +218,12 @@ export default function SegmentosPage() {
               </p>
               <h2
                 id="variacoes-heading"
-                className="mt-6 max-w-[58rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[58rem] text-balance"
               >
                 O mesmo padrão assume formas diferentes.
               </h2>
             </div>
-            <p className="max-w-[29rem] self-end text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-4">
+            <p className="type-lead max-w-[29rem] self-end text-azul-nevoa/80 lg:col-span-4">
               Os setores abaixo aparecem como exemplos de rotina, não como uma
               lista que limita onde a Norte One pode atuar.
             </p>
@@ -235,7 +235,7 @@ export default function SegmentosPage() {
                 key={variation.title}
                 className="grid gap-5 border-b border-[var(--color-border-on-dark)] py-9 sm:grid-cols-12 sm:gap-x-8 sm:py-11 lg:py-14"
               >
-                <h3 className="max-w-[34rem] font-display text-[2rem] leading-[1.08] sm:col-span-5 sm:text-[2.75rem]">
+                <h3 className="type-item-title max-w-[34rem] sm:col-span-5">
                   {variation.title}
                 </h3>
                 <p className="max-w-[38rem] text-sm leading-6 text-azul-nevoa/80 sm:col-span-6 sm:col-start-7 sm:text-base sm:leading-7">
@@ -259,12 +259,12 @@ export default function SegmentosPage() {
               </p>
               <h2
                 id="conversa-heading"
-                className="mt-6 max-w-[40rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[40rem] text-balance text-grafite"
               >
                 Talvez valha conversar quando a equipe começou a compensar o
                 processo.
               </h2>
-              <p className="mt-7 max-w-[31rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
+              <p className="type-lead mt-7 max-w-[31rem] text-grafite/70">
                 Não é preciso esperar uma ruptura grande. Esforço recorrente,
                 demora e dependência já são sinais suficientes para investigar.
               </p>
@@ -287,12 +287,12 @@ export default function SegmentosPage() {
               <p className="text-xs font-semibold uppercase text-cobre">
                 Um contexto em foco hoje
               </p>
-              <h3 className="mt-5 font-display text-3xl font-semibold text-grafite sm:text-[2.5rem]">
+              <h3 className="type-item-title mt-5 text-grafite">
                 Operações de clínicas
               </h3>
             </div>
             <div className="mt-7 max-w-[48rem] lg:col-span-7 lg:col-start-6 lg:mt-0">
-              <p className="text-lg leading-8 text-grafite sm:text-xl sm:leading-9">
+              <p className="type-lead text-grafite">
                 Hoje dedicamos atenção especial a operações em que atendimento,
                 agenda, histórico e relacionamento precisam funcionar em
                 sequência.
@@ -317,14 +317,14 @@ export default function SegmentosPage() {
           </p>
           <h2
             id="segmentos-cta-heading"
-            className="mt-8 max-w-[70rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] sm:text-[3.5rem] lg:text-[4.25rem]"
+            className="type-section-title mt-8 max-w-[70rem] text-balance"
           >
             Seu setor não precisa estar em uma lista para o problema ser
             relevante.
           </h2>
 
           <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="max-w-[41rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-6">
+            <p className="type-lead max-w-[41rem] text-azul-nevoa/80 lg:col-span-6">
               Se algo na rotina está exigindo mais esforço do que deveria, a
               conversa pode começar pelo que acontece e pelas consequências
               para o trabalho.

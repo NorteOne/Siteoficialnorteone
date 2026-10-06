@@ -146,7 +146,7 @@ export function ContactForm() {
         <h2
           ref={successRef}
           tabIndex={-1}
-          className="mt-6 font-display text-3xl font-semibold leading-tight text-grafite sm:text-4xl"
+          className="type-section-title mt-6 text-grafite"
         >
           Recebemos seu contexto.
         </h2>

@@ -32,7 +32,7 @@ export function Differentiators() {
           </p>
           <h2
             id="criterios-heading"
-            className="max-w-[62rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] text-grafite sm:text-[3.5rem] lg:col-span-8 lg:col-start-5 lg:text-[4.5rem]"
+            className="type-section-title max-w-[62rem] text-balance text-grafite lg:col-span-8 lg:col-start-5"
           >
             Resolver bem é mais importante do que construir mais.
           </h2>
@@ -47,7 +47,7 @@ export function Differentiators() {
               <span className="text-xs font-semibold text-cobre sm:col-span-1">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="max-w-[34rem] font-display text-[1.7rem] font-semibold leading-[1.18] text-grafite sm:col-span-5 sm:text-[2.2rem] lg:col-start-3">
+              <h3 className="type-item-title max-w-[34rem] text-grafite sm:col-span-5 lg:col-start-3">
                 {criterion.title}
               </h3>
               <p className="max-w-[30rem] text-sm leading-6 text-grafite/70 sm:col-span-5 sm:text-base sm:leading-7 lg:col-span-4 lg:col-start-9">
@@ -61,7 +61,7 @@ export function Differentiators() {
           <p className="text-xs font-semibold uppercase text-cobre lg:col-span-3">
             Da decisão para a prática
           </p>
-          <p className="mt-4 max-w-[52rem] font-display text-2xl font-semibold leading-[1.3] text-azul-profundo sm:text-[1.85rem] lg:col-span-7 lg:col-start-5 lg:mt-0">
+          <p className="type-statement mt-4 max-w-[52rem] text-azul-profundo lg:col-span-7 lg:col-start-5 lg:mt-0">
             Boas escolhas precisam aparecer no que realmente entra em operação.
           </p>
         </div>

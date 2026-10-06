@@ -50,14 +50,14 @@ export function SolutionsOverview() {
 
             <h2
               id="solucoes-heading"
-              className="mt-6 max-w-[59rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] text-grafite sm:text-[3.5rem] lg:text-[4.75rem]"
+              className="type-section-title mt-6 max-w-[59rem] text-balance text-grafite"
             >
               Melhoramos a operação onde ela mais precisa avançar.
             </h2>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-10 lg:flex lg:items-end">
-            <p className="max-w-[30rem] text-base leading-7 text-grafite/65 sm:text-lg sm:leading-8">
+            <p className="type-lead max-w-[30rem] text-grafite/65">
               A necessidade vem primeiro. A resposta pode reorganizar um
               processo, conectar informações ou exigir uma ferramenta própria.
             </p>
@@ -73,7 +73,7 @@ export function SolutionsOverview() {
                 className="grid grid-cols-1 gap-y-4 border-b border-grafite/15 py-8 sm:py-10 lg:grid-cols-12 lg:gap-x-8 lg:py-12"
               >
                 <div className="lg:col-span-4">
-                  <h3 className="font-display text-[1.75rem] font-semibold leading-[1.15] text-grafite sm:text-[2.1rem] lg:text-[2.5rem]">
+                  <h3 className="type-item-title text-grafite">
                     {capability.title}
                   </h3>
                 </div>
@@ -97,7 +97,7 @@ export function SolutionsOverview() {
           </div>
 
           <div className="mt-5 lg:col-span-7 lg:col-start-5 lg:mt-0">
-            <p className="max-w-[55rem] font-display text-[1.6rem] font-semibold leading-[1.3] text-azul-profundo sm:text-[2rem] lg:text-[2.5rem]">
+            <p className="type-statement max-w-[55rem] text-azul-profundo">
               Software, automação, integrações, dados e IA entram apenas quando
               ajudam a resolver uma necessidade já compreendida.
             </p>

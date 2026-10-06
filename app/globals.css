@@ -41,6 +41,14 @@
   --section-space-tablet: 6rem;
   --section-space-desktop: 8rem;
 
+  --type-size-hero: clamp(2.625rem, calc(2rem + 3vw), 4.5rem);
+  --type-size-page-title: clamp(2.125rem, calc(1.7rem + 2.6vw), 3.5rem);
+  --type-size-section-title: clamp(1.75rem, calc(1.45rem + 1.45vw), 2.625rem);
+  --type-size-statement: clamp(1.375rem, calc(1.2rem + 0.9vw), 2rem);
+  --type-size-item-title: clamp(1.375rem, calc(1.25rem + 0.45vw), 1.625rem);
+  --type-size-product-title: clamp(2.5rem, calc(2.25rem + 1.75vw), 3.5rem);
+  --type-size-lead: clamp(1rem, calc(0.95rem + 0.25vw), 1.1875rem);
+
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -164,6 +172,59 @@
     font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.06;
+  }
+
+  .type-hero {
+    font-family: var(--font-display);
+    font-size: var(--type-size-hero);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.05;
+  }
+
+  .type-page-title {
+    font-family: var(--font-display);
+    font-size: var(--type-size-page-title);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.08;
+  }
+
+  .type-section-title {
+    font-family: var(--font-display);
+    font-size: var(--type-size-section-title);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.1;
+  }
+
+  .type-statement {
+    font-family: var(--font-display);
+    font-size: var(--type-size-statement);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.24;
+  }
+
+  .type-item-title {
+    font-family: var(--font-display);
+    font-size: var(--type-size-item-title);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  .type-product-title {
+    font-family: var(--font-display);
+    font-size: var(--type-size-product-title);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .type-lead {
+    font-size: var(--type-size-lead);
+    line-height: 1.65;
   }
 
   .editorial-rule {

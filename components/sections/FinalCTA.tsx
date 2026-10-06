@@ -14,13 +14,13 @@ export function FinalCTA() {
         </p>
         <h2
           id="cta-final-heading"
-          className="mt-8 max-w-[72rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] sm:text-[4rem] lg:text-[5.5rem]"
+          className="type-section-title mt-8 max-w-[72rem] text-balance"
         >
           Existe algo na sua empresa que poderia funcionar melhor?
         </h2>
 
         <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:pt-12">
-          <p className="max-w-[39rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-6">
+          <p className="type-lead max-w-[39rem] text-azul-nevoa/80 lg:col-span-6">
             Conte o que está acontecendo na sua operação. Antes de propor uma
             resposta, precisamos entender o contexto.
           </p>

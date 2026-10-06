@@ -200,17 +200,17 @@ export default function SolucoesPage() {
               </p>
               <h1
                 id="solucoes-hero-heading"
-                className="mt-8 max-w-[68rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]"
+                className="type-page-title mt-8 max-w-[68rem] text-balance"
               >
                 A solução depende do problema.
               </h1>
-              <p className="mt-7 max-w-[49rem] text-base leading-7 text-azul-nevoa/85 sm:mt-8 sm:text-xl sm:leading-9">
+              <p className="type-lead mt-7 max-w-[49rem] text-azul-nevoa/85 sm:mt-8">
                 Primeiro entendemos o que precisa mudar. Depois decidimos se a
                 resposta é simplificar, conectar, automatizar ou construir.
               </p>
             </div>
 
-            <p className="border-t border-[var(--color-border-on-dark)] pt-7 font-display text-xl font-medium leading-8 text-off-white sm:text-2xl sm:leading-9 lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
+            <p className="type-lead border-t border-[var(--color-border-on-dark)] pt-7 font-medium text-off-white lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
               Uma ferramenta nova não corrige um processo mal definido.
             </p>
           </div>
@@ -229,13 +229,13 @@ export default function SolucoesPage() {
               </p>
               <h2
                 id="areas-heading"
-                className="mt-6 max-w-[58rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[58rem] text-balance text-grafite"
               >
                 A entrada acontece quando a rotina começa a pedir outra
                 resposta.
               </h2>
             </div>
-            <p className="max-w-[31rem] self-end text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
+            <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4 lg:col-start-9">
               Você não precisa saber qual tecnologia usar. Basta reconhecer
               onde a operação perdeu clareza, ritmo ou continuidade.
             </p>
@@ -253,7 +253,7 @@ export default function SolucoesPage() {
                 <p className="text-xs font-semibold uppercase text-azul-profundo/55 lg:col-span-2">
                   {need.category}
                 </p>
-                <h3 className="col-span-2 max-w-[38rem] font-display text-[1.65rem] leading-[1.12] text-grafite sm:col-start-2 sm:text-[2rem] lg:col-span-5 lg:col-start-4 lg:text-[2.4rem]">
+                <h3 className="type-item-title col-span-2 max-w-[38rem] text-grafite sm:col-start-2 lg:col-span-5 lg:col-start-4">
                   {need.title}
                 </h3>
                 <p className="col-span-2 max-w-[30rem] text-sm leading-6 text-grafite/70 sm:col-start-2 sm:text-base sm:leading-7 lg:col-span-4 lg:col-start-9">
@@ -278,12 +278,12 @@ export default function SolucoesPage() {
               </p>
               <h2
                 id="respostas-heading"
-                className="mt-6 max-w-[58rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[58rem] text-balance"
               >
                 Resolver não significa sempre construir.
               </h2>
             </div>
-            <p className="max-w-[29rem] self-end text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-4">
+            <p className="type-lead max-w-[29rem] self-end text-azul-nevoa/80 lg:col-span-4">
               A melhor resposta é a que reduz o problema com a complexidade
               necessária, e não com a maior quantidade de tecnologia.
             </p>
@@ -298,7 +298,7 @@ export default function SolucoesPage() {
                 <span className="text-xs font-semibold text-cobre sm:col-span-1">
                   {path.number}
                 </span>
-                <h3 className="font-display text-[2rem] leading-none sm:col-span-3 sm:text-[2.75rem] lg:col-start-3">
+                <h3 className="type-item-title sm:col-span-3 lg:col-start-3">
                   {path.title}
                 </h3>
                 <p className="max-w-[31rem] text-sm leading-6 text-azul-nevoa/80 sm:col-span-4 sm:text-base sm:leading-7 lg:col-start-6">
@@ -325,7 +325,7 @@ export default function SolucoesPage() {
                 <p className="editorial-kicker">
                   Caixa de ferramentas
                 </p>
-                <h2 className="mt-6 max-w-[55rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] sm:text-[3rem] lg:text-[3.5rem]">
+                <h2 className="type-section-title mt-6 max-w-[55rem] text-balance">
                   A tecnologia entra na medida da resposta.
                 </h2>
               </div>
@@ -341,7 +341,7 @@ export default function SolucoesPage() {
                   key={tool.title}
                   className="grid gap-3 border-b border-[var(--color-border-on-dark)] py-6 sm:grid-cols-12 sm:gap-x-8 sm:py-7"
                 >
-                  <h3 className="font-display text-xl font-medium sm:col-span-4 sm:text-2xl">
+                  <h3 className="type-item-title sm:col-span-4">
                     {tool.title}
                   </h3>
                   <p className="max-w-[43rem] text-sm leading-6 text-azul-nevoa/80 sm:col-span-7 sm:col-start-6 sm:text-base sm:leading-7">
@@ -366,12 +366,12 @@ export default function SolucoesPage() {
               </p>
               <h2
                 id="situacoes-heading"
-                className="mt-6 max-w-[59rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]"
+                className="type-section-title mt-6 max-w-[59rem] text-balance text-grafite"
               >
                 O mesmo problema pode pedir respostas combinadas.
               </h2>
             </div>
-            <p className="max-w-[31rem] self-end text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-4">
+            <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4">
               Estes são exemplos de raciocínio, não casos de clientes. Servem
               para mostrar como contexto e resposta se conectam.
             </p>
@@ -387,7 +387,7 @@ export default function SolucoesPage() {
                   <span className="text-xs font-semibold text-cobre">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <dt className="mt-4 font-display text-xl font-semibold text-grafite sm:text-2xl">
+                  <dt className="type-item-title mt-4 text-grafite">
                     {situation.title}
                   </dt>
                 </div>
@@ -420,13 +420,13 @@ export default function SolucoesPage() {
           </p>
           <h2
             id="solucoes-cta-heading"
-            className="mt-8 max-w-[68rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] text-grafite sm:text-[3.5rem] lg:text-[4.25rem]"
+            className="type-section-title mt-8 max-w-[68rem] text-balance text-grafite"
           >
             Tem algo na operação que você gostaria de entender melhor?
           </h2>
 
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-6">
+            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">
               Você não precisa chegar com a tecnologia escolhida. A conversa
               começa pelo contexto e pelo que precisa mudar.
             </p>

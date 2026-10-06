@@ -147,13 +147,13 @@ export default function AutomacaoDeProcessosPage() {
               </p>
               <h1
                 id="automacao-heading"
-                className="mt-8 max-w-[68rem] text-balance font-display text-[2.75rem] font-bold leading-[1.06] min-[375px]:text-[3rem] sm:text-[3.75rem] lg:text-[4.25rem]"
+                className="type-page-title mt-8 max-w-[68rem] text-balance"
               >
                 Quando automatizar um processo realmente faz sentido?
               </h1>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] pt-7 lg:col-span-5 lg:col-start-8 lg:mt-8">
-              <p className="font-display text-xl font-medium leading-8 sm:text-2xl sm:leading-9">
+              <p className="type-lead font-medium">
                 Um processo ruim não melhora só porque passou a acontecer sozinho.
               </p>
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
@@ -173,11 +173,11 @@ export default function AutomacaoDeProcessosPage() {
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Sinais</p>
-              <h2 id="sinais-heading" className="mt-5 max-w-[49rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem] lg:text-[3.5rem]">
+              <h2 id="sinais-heading" className="type-section-title mt-5 max-w-[49rem] text-balance text-grafite">
                 O trabalho dá pistas antes de pedir automação.
               </h2>
             </div>
-            <p className="max-w-[31rem] self-end text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
+            <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4 lg:col-start-9">
               Nenhum sinal isolado decide. A combinação entre repetição, volume, regra clara e impacto é o que merece investigação.
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function AutomacaoDeProcessosPage() {
                 <span className="text-xs font-semibold text-cobre sm:col-span-1">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-xl font-medium leading-8 text-grafite sm:col-span-5 sm:text-2xl sm:leading-9">
+                <h3 className="type-item-title text-grafite sm:col-span-5">
                   {signal.title}
                 </h3>
                 <p className="max-w-[36rem] text-sm leading-6 text-grafite/70 sm:col-span-5 sm:col-start-8 sm:text-base sm:leading-7">
@@ -205,11 +205,11 @@ export default function AutomacaoDeProcessosPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Antes de automatizar</p>
-              <h2 id="antes-heading" className="mt-5 max-w-[52rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] sm:text-[2.8rem] lg:text-[3.5rem]">
+              <h2 id="antes-heading" className="type-section-title mt-5 max-w-[52rem] text-balance">
                 Primeiro, o processo precisa merecer continuar.
               </h2>
             </div>
-            <p className="max-w-[31rem] self-end text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
+            <p className="type-lead max-w-[31rem] self-end text-azul-nevoa/80 lg:col-span-4 lg:col-start-9">
               Simplificar pode resolver mais do que automatizar. A tecnologia entra depois de retirar o que não deveria existir.
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function AutomacaoDeProcessosPage() {
             {prerequisites.map((item) => (
               <li key={item.number} className="border-b border-[var(--color-border-on-dark)] py-8 sm:min-h-[16rem] sm:px-8 sm:py-9 sm:odd:border-r lg:p-10">
                 <span className="text-xs font-semibold text-cobre">{item.number}</span>
-                <h3 className="mt-8 font-display text-2xl font-semibold">{item.title}</h3>
+                <h3 className="type-item-title mt-8">{item.title}</h3>
                 <p className="mt-4 max-w-[29rem] text-sm leading-6 text-azul-nevoa/80 sm:text-base sm:leading-7">{item.description}</p>
               </li>
             ))}
@@ -229,7 +229,7 @@ export default function AutomacaoDeProcessosPage() {
       <section className="section-space bg-[var(--color-paper)]" aria-labelledby="criterios-heading">
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Critérios de decisão</p>
-          <h2 id="criterios-heading" className="mt-5 max-w-[54rem] text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem] lg:text-[3.5rem]">
+          <h2 id="criterios-heading" className="type-section-title mt-5 max-w-[54rem] text-balance text-grafite">
             A mesma tecnologia pode ser adequada ou prematura.
           </h2>
 
@@ -261,14 +261,14 @@ export default function AutomacaoDeProcessosPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-4">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Riscos</p>
-              <h2 id="riscos-heading" className="mt-5 text-balance font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem]">
+              <h2 id="riscos-heading" className="type-section-title mt-5 text-balance text-grafite">
                 O fluxo também precisa saber falhar.
               </h2>
             </div>
             <dl className="border-t border-[var(--color-border)] lg:col-span-7 lg:col-start-6">
               {risks.map((risk) => (
                 <div key={risk.title} className="grid gap-3 border-b border-[var(--color-border)] py-7 sm:grid-cols-5 sm:gap-x-8">
-                  <dt className="font-display text-xl font-semibold text-grafite sm:col-span-2">{risk.title}</dt>
+                  <dt className="type-item-title text-grafite sm:col-span-2">{risk.title}</dt>
                   <dd className="text-sm leading-6 text-grafite/70 sm:col-span-3 sm:text-base sm:leading-7">{risk.description}</dd>
                 </div>
               ))}
@@ -276,7 +276,7 @@ export default function AutomacaoDeProcessosPage() {
           </div>
 
           <div className="mt-16 grid border-t border-[var(--color-border)] pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <h2 className="font-display text-2xl font-semibold text-grafite lg:col-span-4">Automação não é sinônimo de IA.</h2>
+            <h2 className="type-item-title text-grafite lg:col-span-4">Automação não é sinônimo de IA.</h2>
             <div className="mt-5 max-w-[44rem] space-y-4 text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6 lg:mt-0">
               <p>Automação executa um fluxo definido. Inteligência artificial pode apoiar tarefas como classificar, resumir ou interpretar informação quando existe tolerância ao erro e revisão adequada.</p>
               <p>Usar IA em uma etapa não elimina a necessidade de regras, limites, dados confiáveis e responsabilidade humana pelo processo inteiro.</p>
@@ -290,7 +290,7 @@ export default function AutomacaoDeProcessosPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-4">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Situação hipotética</p>
-              <h2 id="exemplo-heading" className="mt-5 font-display text-[2.25rem] font-semibold leading-[1.08] text-grafite sm:text-[2.8rem]">Um pedido muda de mãos três vezes.</h2>
+              <h2 id="exemplo-heading" className="type-section-title mt-5 text-grafite">Um pedido muda de mãos três vezes.</h2>
             </div>
             <div className="max-w-[46rem] text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6">
               <p>Uma solicitação chega por formulário, é copiada para uma planilha e depois reenviada para quem executa. Antes de automatizar, a empresa elimina campos sem uso, define quem decide exceções e escolhe uma fonte única.</p>
@@ -303,11 +303,11 @@ export default function AutomacaoDeProcessosPage() {
       <section className="section-space border-t border-[var(--color-border)] bg-[var(--color-paper-deep)]" aria-labelledby="automacao-cta-heading">
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Conversa</p>
-          <h2 id="automacao-cta-heading" className="mt-6 max-w-[67rem] text-balance font-display text-[2.4rem] font-semibold leading-[1.08] text-grafite sm:text-[3rem] lg:text-[3.5rem]">
+          <h2 id="automacao-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
             Antes de automatizar, vale explicar onde o trabalho está travando.
           </h2>
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-6">A primeira conversa serve para separar repetição, exceção e causa real do problema.</p>
+            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">A primeira conversa serve para separar repetição, exceção e causa real do problema.</p>
             <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
               <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_automation_click">Conversar sobre um problema</Button>
             </div>

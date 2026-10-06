@@ -43,11 +43,11 @@ export function SelectedWork() {
           <div className="lg:col-span-8 lg:col-start-5">
             <h2
               id="trabalhos-heading"
-              className="max-w-[57rem] text-balance font-display text-[2.5rem] font-semibold leading-[1.08] sm:text-[3.5rem] lg:text-[4.5rem]"
+              className="type-section-title max-w-[57rem] text-balance"
             >
               Um problema operacional transformado em produto.
             </h2>
-            <p className="mt-7 max-w-[43rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8">
+            <p className="type-lead mt-7 max-w-[43rem] text-azul-nevoa/80">
               Em uma clínica, atendimento, agenda, informações e acompanhamento
               pertencem à mesma jornada. Quando cada etapa funciona isolada, a
               equipe precisa reconstruir essa continuidade manualmente.
@@ -68,7 +68,7 @@ export function SelectedWork() {
                 <span className="text-xs font-semibold text-cobre">
                   {step.number}
                 </span>
-                <h3 className="font-display text-2xl leading-none sm:text-[2rem]">
+                <h3 className="type-item-title">
                   {step.label}
                 </h3>
                 <p className="col-span-2 mt-4 max-w-[31rem] text-sm leading-6 text-azul-nevoa/75 sm:col-span-1 sm:mt-0 sm:text-base sm:leading-7">
@@ -85,11 +85,11 @@ export function SelectedWork() {
               </p>
               <h3
                 id="norsey-heading"
-                className="mt-6 font-display text-[4rem] font-bold leading-none sm:text-[5rem] lg:text-[6.5rem]"
+                className="type-product-title mt-6"
               >
                 Norsey
               </h3>
-              <p className="mt-6 max-w-[30rem] text-base leading-7 text-azul-nevoa/85 sm:text-lg sm:leading-8">
+              <p className="type-lead mt-6 max-w-[30rem] text-azul-nevoa/85">
                 Dessa leitura surgiu um produto que conecta o atendimento via
                 WhatsApp à agenda, ao CRM e ao relacionamento com pacientes,
                 dando continuidade à operação da clínica.
