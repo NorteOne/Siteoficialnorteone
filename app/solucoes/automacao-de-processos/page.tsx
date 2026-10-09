@@ -38,34 +38,24 @@ export const metadata: Metadata = {
 
 const signals = [
   {
-    title: "A mesma sequência acontece muitas vezes.",
+    title: "A rotina segue uma sequência previsível.",
     description:
-      "Pessoas repetem etapas previsíveis para registrar, conferir, encaminhar ou atualizar informações.",
+      "Registros, conferências e encaminhamentos se repetem com regras que podem ser explicitadas.",
   },
   {
     title: "O volume ultrapassou a capacidade manual.",
     description:
-      "A rotina funciona em dias tranquilos, mas acumula atrasos assim que a demanda aumenta.",
+      "A rotina funciona em dias tranquilos, mas acumula atrasos quando a demanda aumenta.",
   },
   {
     title: "A memória virou parte do processo.",
     description:
-      "Prazos e próximos passos dependem de alguém lembrar o que precisa acontecer.",
+      "Prazos e próximos passos dependem de alguém lembrar, conferir ou cobrar a próxima etapa.",
   },
   {
     title: "Há transferências manuais entre ferramentas.",
     description:
-      "A mesma informação é copiada, adaptada e conferida em lugares diferentes.",
-  },
-  {
-    title: "Erros seguem um padrão reconhecível.",
-    description:
-      "Falhas de digitação, esquecimentos e duplicidades reaparecem nos mesmos pontos.",
-  },
-  {
-    title: "A equipe confere mais do que decide.",
-    description:
-      "Tempo qualificado é consumido verificando regras simples em vez de tratar exceções.",
+      "A equipe copia os mesmos dados e confere as mesmas regras em lugares diferentes.",
   },
 ];
 
@@ -159,6 +149,12 @@ export default function AutomacaoDeProcessosPage() {
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
                 A decisão começa pela rotina: o que se repete, o que varia e onde uma pessoa ainda precisa decidir.
               </p>
+              <Link
+                href="/contato"
+                className="mt-5 inline-flex min-h-11 items-center font-semibold text-off-white underline decoration-cobre underline-offset-4 hover:decoration-off-white"
+              >
+                Conversar sobre a operação
+              </Link>
             </div>
           </div>
         </Container>
@@ -172,7 +168,7 @@ export default function AutomacaoDeProcessosPage() {
         <Container>
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-7">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Sinais</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Sinais</p>
               <h2 id="sinais-heading" className="type-section-title mt-5 max-w-[49rem] text-balance text-grafite">
                 O trabalho dá pistas antes de pedir automação.
               </h2>
@@ -185,7 +181,7 @@ export default function AutomacaoDeProcessosPage() {
           <ol className="mt-14 border-t border-[var(--color-border)] sm:mt-16 lg:mt-20">
             {signals.map((signal, index) => (
               <li key={signal.title} className="grid gap-4 border-b border-[var(--color-border)] py-7 sm:grid-cols-12 sm:gap-x-8 sm:py-8">
-                <span className="text-xs font-semibold text-cobre sm:col-span-1">
+                <span className="text-xs font-semibold text-cobre-ink sm:col-span-1">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="type-item-title text-grafite sm:col-span-5">
@@ -228,28 +224,26 @@ export default function AutomacaoDeProcessosPage() {
 
       <section className="section-space bg-[var(--color-paper)]" aria-labelledby="criterios-heading">
         <Container>
-          <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Critérios de decisão</p>
+          <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Critérios de decisão</p>
           <h2 id="criterios-heading" className="type-section-title mt-5 max-w-[54rem] text-balance text-grafite">
             A mesma tecnologia pode ser adequada ou prematura.
           </h2>
 
           <div className="mt-14 grid border-y border-[var(--color-border)] sm:mt-16 lg:grid-cols-2 lg:divide-x lg:divide-[var(--color-border)]">
             <div className="py-9 lg:pr-12 lg:py-12">
-              <p className="text-xs font-semibold uppercase text-azul-profundo/55">Faz sentido quando</p>
+              <p className="text-xs font-semibold uppercase text-azul-profundo/75">Faz sentido quando</p>
               <ul className="mt-7 space-y-5 text-base leading-7 text-grafite">
                 <li>o fluxo é estável, previsível e ocorre com frequência;</li>
-                <li>as regras podem ser explicadas e as exceções identificadas;</li>
-                <li>o volume ou o risco de erro justifica manter a automação;</li>
-                <li>existe acompanhamento para medir falhas e ajustar mudanças.</li>
+                <li>as regras e as exceções podem ser identificadas;</li>
+                <li>o volume ou o risco de erro justifica o custo da automação.</li>
               </ul>
             </div>
             <div className="border-t border-[var(--color-border)] py-9 lg:border-t-0 lg:pl-12 lg:py-12">
-              <p className="text-xs font-semibold uppercase text-azul-profundo/55">Não faz sentido quando</p>
+              <p className="text-xs font-semibold uppercase text-azul-profundo/75">Não faz sentido quando</p>
               <ul className="mt-7 space-y-5 text-base leading-7 text-grafite">
-                <li>o processo ainda muda toda semana ou não tem finalidade clara;</li>
+                <li>o processo ainda muda com frequência ou não tem finalidade clara;</li>
                 <li>a tarefa é rara e mais simples de executar manualmente;</li>
-                <li>cada caso exige julgamento que não cabe em regras confiáveis;</li>
-                <li>a causa do atraso é decisão, responsabilidade ou informação ausente.</li>
+                <li>cada caso exige julgamento ou falta uma decisão, responsabilidade ou informação.</li>
               </ul>
             </div>
           </div>
@@ -260,7 +254,7 @@ export default function AutomacaoDeProcessosPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-4">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Riscos</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Riscos</p>
               <h2 id="riscos-heading" className="type-section-title mt-5 text-balance text-grafite">
                 O fluxo também precisa saber falhar.
               </h2>
@@ -277,9 +271,8 @@ export default function AutomacaoDeProcessosPage() {
 
           <div className="mt-16 grid border-t border-[var(--color-border)] pt-10 lg:grid-cols-12 lg:gap-x-8">
             <h2 className="type-item-title text-grafite lg:col-span-4">Automação não é sinônimo de IA.</h2>
-            <div className="mt-5 max-w-[44rem] space-y-4 text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6 lg:mt-0">
-              <p>Automação executa um fluxo definido. Inteligência artificial pode apoiar tarefas como classificar, resumir ou interpretar informação quando existe tolerância ao erro e revisão adequada.</p>
-              <p>Usar IA em uma etapa não elimina a necessidade de regras, limites, dados confiáveis e responsabilidade humana pelo processo inteiro.</p>
+            <div className="mt-5 max-w-[44rem] text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6 lg:mt-0">
+              <p>Automação executa um fluxo definido. IA pode apoiar tarefas como classificar ou resumir informações, desde que existam limites, dados confiáveis, tolerância ao erro e revisão humana.</p>
             </div>
           </div>
         </Container>
@@ -289,7 +282,7 @@ export default function AutomacaoDeProcessosPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-4">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Situação hipotética</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Situação hipotética</p>
               <h2 id="exemplo-heading" className="type-section-title mt-5 text-grafite">Um pedido muda de mãos três vezes.</h2>
             </div>
             <div className="max-w-[46rem] text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6">
@@ -302,7 +295,7 @@ export default function AutomacaoDeProcessosPage() {
 
       <section className="section-space border-t border-[var(--color-border)] bg-[var(--color-paper-deep)]" aria-labelledby="automacao-cta-heading">
         <Container>
-          <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Conversa</p>
+          <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="automacao-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
             Antes de automatizar, vale explicar onde o trabalho está travando.
           </h2>

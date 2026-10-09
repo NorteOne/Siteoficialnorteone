@@ -3,9 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Positioning } from "@/components/sections/Positioning";
 import { Problems } from "@/components/sections/Problems";
 import { SolutionsOverview } from "@/components/sections/SolutionsOverview";
-import { SegmentsTeaser } from "@/components/sections/SegmentsTeaser";
-import { Differentiators } from "@/components/sections/Differentiators";
-import { SelectedWork } from "@/components/sections/SelectedWork";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
@@ -37,9 +34,6 @@ export default function HomePage() {
       <Positioning />
       <Problems />
       <SolutionsOverview />
-      <SegmentsTeaser />
-      <Differentiators />
-      <SelectedWork />
       <AboutTeaser />
       <FinalCTA />
     </>

@@ -120,7 +120,7 @@ export default function ContatoPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-event="whatsapp_click"
-                    className="inline-flex min-h-11 items-center gap-3 font-medium text-azul-profundo underline-offset-4 transition-colors hover:text-cobre hover:underline"
+                    className="inline-flex min-h-11 items-center gap-3 font-medium text-azul-profundo underline-offset-4 transition-colors hover:text-cobre-ink hover:underline"
                   >
                     <MessageCircle
                       size={19}
@@ -131,7 +131,7 @@ export default function ContatoPage() {
                   </a>
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    className="inline-flex min-h-11 items-center gap-3 break-all font-medium text-azul-profundo underline-offset-4 transition-colors hover:text-cobre hover:underline"
+                    className="inline-flex min-h-11 items-center gap-3 break-all font-medium text-azul-profundo underline-offset-4 transition-colors hover:text-cobre-ink hover:underline"
                   >
                     <Mail
                       size={19}
@@ -143,7 +143,7 @@ export default function ContatoPage() {
                 </div>
               </div>
 
-              <p className="mt-8 max-w-[27rem] text-sm leading-6 text-grafite/55">
+              <p className="mt-8 max-w-[27rem] text-sm leading-6 text-grafite/70">
                 Vamos ler o contexto antes de responder.
               </p>
             </aside>
@@ -194,7 +194,7 @@ export default function ContatoPage() {
                   key={step.number}
                   className="grid gap-3 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3rem_1fr] sm:gap-x-5 sm:py-8"
                 >
-                  <span className="text-xs font-semibold text-cobre">
+                  <span className="text-xs font-semibold text-cobre-ink">
                     {step.number}
                   </span>
                   <div>

@@ -39,44 +39,30 @@ const operationalNeeds = [
   {
     number: "01",
     category: "Rotina",
-    title: "A operação ficou difícil de sustentar.",
+    title: "O volume cresceu além da rotina.",
     description:
-      "Processos cresceram sem a mesma clareza de responsabilidades, etapas e critérios.",
+      "Responsabilidades, etapas e controles já não acompanham o trabalho.",
   },
   {
     number: "02",
     category: "Eficiência",
     title: "O trabalho manual virou gargalo.",
     description:
-      "Conferências, registros e tarefas repetitivas ocupam a equipe e aumentam a chance de erro.",
+      "Conferências e tarefas repetidas ocupam a equipe e ampliam o risco de erro.",
   },
   {
     number: "03",
     category: "Conexão",
-    title: "A informação não acompanha o trabalho.",
+    title: "As ferramentas não preservam o contexto.",
     description:
-      "Ferramentas, planilhas e pessoas guardam partes diferentes do contexto necessário para agir.",
+      "A equipe ainda transporta informações entre sistemas e reconstrói o histórico para agir.",
   },
   {
     number: "04",
     category: "Relacionamento",
     title: "O atendimento perde continuidade.",
     description:
-      "Conversas, histórico e próximos passos se dispersam entre canais e dependem da memória da equipe.",
-  },
-  {
-    number: "05",
-    category: "Decisão",
-    title: "A gestão enxerga tarde o que aconteceu.",
-    description:
-      "Dados fragmentados dificultam acompanhar a operação, reconhecer desvios e decidir com contexto.",
-  },
-  {
-    number: "06",
-    category: "Adequação",
-    title: "As ferramentas exigem contornos demais.",
-    description:
-      "Soluções prontas forçam controles paralelos e deixam de atender uma parte importante do processo.",
+      "Conversas e próximos passos se dispersam entre canais e dependem da memória da equipe.",
   },
 ];
 
@@ -119,48 +105,13 @@ const responsePaths = [
   },
 ];
 
-const toolset = [
-  {
-    title: "Ferramentas existentes",
-    description:
-      "Adotar e configurar uma solução pronta pode ser a resposta mais simples e responsável.",
-  },
-  {
-    title: "Integrações e APIs",
-    description:
-      "Conectam sistemas para que dados e ações avancem sem reconstruir o contexto a cada etapa.",
-  },
-  {
-    title: "Automações",
-    description:
-      "Executam rotinas previsíveis com critérios, acompanhamento e pontos claros de intervenção.",
-  },
-  {
-    title: "Dados e IA",
-    description:
-      "Apoiam tarefas concretas como organizar, classificar, resumir e interpretar informação dentro de fluxos controlados.",
-  },
-  {
-    title: "Software próprio",
-    description:
-      "Materializa um processo específico quando adaptar ferramentas prontas custaria mais do que resolveria.",
-  },
-];
-
 const situations = [
   {
     title: "Atendimento fragmentado",
     context:
-      "Uma empresa de serviços atende por mensagens, agenda compromissos em outra ferramenta e registra o histórico em planilhas.",
+      "Uma equipe atende por mensagens, agenda compromissos em outra ferramenta e registra o histórico em planilhas.",
     direction:
-      "Organizar o fluxo, conectar as informações e automatizar apenas os próximos passos previsíveis.",
-  },
-  {
-    title: "Rotina administrativa",
-    context:
-      "A equipe confere os mesmos dados em vários lugares antes de registrar cada solicitação.",
-    direction:
-      "Simplificar as validações e automatizar etapas com regras claras, mantendo exceções com as pessoas.",
+      "Conectar as informações necessárias e automatizar apenas os próximos passos previsíveis.",
   },
   {
     title: "Processo específico",
@@ -168,13 +119,6 @@ const situations = [
       "Uma operação tem uma etapa central que nenhuma ferramenta pronta atende sem controles paralelos.",
     direction:
       "Confirmar a lacuna e construir somente a parte própria que o processo realmente precisa.",
-  },
-  {
-    title: "Decisão sem contexto",
-    context:
-      "Informações importantes existem, mas chegam separadas e tarde demais para orientar a gestão.",
-    direction:
-      "Integrar as fontes e criar uma camada clara de acompanhamento antes de ampliar a tecnologia.",
   },
 ];
 
@@ -208,6 +152,12 @@ export default function SolucoesPage() {
                 Primeiro entendemos o que precisa mudar. Depois decidimos se a
                 resposta é simplificar, conectar, automatizar ou construir.
               </p>
+              <Link
+                href="/contato"
+                className="mt-5 inline-flex min-h-11 items-center font-semibold text-off-white underline decoration-cobre underline-offset-4 hover:decoration-off-white"
+              >
+                Conversar sobre a operação
+              </Link>
             </div>
 
             <p className="type-lead border-t border-[var(--color-border-on-dark)] pt-7 font-medium text-off-white lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
@@ -247,10 +197,10 @@ export default function SolucoesPage() {
                 key={need.number}
                 className="grid grid-cols-[2.5rem_1fr] gap-x-4 gap-y-5 border-b border-[var(--color-border)] py-8 sm:grid-cols-[3rem_1fr] sm:gap-x-6 sm:py-10 lg:grid-cols-12 lg:items-start lg:gap-x-8 lg:py-12"
               >
-                <span className="text-xs font-semibold text-cobre lg:col-span-1">
+                <span className="text-xs font-semibold text-cobre-ink lg:col-span-1">
                   {need.number}
                 </span>
-                <p className="text-xs font-semibold uppercase text-azul-profundo/55 lg:col-span-2">
+                <p className="text-xs font-semibold uppercase text-grafite/75 lg:col-span-2">
                   {need.category}
                 </p>
                 <h3 className="type-item-title col-span-2 max-w-[38rem] text-grafite sm:col-start-2 lg:col-span-5 lg:col-start-4">
@@ -319,38 +269,6 @@ export default function SolucoesPage() {
             ))}
           </ol>
 
-          <div className="mt-16 border-t border-[var(--color-border-on-dark)] pt-14 sm:mt-20 sm:pt-16 lg:mt-24 lg:pt-20">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-x-8">
-              <div className="lg:col-span-7">
-                <p className="editorial-kicker">
-                  Caixa de ferramentas
-                </p>
-                <h2 className="type-section-title mt-6 max-w-[55rem] text-balance">
-                  A tecnologia entra na medida da resposta.
-                </h2>
-              </div>
-              <p className="max-w-[31rem] self-end text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8 lg:col-span-4 lg:col-start-9">
-                Uma ferramenta pronta pode ser a escolha certa. Construir do
-                zero só faz sentido quando existe uma razão operacional clara.
-              </p>
-            </div>
-
-            <ul className="mt-12 border-t border-[var(--color-border-on-dark)] sm:mt-16">
-              {toolset.map((tool) => (
-                <li
-                  key={tool.title}
-                  className="grid gap-3 border-b border-[var(--color-border-on-dark)] py-6 sm:grid-cols-12 sm:gap-x-8 sm:py-7"
-                >
-                  <h3 className="type-item-title sm:col-span-4">
-                    {tool.title}
-                  </h3>
-                  <p className="max-w-[43rem] text-sm leading-6 text-azul-nevoa/80 sm:col-span-7 sm:col-start-6 sm:text-base sm:leading-7">
-                    {tool.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
         </Container>
       </section>
 
@@ -384,7 +302,7 @@ export default function SolucoesPage() {
                 className="grid gap-5 border-b border-[var(--color-border)] py-8 sm:py-9 lg:grid-cols-12 lg:gap-x-8 lg:py-10"
               >
                 <div className="lg:col-span-3">
-                  <span className="text-xs font-semibold text-cobre">
+                  <span className="text-xs font-semibold text-cobre-ink">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <dt className="type-item-title mt-4 text-grafite">
@@ -396,7 +314,7 @@ export default function SolucoesPage() {
                     {situation.context}
                   </p>
                   <div className="lg:col-span-3 lg:col-start-10">
-                    <p className="text-xs font-semibold uppercase text-azul-profundo/55">
+                    <p className="text-xs font-semibold uppercase text-azul-profundo/75">
                       Direção possível
                     </p>
                     <p className="mt-3 text-sm leading-6 text-azul-profundo sm:text-base sm:leading-7">

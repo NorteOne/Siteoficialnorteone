@@ -1119,3 +1119,43 @@ rolagem suave nao essenciais.
   `Tecnologia, quando necessaria`;
 - fornecer identidade, screenshots atuais e URL oficial da Norsey;
 - resolver os placeholders legais historicos fora desta fase visual.
+
+## 27. Consolidacao editorial e estado atual da Norsey
+
+Esta secao substitui qualquer decisao anterior que apresente a Norsey como
+produto pronto, caso concluido ou prova publica de execucao. A Norsey ainda nao
+esta pronta para ser apresentada no site. A secao `Trabalho selecionado` foi
+retirada da homepage e so deve voltar quando o produto, os claims e os ativos
+forem atuais, autorizados e aprovados para divulgacao. Nao substituir essa
+prova por mockups, imagens ou resultados hipoteticos.
+
+A homepage foi reduzida a seis secoes: promessa, posicionamento, reconhecimento
+do problema, caminhos de resposta, identidade da empresa e conversa. A lista de
+seis etapas saiu da homepage porque `/como-trabalhamos` ja explica o processo;
+o teaser de contextos saiu porque `/segmentos` aprofunda o tema; e os criterios
+repetidos sairam da homepage porque ja estao em Solucoes e Como trabalhamos.
+`/solucoes` agora apresenta quatro respostas e exemplos hipoteticos limitados,
+sem repetir uma lista separada de tecnologias.
+
+As paginas de aprofundamento preservam os criterios e riscos que ajudam uma
+empresa a decidir, mas condensam sinais ou listas que repetiam a mesma ideia.
+Cada rota de solucao oferece um acesso textual a Contato desde a abertura. As
+paginas Sobre e Contextos foram enxugadas para remover reiteracoes internas.
+Essas mudancas sao editoriais: nao criam novas capacidades, cases, metricas ou
+promessas.
+
+Para melhorar leitura e acessibilidade, o cobre permanece como assinatura
+visual, mas textos pequenos sobre fundos claros usam `--color-cobre-ink`
+(`#80502F`). O texto auxiliar `--color-cinza-pedra` passa a `#626971`.
+Etiquetas editoriais usam pelo menos 12 px; rotulos do rodape ganharam
+contraste. Em larguras abaixo de 375 px, o CTA principal da homepage usa uma
+frase mais curta para evitar quebra imprevista.
+
+As imagens do logotipo declaram sua largura renderizada para evitar downloads
+desproporcionais. O logotipo do cabecalho e carregado com prioridade normal;
+somente a imagem do Hero e pre-carregada. A fotografia do fundador usa o
+carregamento lazy por estar abaixo da primeira dobra.
+
+O material de trabalho, capturas do produto e qualquer prova publica da
+Norsey continuam pendentes. Esta consolidacao nao autoriza publicacao nem
+substitui a revisao visual e de conteudo em desktop, tablet e mobile.

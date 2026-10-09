@@ -8,6 +8,7 @@ export function AboutTeaser() {
       id="sobre"
       className="section-space-generous bg-[var(--color-paper-deep)]"
       aria-labelledby="sobre-heading"
+      data-whatsapp-hide
     >
       <Container>
         <header className="editorial-reveal grid grid-cols-1 gap-7 lg:grid-cols-12 lg:gap-x-8">
@@ -25,27 +26,14 @@ export function AboutTeaser() {
         </header>
 
         <div className="mt-14 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:mt-20 lg:grid-cols-12 lg:gap-x-8 lg:pt-12">
-          <p className="type-statement max-w-[31rem] text-azul-profundo lg:col-span-3">
-            A Norte One trabalha do diagnóstico à execução.
-          </p>
-
-          <div className="type-lead mt-8 max-w-[46rem] space-y-6 text-grafite/75 lg:col-span-7 lg:col-start-5 lg:mt-0">
+          <div className="type-lead mt-8 max-w-[46rem] text-grafite/75 lg:col-span-7 lg:col-start-5 lg:mt-0">
             <p>
-              Nosso trabalho começa na realidade do negócio: como as pessoas
-              trabalham, onde há perda de continuidade e o que precisa mudar.
-            </p>
-            <p>
-              A resposta pode simplificar um processo, conectar o que já existe
-              ou adotar uma solução pronta. Quando construir é necessário, o
-              mesmo critério acompanha o trabalho até a prática.
-            </p>
-            <p>
-              Esse critério mantém diagnóstico, decisão e execução conectados,
-              reduzindo a distância entre o problema apresentado e a resposta
-              colocada em prática.
+              A proximidade entre diagnóstico, decisão e execução começa por
+              entender como a empresa funciona, onde perde continuidade e o
+              que precisa mudar.
             </p>
 
-            <div className="mt-9 flex items-center gap-4 border-t border-[var(--color-border)] pt-6">
+            <div className="mt-8 flex items-center gap-4 border-t border-[var(--color-border)] pt-6">
               <Image
                 src="/images/founder/fabio-campos-magalhaes-desktop.webp"
                 alt=""
@@ -63,7 +51,7 @@ export function AboutTeaser() {
                 </p>
                 <Link
                   href="/sobre#fundador"
-                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-azul-profundo underline underline-offset-4 hover:text-cobre"
+                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-azul-profundo underline underline-offset-4 hover:text-cobre-ink"
                 >
                   Conheça quem conduz o trabalho
                 </Link>

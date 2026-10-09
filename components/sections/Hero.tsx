@@ -31,10 +31,10 @@ export function Hero() {
               href="/contato"
               size="lg"
               variant="accent"
-              className="w-full px-5 text-sm min-[375px]:px-7 min-[375px]:text-base sm:w-auto"
+              className="w-full px-4 text-sm min-[375px]:px-7 min-[375px]:text-base sm:w-auto"
               data-event="cta_hero_click"
             >
-              Falar sobre minha operação
+              Falar com a Norte One
             </Button>
           </div>
         </div>
@@ -57,7 +57,7 @@ function ArchitecturalMediaPlane() {
         src="/images/brand/architecture-hero.webp"
         alt=""
         fill
-        priority
+        preload
         quality={84}
         sizes="(min-width: 1024px) 54vw, 100vw"
         className="object-cover object-[center_58%] sm:object-[center_55%] lg:object-[56%_center]"

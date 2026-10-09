@@ -60,39 +60,27 @@ const alternatives = [
 ];
 
 const reasonsNotToBuild = [
-  "Uma solução de mercado já atende o essencial sem adaptações críticas.",
-  "O problema está no processo, na responsabilidade ou na adoção, e não na ferramenta.",
-  "A operação muda rápido demais para transformar regras atuais em produto.",
-  "A necessidade é temporária ou periférica para o negócio.",
-  "Não existe estrutura para decidir, manter, apoiar e evoluir o software.",
-  "A complexidade criada seria maior do que o ganho operacional esperado.",
+  "Uma ferramenta de mercado já atende ao essencial sem adaptações críticas.",
+  "A causa está no processo, na responsabilidade ou na adoção — não na ferramenta.",
+  "A necessidade é instável, temporária ou não tem responsável por sua manutenção.",
+  "A complexidade e o custo contínuo superam o ganho operacional esperado.",
 ];
 
 const reasonsToConsider = [
   {
     title: "A lacuna está em um processo central.",
     description:
-      "O problema afeta uma parte importante e recorrente da operação, não uma preferência isolada.",
+      "O problema é recorrente, afeta uma parte importante da operação e não é apenas uma preferência.",
   },
   {
-    title: "O modo de operar cria diferenciação real.",
+    title: "As alternativas não resolvem a necessidade.",
     description:
-      "A ferramenta precisa sustentar uma lógica que faz parte da proposta ou da vantagem da empresa.",
+      "Configurar ou conectar ferramentas existentes ainda deixa sem resposta o fluxo que importa.",
   },
   {
-    title: "As adaptações viraram um sistema paralelo.",
+    title: "A empresa pode sustentar o produto.",
     description:
-      "Planilhas, controles e contornos já carregam custo e risco próximos aos de uma solução própria.",
-  },
-  {
-    title: "Integrações não resolvem a necessidade.",
-    description:
-      "Conectar produtos existentes ainda deixa sem resposta o fluxo estratégico que importa.",
-  },
-  {
-    title: "A operação tem maturidade para assumir o produto.",
-    description:
-      "Há responsáveis, regras compreendidas e capacidade de priorizar evolução ao longo do tempo.",
+      "Existem responsáveis, regras compreendidas e capacidade para manter e evoluir a solução.",
   },
 ];
 
@@ -103,15 +91,11 @@ const ownershipCosts = [
   },
   {
     title: "Operação",
-    description: "Apoiar usuários, tratar dados, permissões, exceções e mudanças de rotina.",
+    description: "Apoiar pessoas, dados, permissões, exceções e mudanças de rotina.",
   },
   {
-    title: "Manutenção",
-    description: "Corrigir falhas, atualizar dependências e acompanhar integrações externas.",
-  },
-  {
-    title: "Evolução",
-    description: "Aprender com o uso e investir continuamente no que passou a ser infraestrutura da empresa.",
+    title: "Manutenção e evolução",
+    description: "Corrigir falhas, atualizar dependências e priorizar melhorias contínuas.",
   },
 ];
 
@@ -152,6 +136,12 @@ export default function SolucoesSobMedidaPage() {
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
                 Software próprio transfere para a empresa uma responsabilidade contínua. O benefício precisa justificar essa escolha inteira.
               </p>
+              <Link
+                href="/contato"
+                className="mt-5 inline-flex min-h-11 items-center font-semibold text-off-white underline decoration-cobre underline-offset-4 hover:decoration-off-white"
+              >
+                Conversar sobre a operação
+              </Link>
             </div>
           </div>
         </Container>
@@ -161,7 +151,7 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Primeira responsabilidade</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Primeira responsabilidade</p>
               <h2 id="nao-construir-heading" className="type-section-title mt-5 max-w-[43rem] text-balance text-grafite">
                 Tentar não construir.
               </h2>
@@ -173,7 +163,7 @@ export default function SolucoesSobMedidaPage() {
             <ol className="border-t border-[var(--color-border)] lg:col-span-6 lg:col-start-7">
               {alternatives.map((alternative, index) => (
                 <li key={alternative.title} className="grid gap-3 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3rem_1fr] sm:gap-x-5">
-                  <span className="text-xs font-semibold text-cobre">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-xs font-semibold text-cobre-ink">{String(index + 1).padStart(2, "0")}</span>
                   <div>
                     <h3 className="type-item-title text-grafite">{alternative.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">{alternative.description}</p>
@@ -213,7 +203,7 @@ export default function SolucoesSobMedidaPage() {
       <section className="section-space bg-[var(--color-paper)]" aria-labelledby="quando-sim-heading">
         <Container>
           <div className="max-w-[57rem]">
-            <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Quando considerar</p>
+            <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Quando considerar</p>
             <h2 id="quando-sim-heading" className="type-section-title mt-5 text-balance text-grafite">
               Uma necessidade específica pode justificar uma resposta própria.
             </h2>
@@ -222,7 +212,7 @@ export default function SolucoesSobMedidaPage() {
           <dl className="mt-14 border-t border-[var(--color-border)] sm:mt-16 lg:mt-20">
             {reasonsToConsider.map((reason, index) => (
               <div key={reason.title} className="grid gap-4 border-b border-[var(--color-border)] py-8 sm:grid-cols-12 sm:gap-x-8 sm:py-9">
-                <span className="text-xs font-semibold text-cobre sm:col-span-1">{String(index + 1).padStart(2, "0")}</span>
+                <span className="text-xs font-semibold text-cobre-ink sm:col-span-1">{String(index + 1).padStart(2, "0")}</span>
                 <dt className="type-item-title text-grafite sm:col-span-5">{reason.title}</dt>
                 <dd className="max-w-[36rem] text-sm leading-6 text-grafite/70 sm:col-span-5 sm:col-start-8 sm:text-base sm:leading-7">{reason.description}</dd>
               </div>
@@ -235,7 +225,7 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="min-w-0 lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Custo total</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Custo total</p>
               <h2 id="custo-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
                 O desenvolvimento é só o começo da conta.
               </h2>
@@ -260,7 +250,7 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Situação hipotética</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Situação hipotética</p>
               <h2 id="perguntas-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
                 Um fluxo central vive em cinco controles paralelos.
               </h2>
@@ -271,20 +261,12 @@ export default function SolucoesSobMedidaPage() {
             </div>
           </div>
 
-          <div className="mt-16 border-t border-[var(--color-border)] pt-10">
-            <p className="text-xs font-semibold uppercase text-azul-profundo/55">Perguntas antes da decisão</p>
-            <ul className="type-item-title mt-7 grid gap-6 text-grafite sm:grid-cols-2 lg:grid-cols-3">
-              <li>O problema continuará importante daqui a alguns anos?</li>
-              <li>Quem será responsável pelo produto depois do lançamento?</li>
-              <li>Qual alternativa menor foi descartada, e por quê?</li>
-            </ul>
-          </div>
         </Container>
       </section>
 
       <section className="section-space border-t border-[var(--color-border)] bg-[var(--color-paper-deep)]" aria-labelledby="software-cta-heading">
         <Container>
-          <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Conversa</p>
+          <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="software-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
             Antes de pensar no software, vale explicar o que nenhuma alternativa resolveu.
           </h2>

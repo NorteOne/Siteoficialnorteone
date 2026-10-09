@@ -112,6 +112,7 @@ export function Header() {
           alt="Norte One"
           width={691}
           height={213}
+          sizes="104px"
           className="h-8 w-auto"
         />
         <button
@@ -181,7 +182,7 @@ export function Header() {
             alt="Norte One"
             width={691}
             height={213}
-            priority
+            sizes="(min-width: 1024px) 130px, (min-width: 640px) 117px, 104px"
             className="h-8 w-auto sm:h-9 lg:h-10"
           />
         </Link>

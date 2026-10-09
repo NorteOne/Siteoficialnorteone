@@ -37,7 +37,7 @@ export function FormField({
 }
 
 const controlBase =
-  "min-h-12 w-full rounded-none border-0 border-b border-[var(--color-border)] bg-transparent px-0 py-3 text-base text-grafite outline-none placeholder:text-cinza-pedra/65 transition-[border-color,background-color] duration-300 focus:border-cobre focus:bg-white/35";
+  "min-h-12 w-full rounded-none border-0 border-b border-[var(--color-border)] bg-transparent px-0 py-3 text-base text-grafite outline-none placeholder:text-cinza-pedra transition-[border-color,background-color] duration-300 focus:border-cobre focus:bg-white/35";
 
 export function inputClasses(hasError?: boolean) {
   return cn(controlBase, hasError ? "border-red-600" : "focus:border-cobre");
