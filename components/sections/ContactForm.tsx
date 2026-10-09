@@ -197,6 +197,7 @@ export function ContactForm() {
             id={ids.name}
             name="name"
             autoComplete="name"
+            required
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? `${ids.name}-error` : undefined}
             className={inputClasses(!!errors.name)}
@@ -215,6 +216,7 @@ export function ContactForm() {
             id={ids.company}
             name="company"
             autoComplete="organization"
+            required
             aria-invalid={!!errors.company}
             aria-describedby={errors.company ? `${ids.company}-error` : undefined}
             className={inputClasses(!!errors.company)}
@@ -234,6 +236,7 @@ export function ContactForm() {
             name="email"
             type="email"
             autoComplete="email"
+            required
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? `${ids.email}-error` : undefined}
             className={inputClasses(!!errors.email)}
@@ -277,6 +280,7 @@ export function ContactForm() {
           id={ids.challenge}
           name="challenge"
           rows={5}
+          required
           placeholder="Conte o que está dificultando o trabalho hoje. Não precisa indicar uma solução."
           aria-invalid={!!errors.challenge}
           aria-describedby={errors.challenge ? `${ids.challenge}-error` : undefined}
@@ -292,6 +296,7 @@ export function ContactForm() {
             id={ids.consent}
             name="consent"
             type="checkbox"
+            required
             aria-invalid={!!errors.consent}
             aria-describedby={errors.consent ? `${ids.consent}-error` : undefined}
             className="mt-1 h-5 w-5 shrink-0 rounded border-[var(--color-border)] text-azul-profundo focus:ring-cobre"

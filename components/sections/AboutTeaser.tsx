@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
 export function AboutTeaser() {
@@ -42,6 +44,31 @@ export function AboutTeaser() {
               reduzindo a distância entre o problema apresentado e a resposta
               colocada em prática.
             </p>
+
+            <div className="mt-9 flex items-center gap-4 border-t border-[var(--color-border)] pt-6">
+              <Image
+                src="/images/founder/fabio-campos-magalhaes-desktop.webp"
+                alt=""
+                width={96}
+                height={96}
+                sizes="64px"
+                className="size-16 shrink-0 object-cover"
+              />
+              <div>
+                <p className="text-sm font-semibold text-azul-profundo">
+                  Fábio Campos Magalhães
+                </p>
+                <p className="mt-1 text-sm text-grafite/65">
+                  Fundador da Norte One
+                </p>
+                <Link
+                  href="/sobre#fundador"
+                  className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-azul-profundo underline underline-offset-4 hover:text-cobre"
+                >
+                  Conheça quem conduz o trabalho
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

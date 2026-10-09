@@ -104,7 +104,7 @@ Azul profundo e off white devem dominar. Cobre nao deve ser usado em grandes sup
 
 ## 4. Navegacao, hero e como pensamos
 
-- Navegacao simplificada para cinco destinos; contato passa a ser uma acao separada.
+- Navegacao com quatro destinos claros; contato permanece como acao separada. "Insights" so volta ao menu quando houver conteudo editorial real, aprovado e publicado.
 - Cabecalho sem vidro, gradiente ou sombra decorativa.
 - Hero tipografico e assimetrico, com slot final para fotografia arquitetonica aprovada. Enquanto o ativo nao existe, o slot usa apenas planos estruturais, sem fotografia simulada.
 - Hero estatico, sem animacao de entrada; a composicao e a tipografia carregam a hierarquia.
@@ -480,7 +480,7 @@ O Footer deixa de apresentar a Norte One como fornecedora de tecnologia e passa 
 Sua navegacao foi reduzida a rotas existentes:
 
 - Norte One: Sobre, Como trabalhamos e Contato;
-- Atuacao: Solucoes e Segmentos;
+- Atuacao: Solucoes e Contextos;
 - Legal: Politica de Privacidade, Termos e Cookies.
 
 Nao existe link para Norsey porque nenhuma URL oficial esta disponivel. Redes sociais placeholder nao sao renderizadas. O contato usa links reais para e-mail e WhatsApp, alem de localizacao e CNPJ ja configurados no projeto.

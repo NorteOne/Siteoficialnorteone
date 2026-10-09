@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
-import { siteConfig, PLACEHOLDER } from "@/lib/site-config";
+import { siteConfig } from "@/lib/site-config";
 
 const pageTitle = "Política de Privacidade";
 const pageDescription =
@@ -48,7 +48,7 @@ export default function PoliticaDePrivacidadePage() {
             level="h1"
             eyebrow="Legal"
             title="Política de Privacidade"
-            description="Última atualização: a definir na publicação oficial. Este documento explica como tratamos dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)."
+            description="Este documento explica como tratamos dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)."
           />
         </Container>
       </section>
@@ -144,9 +144,6 @@ export default function PoliticaDePrivacidadePage() {
             </p>
           </Block>
 
-          <Block title="10. Encarregado de dados (DPO)">
-            <p>{PLACEHOLDER}</p>
-          </Block>
         </Container>
       </section>
     </>
