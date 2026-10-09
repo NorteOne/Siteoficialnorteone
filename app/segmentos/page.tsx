@@ -90,20 +90,6 @@ const contextVariations = [
     description:
       "Uma empresa pequena pode concentrar decisões em uma pessoa. Uma operação maior pode repetir a mesma dependência entre equipes inteiras. Nos dois casos, o trabalho fica vulnerável.",
   },
-  {
-    title: "A consequência atravessa áreas.",
-    description:
-      "Uma passagem manual de informação pode parecer um detalhe local e, ainda assim, provocar espera, retrabalho e perda de contexto em vários momentos da operação.",
-  },
-];
-
-const conversationSignals = [
-  "A equipe compensa falhas do processo com trabalho manual todos os dias.",
-  "O crescimento aumentou o retrabalho mais rápido do que a capacidade.",
-  "Existem ferramentas demais e continuidade de menos entre elas.",
-  "Tarefas importantes esperam pela memória ou disponibilidade de alguém.",
-  "O atendimento perde contexto entre uma conversa e o próximo passo.",
-  "Os dados existem, mas decidir ainda exige juntar informação manualmente.",
 ];
 
 export default function SegmentosPage() {
@@ -180,7 +166,7 @@ export default function SegmentosPage() {
                 className="grid grid-cols-1 gap-7 border-b border-[var(--color-border)] pb-14 pt-8 sm:pb-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:pb-20 lg:pt-12"
               >
                 <div className="lg:col-span-6">
-                  <p className="text-xs font-semibold text-cobre">
+                  <p className="text-xs font-semibold text-cobre-ink">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="type-item-title mt-5 max-w-[42rem] text-balance text-grafite">
@@ -192,7 +178,7 @@ export default function SegmentosPage() {
                 </div>
 
                 <div className="border-l border-cobre pl-5 lg:col-span-4 lg:col-start-9 lg:self-end lg:pl-6">
-                  <p className="text-xs font-semibold uppercase text-azul-profundo/55">
+                  <p className="text-xs font-semibold uppercase text-azul-profundo/75">
                     Consequência na operação
                   </p>
                   <p className="mt-3 text-sm leading-6 text-azul-profundo sm:text-base sm:leading-7">
@@ -253,7 +239,7 @@ export default function SegmentosPage() {
       >
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-x-8">
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-7">
               <p className="editorial-kicker">
                 Quando procurar ajuda
               </p>
@@ -264,27 +250,16 @@ export default function SegmentosPage() {
                 Talvez valha conversar quando a equipe começou a compensar o
                 processo.
               </h2>
-              <p className="type-lead mt-7 max-w-[31rem] text-grafite/70">
-                Não é preciso esperar uma ruptura grande. Esforço recorrente,
-                demora e dependência já são sinais suficientes para investigar.
-              </p>
             </div>
-
-            <ul className="border-t border-[var(--color-border)] lg:col-span-6 lg:col-start-7">
-              {conversationSignals.map((signal) => (
-                <li
-                  key={signal}
-                  className="border-b border-[var(--color-border)] py-6 font-display text-lg font-medium leading-8 text-azul-profundo sm:py-7 sm:text-xl sm:leading-8"
-                >
-                  {signal}
-                </li>
-              ))}
-            </ul>
+            <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4 lg:col-start-9">
+              Esforço, demora e dependência recorrentes já justificam
+              investigar — sem esperar uma ruptura.
+            </p>
           </div>
 
           <aside className="mt-16 grid border-t border-[var(--color-border)] pt-10 sm:mt-20 sm:pt-12 lg:mt-24 lg:grid-cols-12 lg:gap-x-8 lg:pt-16">
             <div className="lg:col-span-4">
-              <p className="text-xs font-semibold uppercase text-cobre">
+              <p className="text-xs font-semibold uppercase text-cobre-ink">
                 Um contexto em foco hoje
               </p>
               <h3 className="type-item-title mt-5 text-grafite">

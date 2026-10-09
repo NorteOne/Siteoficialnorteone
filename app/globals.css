@@ -9,9 +9,10 @@
   --color-paper-deep: #e9e4db;
   --color-grafite: #25282c;
   --color-cobre: #b87945;
+  --color-cobre-ink: #80502f;
   --color-cobre-claro: #c68a58;
   --color-azul-nevoa: #d8e1e8;
-  --color-cinza-pedra: #8a8f98;
+  --color-cinza-pedra: #626971;
   --color-white: #ffffff;
 
   --color-bg: var(--color-paper);
@@ -61,6 +62,7 @@
   --color-paper-deep: var(--color-paper-deep);
   --color-grafite: var(--color-grafite);
   --color-cobre: var(--color-cobre);
+  --color-cobre-ink: var(--color-cobre-ink);
   --color-cobre-claro: var(--color-cobre-claro);
   --color-azul-nevoa: var(--color-azul-nevoa);
   --color-cinza-pedra: var(--color-cinza-pedra);
@@ -151,11 +153,15 @@
   }
 
   .editorial-kicker {
-    color: var(--color-cobre);
-    font-size: 0.6875rem;
+    color: var(--color-cobre-ink);
+    font-size: 0.75rem;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     text-transform: uppercase;
+  }
+
+  .text-off-white .editorial-kicker {
+    color: var(--color-cobre);
   }
 
   .editorial-kicker::before {

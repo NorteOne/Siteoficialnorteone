@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 const fractures = [
   {
     number: "01",
-    title: "A informação nasce em um lugar.",
-    description: "Um pedido, conversa ou registro entra por uma ferramenta específica.",
+    title: "A informação começa em um lugar.",
+    description: "Pedidos, conversas e registros entram por ferramentas diferentes.",
   },
   {
     number: "02",
@@ -50,30 +50,20 @@ const fractures = [
   {
     number: "03",
     title: "Cada sistema guarda uma versão.",
-    description: "Duplicidades e atualizações parciais tornam difícil saber qual informação vale.",
-  },
-  {
-    number: "04",
-    title: "A decisão chega tarde.",
-    description: "A gestão recompõe o histórico depois que o atraso ou a inconsistência já aconteceu.",
+    description: "Duplicidades atrasam a decisão e dificultam saber qual informação vale.",
   },
 ];
 
 const beforeIntegrating = [
   {
-    verb: "Eliminar",
-    question: "Esta ferramenta ainda precisa existir?",
-    explanation: "Uma etapa sem utilidade não merece uma conexão nova.",
+    verb: "Simplificar",
+    question: "A informação pode deixar de circular?",
+    explanation: "Remover uma etapa ou ferramenta sem função evita criar outra conexão.",
   },
   {
     verb: "Substituir",
     question: "Uma ferramenta já cobre as duas necessidades?",
-    explanation: "Trocar pode ser mais simples quando a transição é viável e o processo é comum.",
-  },
-  {
-    verb: "Simplificar",
-    question: "A informação pode deixar de circular?",
-    explanation: "Reduzir campos, aprovações ou cópias pode retirar o problema pela raiz.",
+    explanation: "Trocar pode ser mais simples quando o processo é comum e a transição viável.",
   },
   {
     verb: "Conectar",
@@ -126,6 +116,12 @@ export default function IntegracoesPage() {
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
                 Antes de falar em API, é preciso entender qual informação deve atravessar a operação e por quê.
               </p>
+              <Link
+                href="/contato"
+                className="mt-5 inline-flex min-h-11 items-center font-semibold text-off-white underline decoration-cobre underline-offset-4 hover:decoration-off-white"
+              >
+                Conversar sobre a operação
+              </Link>
             </div>
           </div>
         </Container>
@@ -135,7 +131,7 @@ export default function IntegracoesPage() {
         <Container>
           <div className="grid gap-8 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-7">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">O problema</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">O problema</p>
               <h2 id="fratura-heading" className="type-section-title mt-5 max-w-[51rem] text-balance text-grafite">
                 Ferramentas desconectadas transformam pessoas em pontes.
               </h2>
@@ -148,7 +144,7 @@ export default function IntegracoesPage() {
           <ol className="mt-14 grid border-t border-[var(--color-border)] sm:mt-16 lg:mt-20 lg:grid-cols-4">
             {fractures.map((fracture) => (
               <li key={fracture.number} className="border-b border-[var(--color-border)] py-8 lg:min-h-[22rem] lg:border-r lg:px-7 lg:last:border-r-0">
-                <span className="text-xs font-semibold text-cobre">{fracture.number}</span>
+                <span className="text-xs font-semibold text-cobre-ink">{fracture.number}</span>
                 <h3 className="type-item-title mt-8 max-w-[18rem] text-grafite">{fracture.title}</h3>
                 <p className="mt-5 max-w-[20rem] text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">{fracture.description}</p>
               </li>
@@ -161,7 +157,7 @@ export default function IntegracoesPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Antes da integração</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Antes da integração</p>
               <h2 id="alternativas-heading" className="type-section-title mt-5 max-w-[39rem] text-balance text-grafite">
                 Conectar é apenas uma das respostas possíveis.
               </h2>
@@ -174,7 +170,7 @@ export default function IntegracoesPage() {
               {beforeIntegrating.map((item) => (
                 <div key={item.verb} className="border-b border-[var(--color-border)] py-7">
                   <dt className="grid gap-2 sm:grid-cols-[7rem_1fr] sm:gap-x-6">
-                    <span className="text-xs font-semibold uppercase text-cobre">{item.verb}</span>
+                    <span className="text-xs font-semibold uppercase text-cobre-ink">{item.verb}</span>
                     <span className="type-item-title text-grafite">{item.question}</span>
                   </dt>
                   <dd className="mt-3 text-sm leading-6 text-grafite/70 sm:ml-[8.5rem] sm:text-base sm:leading-7">{item.explanation}</dd>
@@ -198,17 +194,15 @@ export default function IntegracoesPage() {
               <ul className="mt-7 space-y-5 text-base leading-7 text-azul-nevoa/85">
                 <li>as ferramentas atendem bem às suas funções principais;</li>
                 <li>a quebra acontece na passagem de dados ou ações entre elas;</li>
-                <li>existe uma fonte oficial para cada informação importante;</li>
-                <li>o ganho de continuidade justifica manutenção e monitoramento.</li>
+                <li>há uma fonte oficial e alguém responsável por acompanhar a conexão.</li>
               </ul>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] py-9 lg:border-t-0 lg:pl-12 lg:py-12">
               <p className="text-xs font-semibold uppercase text-cobre">Não faz sentido quando</p>
               <ul className="mt-7 space-y-5 text-base leading-7 text-azul-nevoa/85">
                 <li>uma das ferramentas já não atende ao processo;</li>
-                <li>ninguém concorda sobre os dados, regras ou responsabilidades;</li>
-                <li>a conexão serve apenas para sustentar etapas desnecessárias;</li>
-                <li>a dependência criada custa mais do que uma substituição planejada.</li>
+                <li>dados, regras ou responsabilidades ainda não estão definidos;</li>
+                <li>a conexão mantém etapas desnecessárias ou custa mais que a substituição.</li>
               </ul>
             </div>
           </div>
@@ -226,7 +220,7 @@ export default function IntegracoesPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Riscos</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Riscos</p>
               <h2 id="integracao-riscos-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
                 Uma conexão sem controle multiplica inconsistências.
               </h2>
@@ -234,7 +228,7 @@ export default function IntegracoesPage() {
             <ol className="border-t border-[var(--color-border)] lg:col-span-6 lg:col-start-7">
               {risks.map((risk, index) => (
                 <li key={risk} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-[var(--color-border)] py-7">
-                  <span className="text-xs font-semibold text-cobre">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="text-xs font-semibold text-cobre-ink">{String(index + 1).padStart(2, "0")}</span>
                   <p className="type-item-title text-grafite">{risk}</p>
                 </li>
               ))}
@@ -243,7 +237,7 @@ export default function IntegracoesPage() {
 
           <div className="mt-16 grid border-t border-[var(--color-border)] pt-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-4">
-              <p className="text-xs font-semibold uppercase text-cobre">Situação hipotética</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink">Situação hipotética</p>
               <h2 className="type-item-title mt-5 text-grafite">O atendimento conhece o cliente, mas a agenda não.</h2>
             </div>
             <div className="mt-6 max-w-[46rem] text-base leading-7 text-grafite/70 lg:col-span-7 lg:col-start-6 lg:mt-0">
@@ -256,7 +250,7 @@ export default function IntegracoesPage() {
 
       <section className="section-space border-t border-[var(--color-border)] bg-[var(--color-paper-deep)]" aria-labelledby="integracoes-cta-heading">
         <Container>
-          <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Conversa</p>
+          <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="integracoes-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
             Antes de conectar sistemas, vale entender onde o contexto se perde.
           </h2>

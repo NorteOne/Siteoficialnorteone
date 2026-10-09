@@ -44,7 +44,7 @@ export function Differentiators() {
               key={criterion.title}
               className="grid gap-5 border-b border-[var(--color-border)] py-8 sm:grid-cols-12 sm:gap-x-8 sm:py-10 lg:py-12"
             >
-              <span className="text-xs font-semibold text-cobre sm:col-span-1">
+              <span className="text-xs font-semibold text-cobre-ink sm:col-span-1">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="type-item-title max-w-[34rem] text-grafite sm:col-span-5 lg:col-start-3">
@@ -58,7 +58,7 @@ export function Differentiators() {
         </div>
 
         <div className="mt-12 grid border-t border-[var(--color-border)] pt-7 sm:mt-16 sm:pt-8 lg:grid-cols-12 lg:gap-x-8">
-          <p className="text-xs font-semibold uppercase text-cobre lg:col-span-3">
+          <p className="text-xs font-semibold uppercase text-cobre-ink lg:col-span-3">
             Da decisão para a prática
           </p>
           <p className="type-statement mt-4 max-w-[52rem] text-azul-profundo lg:col-span-7 lg:col-start-5 lg:mt-0">

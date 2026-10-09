@@ -1,43 +1,6 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-
-const thinkingSteps = [
-  {
-    number: "01",
-    title: "Entender",
-    description:
-      "Observar como a empresa funciona, o que mudou e onde a operação perde ritmo.",
-  },
-  {
-    number: "02",
-    title: "Diagnosticar",
-    description:
-      "Separar sintomas de causas e definir o que realmente precisa melhorar.",
-  },
-  {
-    number: "03",
-    title: "Desenhar",
-    description:
-      "Organizar uma resposta adequada ao processo, às pessoas e ao momento da empresa.",
-  },
-  {
-    number: "04",
-    title: "Construir",
-    description:
-      "Transformar a direção escolhida em uma solução aplicável ao trabalho real.",
-  },
-  {
-    number: "05",
-    title: "Integrar",
-    description:
-      "Conectar a solução à rotina, às ferramentas e às equipes que já existem.",
-  },
-  {
-    number: "06",
-    title: "Medir",
-    description:
-      "Acompanhar o efeito na operação e ajustar o que ainda limita o resultado.",
-  },
-];
 
 export function Positioning() {
   return (
@@ -64,10 +27,17 @@ export function Positioning() {
               acontece, onde a operação perde eficiência e o que precisa mudar
               para a empresa avançar com mais clareza.
             </p>
+            <Link
+              href="/como-trabalhamos"
+              className="mt-5 inline-flex min-h-11 items-center gap-2 font-semibold text-azul-profundo underline decoration-cobre/60 underline-offset-4 transition-colors hover:decoration-cobre focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobre"
+            >
+              Veja como trabalhamos
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
 
           <aside className="border-t border-[var(--color-border)] pt-6 lg:col-span-4 lg:col-start-9">
-            <p className="text-xs font-semibold uppercase text-cobre">
+            <p className="text-xs font-semibold uppercase text-cobre-ink">
               Independência tecnológica
             </p>
             <p className="type-statement mt-4 text-azul-profundo">
@@ -75,23 +45,6 @@ export function Positioning() {
             </p>
           </aside>
         </div>
-
-        <ol className="mt-14 grid border-t border-[var(--color-border)] sm:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24">
-          {thinkingSteps.map((step) => (
-            <li
-              key={step.number}
-              className="grid grid-cols-[2.5rem_1fr] gap-x-4 border-b border-[var(--color-border)] py-7 sm:grid-cols-[3.5rem_1fr] sm:py-9"
-            >
-              <span className="text-xs font-semibold text-cobre">{step.number}</span>
-              <h3 className="type-item-title text-grafite">
-                {step.title}
-              </h3>
-              <p className="col-start-2 mt-4 max-w-[29rem] text-sm leading-6 text-grafite/70 sm:text-base sm:leading-7">
-                {step.description}
-              </p>
-            </li>
-          ))}
-        </ol>
       </Container>
     </section>
   );

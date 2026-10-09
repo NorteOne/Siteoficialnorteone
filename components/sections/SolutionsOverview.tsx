@@ -1,35 +1,31 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
-const capabilities = [
+const responsePaths = [
   {
-    title: "Operação",
+    title: "Simplificar",
     description:
-      "Organizar processos, informações e responsabilidades para reduzir atrito no trabalho diário.",
+      "Retirar etapas sem valor antes de automatizar ou trocar ferramentas.",
+    href: "/solucoes",
   },
   {
-    title: "Eficiência",
+    title: "Conectar",
     description:
-      "Eliminar tarefas repetitivas, retrabalho e etapas que não precisam depender de pessoas.",
+      "Preservar o que funciona e dar continuidade às informações entre ferramentas.",
+    href: "/solucoes/integracoes",
   },
   {
-    title: "Conexão",
+    title: "Automatizar",
     description:
-      "Fazer ferramentas, dados e equipes que hoje trabalham separadas funcionarem melhor juntas.",
+      "Executar etapas previsíveis, mantendo exceções sob responsabilidade da equipe.",
+    href: "/solucoes/automacao-de-processos",
   },
   {
-    title: "Decisão",
+    title: "Construir",
     description:
-      "Transformar informação disponível em clareza para acompanhar a operação e decidir.",
-  },
-  {
-    title: "Relacionamento",
-    description:
-      "Dar continuidade ao atendimento e ao acompanhamento de clientes sem perder contexto pelo caminho.",
-  },
-  {
-    title: "Ferramentas adequadas",
-    description:
-      "Quando nenhuma solução existente atende bem ao processo, desenhar e construir a ferramenta necessária.",
+      "Criar uma ferramenta própria somente quando as alternativas não resolvem uma necessidade real.",
+    href: "/solucoes/solucoes-sob-medida",
   },
 ];
 
@@ -45,63 +41,51 @@ export function SolutionsOverview() {
         <div className="editorial-reveal grid grid-cols-1 gap-y-10 lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-8">
             <p className="editorial-kicker">
-              Áreas de atuação
+              Respostas possíveis
             </p>
 
             <h2
               id="solucoes-heading"
               className="type-section-title mt-6 max-w-[59rem] text-balance text-grafite"
             >
-              Melhoramos a operação onde ela mais precisa avançar.
+              A resposta precisa caber na operação.
             </h2>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-10 lg:flex lg:items-end">
             <p className="type-lead max-w-[30rem] text-grafite/65">
-              A necessidade vem primeiro. A resposta pode reorganizar um
-              processo, conectar informações ou exigir uma ferramenta própria.
+              Primeiro entendemos o problema. Depois avaliamos o caminho de
+              menor complexidade que pode resolvê-lo.
             </p>
           </div>
         </div>
 
-        {/* Lista aberta — sem cards */}
         <div className="mt-14 sm:mt-16 lg:mt-20">
           <ul className="editorial-rule border-t border-grafite/15">
-            {capabilities.map((capability) => (
+            {responsePaths.map((path) => (
               <li
-                key={capability.title}
-                className="grid grid-cols-1 gap-y-4 border-b border-grafite/15 py-8 sm:py-10 lg:grid-cols-12 lg:gap-x-8 lg:py-12"
+                key={path.title}
+                className="border-b border-grafite/15"
               >
-                <div className="lg:col-span-4">
-                  <h3 className="type-item-title text-grafite">
-                    {capability.title}
+                <Link
+                  href={path.href}
+                  className="group grid gap-3 py-7 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-cobre sm:grid-cols-12 sm:items-center sm:gap-x-8 sm:py-8 lg:py-9"
+                >
+                  <h3 className="type-item-title text-grafite sm:col-span-4">
+                    {path.title}
                   </h3>
-                </div>
-
-                <div className="lg:col-span-6 lg:col-start-7">
-                  <p className="max-w-[38rem] text-base leading-7 text-grafite/68 sm:text-lg sm:leading-8">
-                    {capability.description}
+                  <p className="max-w-[38rem] text-base leading-7 text-grafite/75 sm:col-span-6 sm:col-start-6">
+                    {path.description}
                   </p>
-                </div>
+                  <ArrowRight
+                    size={18}
+                    aria-hidden="true"
+                    className="hidden text-azul-profundo transition-transform group-hover:translate-x-1 sm:col-span-1 sm:col-start-12 sm:block"
+                  />
+                </Link>
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Fechamento conceitual */}
-        <div className="mt-16 border-t border-grafite/15 pt-8 sm:mt-20 sm:pt-10 lg:mt-28 lg:grid lg:grid-cols-12 lg:gap-x-8">
-          <div className="lg:col-span-3">
-            <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">
-              Tecnologia, quando necessária
-            </p>
-          </div>
-
-          <div className="mt-5 lg:col-span-7 lg:col-start-5 lg:mt-0">
-            <p className="type-statement max-w-[55rem] text-azul-profundo">
-              Software, automação, integrações, dados e IA entram apenas quando
-              ajudam a resolver uma necessidade já compreendida.
-            </p>
-          </div>
         </div>
       </Container>
     </section>

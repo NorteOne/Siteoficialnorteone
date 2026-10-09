@@ -13,7 +13,7 @@ const variants: Record<Variant, string> = {
   primary:
     "border-cobre bg-cobre text-azul-noturno hover:border-cobre-claro hover:bg-cobre-claro",
   secondary:
-    "border-transparent border-b-azul-profundo bg-transparent px-0 text-azul-profundo hover:border-b-cobre hover:text-cobre",
+    "border-transparent border-b-azul-profundo bg-transparent px-0 text-azul-profundo hover:border-b-cobre-ink hover:text-cobre-ink",
   ghost:
     "border-[var(--color-border-on-dark)] bg-transparent text-off-white hover:border-off-white",
   accent:

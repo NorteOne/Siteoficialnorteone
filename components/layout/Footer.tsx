@@ -14,6 +14,7 @@ export function Footer() {
               alt="Norte One"
               width={691}
               height={213}
+              sizes="(min-width: 640px) 117px, 104px"
               className="h-8 w-auto sm:h-9"
             />
             <p className="mt-7 max-w-[43rem] font-display text-[1.5rem] font-semibold leading-[1.3] text-off-white sm:text-[1.85rem] lg:text-[2rem]">
@@ -45,7 +46,7 @@ export function Footer() {
           <FooterInfo label="CNPJ" value={siteConfig.contact.cnpj} />
         </address>
 
-        <div className="mt-8 flex flex-col gap-3 text-xs text-azul-nevoa/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 text-xs text-azul-nevoa/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Norte One. Todos os direitos reservados.</p>
           <p>Sinop, Mato Grosso</p>
         </div>
@@ -87,7 +88,7 @@ function FooterColumn({
 function FooterInfo({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-[11px] uppercase text-azul-nevoa/50">{label}</p>
+      <p className="text-xs uppercase text-azul-nevoa/60">{label}</p>
       <p className="mt-1">{value}</p>
     </div>
   );
@@ -106,7 +107,7 @@ function FooterLink({
 }) {
   return (
     <div>
-      <p className="text-[11px] uppercase text-azul-nevoa/50">{label}</p>
+      <p className="text-xs uppercase text-azul-nevoa/60">{label}</p>
       <a
         href={href}
         className="mt-1 inline-block text-off-white/85 underline-offset-4 transition-colors hover:text-off-white hover:underline"
