@@ -44,10 +44,9 @@ export function getWhatsAppLink(message?: string) {
 
 export const primaryNav = [
   { label: "Soluções", href: "/solucoes" },
-  { label: "Segmentos", href: "/segmentos" },
+  { label: "Contextos", href: "/segmentos" },
   { label: "Como trabalhamos", href: "/como-trabalhamos" },
   { label: "Sobre", href: "/sobre" },
-  { label: "Insights", href: "/insights" },
   { label: "Contato", href: "/contato" },
 ] as const;
 
@@ -59,7 +58,7 @@ export const footerNav = {
   ],
   atuacao: [
     { label: "Soluções", href: "/solucoes" },
-    { label: "Segmentos", href: "/segmentos" },
+    { label: "Contextos", href: "/segmentos" },
   ],
   legal: [
     { label: "Política de Privacidade", href: "/politica-de-privacidade" },

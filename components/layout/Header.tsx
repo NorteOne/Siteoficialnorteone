@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { primaryNav } from "@/lib/site-config";
@@ -76,95 +76,90 @@ export function Header() {
   // cria um novo containing block para elementos "fixed", o que quebrava o
   // posicionamento em tela cheia deste painel quando o header tinha o efeito
   // de vidro ativo (rolagem). Um portal para o <body> evita esse problema.
-  const mobileMenu = (
-    <AnimatePresence>
-      {menuOpen ? (
-        <motion.div
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Menu de navegação"
-          className="fixed inset-0 z-[100] flex flex-col bg-azul-noturno lg:hidden"
-          initial={{ y: -16 }}
-          animate={{ y: 0 }}
-          exit={{ y: -16 }}
-          transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          onKeyDown={(event) => {
-            if (event.key !== "Tab") return;
+  const mobileMenu = menuOpen ? (
+    <motion.div
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Menu de navegação"
+      className="fixed inset-0 z-[100] flex flex-col bg-azul-noturno lg:hidden"
+      initial={{ y: -16 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+      onKeyDown={(event) => {
+        if (event.key !== "Tab") return;
 
-            const focusable = Array.from(
-              event.currentTarget.querySelectorAll<HTMLElement>(
-                'a[href], button:not([disabled])'
-              )
-            );
-            const first = focusable[0];
-            const last = focusable.at(-1);
+        const focusable = Array.from(
+          event.currentTarget.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled])'
+          )
+        );
+        const first = focusable[0];
+        const last = focusable.at(-1);
 
-            if (event.shiftKey && document.activeElement === first) {
-              event.preventDefault();
-              last?.focus();
-            } else if (!event.shiftKey && document.activeElement === last) {
-              event.preventDefault();
-              first?.focus();
-            }
-          }}
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }}
+    >
+      <div className="flex h-[4.5rem] items-center justify-between border-b border-[var(--color-border-on-dark)] px-5 sm:h-[4.75rem] sm:px-10">
+        <Image
+          src="/logo/lockup.png"
+          alt="Norte One"
+          width={691}
+          height={213}
+          className="h-8 w-auto"
+        />
+        <button
+          ref={closeButtonRef}
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center text-off-white transition-colors hover:text-cobre"
+          aria-label="Fechar menu"
+          onClick={() => setMenuOpen(false)}
         >
-          <div className="flex h-[4.5rem] items-center justify-between border-b border-[var(--color-border-on-dark)] px-5 sm:h-[4.75rem] sm:px-10">
-            <Image
-              src="/logo/lockup.png"
-              alt="Norte One"
-              width={691}
-              height={213}
-              className="h-8 w-auto"
-            />
-            <button
-              ref={closeButtonRef}
-              type="button"
-              className="inline-flex h-11 w-11 items-center justify-center text-off-white transition-colors hover:text-cobre"
-              aria-label="Fechar menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              <X size={26} aria-hidden="true" />
-            </button>
-          </div>
+          <X size={26} aria-hidden="true" />
+        </button>
+      </div>
 
-          <nav
-            aria-label="Navegação móvel"
-            className="flex flex-1 flex-col justify-center px-5 sm:px-10"
+      <nav
+        aria-label="Navegação móvel"
+        className="flex flex-1 flex-col justify-center px-5 sm:px-10"
+      >
+        {headerNav.map((item, index) => (
+          <motion.div
+            key={item.href}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.03 * index, duration: 0.25 }}
           >
-            {headerNav.map((item, index) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.03 * index, duration: 0.25 }}
-              >
-                <Link
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="block border-b border-[var(--color-border-on-dark)] py-4 font-display text-[1.75rem] font-semibold leading-tight text-off-white sm:py-5 sm:text-[2.25rem]"
-                >
-                  {item.label}
-                </Link>
-              </motion.div>
-            ))}
-          </nav>
-
-          <div className="px-5 pb-8 pt-4 sm:px-10 sm:pb-10">
-            <Button
-              href="/contato"
-              variant="light"
-              size="lg"
-              className="w-full"
+            <Link
+              href={item.href}
               onClick={() => setMenuOpen(false)}
+              className="block border-b border-[var(--color-border-on-dark)] py-4 font-display text-[1.75rem] font-semibold leading-tight text-off-white sm:py-5 sm:text-[2.25rem]"
             >
-              Conversar sobre um problema
-            </Button>
-          </div>
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
-  );
+              {item.label}
+            </Link>
+          </motion.div>
+        ))}
+      </nav>
+
+      <div className="px-5 pb-8 pt-4 sm:px-10 sm:pb-10">
+        <Button
+          href="/contato"
+          variant="light"
+          size="lg"
+          className="w-full"
+          onClick={() => setMenuOpen(false)}
+        >
+          Conversar sobre um problema
+        </Button>
+      </div>
+    </motion.div>
+  ) : null;
 
   return (
     <header
