@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--color-border-on-dark)] bg-azul-noturno text-off-white">
       <Container className="pb-20 pt-14 sm:pb-16 sm:pt-16 lg:pb-12 lg:pt-16">
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-x-8">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-7">
             <Image
               src="/logo/lockup.png"
@@ -17,12 +17,9 @@ export function Footer() {
               sizes="(min-width: 640px) 117px, 104px"
               className="h-8 w-auto sm:h-9"
             />
-            <p className="mt-7 max-w-[43rem] font-display text-[1.5rem] font-semibold leading-[1.3] text-off-white sm:text-[1.85rem] lg:text-[2rem]">
-              Entendemos a operação para desenvolver soluções que fazem sentido.
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:col-span-5 lg:self-end">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:col-span-5 lg:self-start">
             <FooterColumn title="Norte One" links={footerNav.empresa} />
             <FooterColumn title="Atuação" links={footerNav.atuacao} />
             <FooterColumn title="Legal" links={footerNav.legal} />
