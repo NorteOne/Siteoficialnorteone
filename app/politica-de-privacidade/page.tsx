@@ -160,7 +160,7 @@ function Block({
   id?: string;
 }) {
   return (
-    <div id={id} className="scroll-mt-24">
+    <div id={id} className="scroll-mt-6 sm:scroll-mt-5 lg:scroll-mt-4">
       <h2 className="text-xl font-semibold text-azul-profundo">{title}</h2>
       <div className="mt-3 text-cinza-pedra">{children}</div>
     </div>

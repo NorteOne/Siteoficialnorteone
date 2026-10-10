@@ -184,7 +184,7 @@ export default function SobrePage() {
             </div>
           </div>
 
-          <div id="fundador" className="mt-16 grid scroll-mt-20 border-t border-[var(--color-border)] pt-10 sm:mt-20 sm:scroll-mt-24 sm:pt-12 lg:mt-28 lg:grid-cols-12 lg:gap-x-8 lg:pt-16">
+          <div id="fundador" className="mt-16 grid scroll-mt-2 border-t border-[var(--color-border)] pt-10 sm:mt-20 sm:scroll-mt-5 sm:pt-12 lg:mt-28 lg:grid-cols-12 lg:scroll-mt-8 lg:gap-x-8 lg:pt-16">
             <div className="lg:col-span-3">
               <p className="text-xs font-semibold uppercase text-cobre-ink">
                 Quem assume a direção
