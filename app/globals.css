@@ -100,6 +100,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
     text-size-adjust: 100%;
   }
 
@@ -247,6 +248,10 @@
 }
 
 @media (min-width: 640px) {
+  html {
+    scroll-padding-top: 4.75rem;
+  }
+
   .section-space {
     padding-block: var(--section-space-tablet);
   }
@@ -261,6 +266,10 @@
 }
 
 @media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   .section-space {
     padding-block: var(--section-space-desktop);
   }
