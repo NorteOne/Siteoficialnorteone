@@ -18,8 +18,7 @@ export function Footer() {
               className="h-8 w-auto sm:h-9"
             />
             <p className="mt-7 max-w-[43rem] font-display text-[1.5rem] font-semibold leading-[1.3] text-off-white sm:text-[1.85rem] lg:text-[2rem]">
-              A Norte One transforma desafios operacionais em soluções
-              alinhadas à realidade de cada negócio.
+              Entendemos a operação para desenvolver soluções que fazem sentido.
             </p>
           </div>
 
