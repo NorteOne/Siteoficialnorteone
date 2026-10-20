@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -8,25 +10,24 @@ export function Hero() {
       <Container className="relative z-10 grid grid-cols-1 gap-y-6 pb-8 pt-8 sm:gap-y-8 sm:pb-10 sm:pt-12 lg:min-h-[calc(100svh-6.5rem)] lg:grid-cols-12 lg:grid-rows-[auto_1fr_auto] lg:gap-x-8 lg:gap-y-10 lg:pb-10 lg:pt-12">
         <div className="lg:col-span-7">
           <p className="editorial-kicker">
-            Operação antes da ferramenta
+            Norte One / Eficiência operacional
           </p>
         </div>
 
         <div className="self-center lg:col-span-7 lg:row-start-2">
           <h1 className="type-hero max-w-[49rem] text-balance text-off-white">
-            <span className="block">Sua empresa</span>
-            <span className="block">pode funcionar</span>
-            <span className="block">melhor.</span>
+            <span className="block">Menos gargalos.</span>
+            <span className="block">Mais fôlego</span>
+            <span className="block">para crescer.</span>
           </h1>
         </div>
 
-        <div className="grid items-end gap-6 sm:grid-cols-2 sm:gap-8 lg:col-span-7 lg:row-start-3">
+        <div className="grid gap-6 sm:gap-7 lg:col-span-7 lg:row-start-3">
           <p className="type-lead max-w-[37rem] text-azul-nevoa/82">
-            A Norte One entende processos, identifica gargalos e constrói
-            soluções para melhorar a operação — usando tecnologia apenas
-            quando ela realmente faz sentido.
+            Unimos negócio, processos e tecnologia para reduzir retrabalho:
+            software, automação, integrações e IA onde podem gerar impacto.
           </p>
-          <div className="sm:flex sm:justify-end">
+          <div className="flex flex-col items-start gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-7">
             <Button
               href="/contato"
               size="lg"
@@ -34,9 +35,16 @@ export function Hero() {
               className="w-full px-4 text-sm min-[375px]:px-7 min-[375px]:text-base sm:w-auto"
               data-event="cta_hero_click"
             >
-              Falar com a Norte One
+              {siteConfig.primaryCta}
             </Button>
+            <Link href="/solucoes" className="inline-flex min-h-11 items-center text-sm font-semibold text-off-white underline decoration-cobre/60 underline-offset-4 hover:decoration-cobre">
+              Entender as soluções
+            </Link>
           </div>
+          <p className="max-w-[35rem] text-sm leading-6 text-azul-nevoa/75">
+            Uma primeira conversa para entender o cenário e identificar uma
+            oportunidade real de melhoria.
+          </p>
         </div>
       </Container>
 

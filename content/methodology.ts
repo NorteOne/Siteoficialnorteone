@@ -5,30 +5,36 @@ export const methodology: MethodologyStep[] = [
     step: "01",
     title: "Entender",
     description:
-      "Conhecemos o cenário, os objetivos e as dificuldades da empresa antes de falar sobre qualquer solução.",
+      "Conhecer o negócio, os objetivos e as dificuldades de quem executa o trabalho.",
   },
   {
     step: "02",
-    title: "Diagnosticar",
+    title: "Mapear",
     description:
-      "Mapeamos processos, gargalos e oportunidades reais dentro da operação.",
+      "Identificar gargalos, dependências e perdas de tempo entre as etapas da operação.",
   },
   {
     step: "03",
-    title: "Estruturar",
+    title: "Priorizar",
     description:
-      "Definimos a solução mais adequada ao contexto e priorizamos o que realmente gera valor.",
+      "Avaliar impacto, esforço e risco para escolher onde a mudança merece começar.",
   },
   {
     step: "04",
-    title: "Implementar",
+    title: "Propor",
     description:
-      "Desenvolvemos, integramos e colocamos a solução em operação junto com a sua equipe.",
+      "Definir a resposta, o escopo e os critérios para avaliar a melhoria esperada.",
   },
   {
     step: "05",
-    title: "Evoluir",
+    title: "Implementar",
     description:
-      "Acompanhamos os resultados e identificamos novas possibilidades de melhoria contínua.",
+      "Construir, configurar e integrar a solução junto de quem vai usá-la na rotina.",
+  },
+  {
+    step: "06",
+    title: "Acompanhar",
+    description:
+      "Observar o uso e os resultados, tratar falhas e ajustar o que ainda limita a operação.",
   },
 ];

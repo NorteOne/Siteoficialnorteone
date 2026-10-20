@@ -7,7 +7,7 @@ import { getWhatsAppLink, siteConfig } from "@/lib/site-config";
 
 const pageTitle = "Converse sobre sua operação";
 const pageDescription =
-  "Conte à Norte One o que está acontecendo na sua operação. A primeira conversa começa pelo contexto, antes de qualquer solução.";
+  "Converse com a Norte One sobre gargalos, trabalho manual e oportunidades de melhoria. Conte o cenário por formulário, WhatsApp ou e-mail corporativo.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -38,21 +38,21 @@ export const metadata: Metadata = {
 const nextSteps = [
   {
     number: "01",
-    title: "Lemos o contexto",
+    title: "Entendemos seu cenário.",
     description:
       "O ponto de partida é entender como a situação aparece no trabalho real.",
   },
   {
     number: "02",
-    title: "Fazemos as perguntas necessárias",
+    title: "Esclarecemos os pontos importantes.",
     description:
       "Se algo ainda não estiver claro, aprofundamos a conversa antes de sugerir caminhos.",
   },
   {
     number: "03",
-    title: "Avaliamos o problema",
+    title: "Avaliamos o próximo passo.",
     description:
-      "Só depois discutimos o que vale reorganizar, aproveitar ou construir.",
+      "Avaliamos a oportunidade e indicamos como aprofundar a análise ou discutir uma proposta de trabalho.",
   },
 ];
 
@@ -80,14 +80,14 @@ export default function ContatoPage() {
                 id="contato-hero-heading"
                 className="type-page-title mt-8 max-w-[68rem] text-balance"
               >
-                Comece pelo que está acontecendo.
+                Sua empresa pode operar melhor. Vamos descobrir por onde começar?
               </h1>
             </div>
 
             <p className="type-lead max-w-[37rem] border-t border-[var(--color-border-on-dark)] pt-7 text-azul-nevoa/85 lg:col-span-5 lg:col-start-8 lg:mt-4 lg:pt-8">
-              Você não precisa saber se a resposta é software, automação,
-              integração ou outra coisa. Primeiro precisamos compreender o
-              contexto da sua operação.
+              Conte quais processos estão dificultando a rotina da sua empresa.
+              Vamos entender seu cenário e identificar oportunidades de melhoria
+              com tecnologia, automação e soluções sob medida.
             </p>
           </div>
         </Container>
@@ -102,7 +102,7 @@ export default function ContatoPage() {
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-x-8">
             <aside className="lg:col-span-4">
               <p className="editorial-kicker">
-                Antes de pensar em solução
+                Um ponto de partida simples
               </p>
               <p className="type-statement mt-6 max-w-[28rem] text-azul-profundo">
                 Descreva a situação como ela aparece hoje. Nós ajudamos a
@@ -111,8 +111,8 @@ export default function ContatoPage() {
 
               <div className="mt-10 max-w-[27rem] border-t border-[var(--color-border)] pt-7 sm:mt-12">
                 <p className="text-sm leading-6 text-grafite/65">
-                  Prefere usar outro canal? O formulário continua sendo a forma
-                  mais completa de começar, mas você também pode escrever por:
+                  Escolha o canal mais conveniente. Você pode usar o formulário,
+                  conversar pelo WhatsApp ou escrever por e-mail.
                 </p>
                 <div className="mt-5 flex flex-col items-start gap-4">
                   <a
@@ -144,7 +144,7 @@ export default function ContatoPage() {
               </div>
 
               <p className="mt-8 max-w-[27rem] text-sm leading-6 text-grafite/70">
-                Vamos ler o contexto antes de responder.
+                Não é necessário preparar um diagnóstico ou escolher uma tecnologia.
               </p>
             </aside>
 
@@ -156,11 +156,11 @@ export default function ContatoPage() {
                 id="formulario-heading"
                 className="type-section-title mt-6 text-grafite"
               >
-                Conte o que precisa funcionar melhor.
+                Conte o que sua empresa precisa melhorar.
               </h2>
               <p className="type-lead mt-5 max-w-[41rem] text-grafite/70">
-                Não é preciso definir tecnologia, orçamento ou prazo. Um relato
-                direto do problema já é suficiente para iniciar a conversa.
+                Você não precisa conhecer a solução técnica. Basta explicar o
+                que está acontecendo hoje.
               </p>
               <div className="mt-9 sm:mt-10">
                 <ContactForm />

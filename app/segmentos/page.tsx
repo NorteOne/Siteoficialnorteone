@@ -129,8 +129,7 @@ export default function SegmentosPage() {
             </div>
 
             <p className="type-lead border-t border-[var(--color-border-on-dark)] pt-7 font-medium text-off-white lg:col-span-5 lg:col-start-8 lg:mt-8 lg:pt-8">
-              A pergunta não é em qual lista a empresa entra. É onde a rotina
-              perdeu continuidade.
+              O impacto se revela em prazo, capacidade, atendimento e visibilidade da gestão.
             </p>
           </div>
         </Container>
@@ -210,8 +209,8 @@ export default function SegmentosPage() {
               </h2>
             </div>
             <p className="type-lead max-w-[29rem] self-end text-azul-nevoa/80 lg:col-span-4">
-              Os setores abaixo aparecem como exemplos de rotina, não como uma
-              lista que limita onde a Norte One pode atuar.
+              Clínicas, empresas de serviços e operações comerciais têm fluxos
+              diferentes. A resposta considera essas diferenças desde o diagnóstico.
             </p>
           </div>
 
@@ -247,8 +246,7 @@ export default function SegmentosPage() {
                 id="conversa-heading"
                 className="type-section-title mt-6 max-w-[40rem] text-balance text-grafite"
               >
-                Talvez valha conversar quando a equipe começou a compensar o
-                processo.
+                Quando a equipe compensa o processo, existe um gargalo a investigar.
               </h2>
             </div>
             <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4 lg:col-start-9">
@@ -294,8 +292,7 @@ export default function SegmentosPage() {
             id="segmentos-cta-heading"
             className="type-section-title mt-8 max-w-[70rem] text-balance"
           >
-            Seu setor não precisa estar em uma lista para o problema ser
-            relevante.
+            Seu contexto define a melhoria que merece prioridade.
           </h2>
 
           <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
@@ -312,7 +309,7 @@ export default function SegmentosPage() {
                 className="w-full min-[375px]:w-auto"
                 data-event="cta_segments_click"
               >
-                Conversar sobre um problema
+                {siteConfig.primaryCta}
               </Button>
             </div>
           </div>

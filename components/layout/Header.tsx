@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { primaryNav } from "@/lib/site-config";
+import { primaryNav, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const headerNav = primaryNav.filter((item) => item.href !== "/contato");
@@ -156,7 +156,7 @@ export function Header() {
           className="w-full"
           onClick={() => setMenuOpen(false)}
         >
-          Conversar sobre um problema
+          {siteConfig.primaryCta}
         </Button>
       </div>
     </motion.div>
@@ -204,8 +204,9 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/contato" variant="ghost" size="md" data-event="cta_header_click">
-            Conversar
+          <Button href="/contato" variant="ghost" size="md" aria-label={siteConfig.primaryCta} data-event="cta_header_click">
+            <span className="xl:hidden">Conversar</span>
+            <span className="hidden xl:inline">Conversar sobre a operação</span>
           </Button>
         </div>
 

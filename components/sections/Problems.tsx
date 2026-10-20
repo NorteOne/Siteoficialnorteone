@@ -4,30 +4,30 @@ const problemObservations = [
   {
     number: "01",
     category: "Dependência",
-    statement: "A operação depende de quem sabe como tudo funciona.",
+    statement: "O trabalho para quando uma pessoa não está.",
     consequence:
-      "Quando conhecimento e decisões ficam concentrados, a continuidade do trabalho se torna frágil.",
+      "Conhecimento e decisões concentrados limitam a autonomia da equipe e tornam cada ausência um risco para prazos e clientes.",
   },
   {
     number: "02",
     category: "Retrabalho",
-    statement: "O mesmo trabalho é feito mais de uma vez.",
+    statement: "Sua equipe copia e confere os mesmos dados.",
     consequence:
-      "Planilhas, mensagens e conferências manuais consomem tempo e aumentam a chance de erro.",
+      "Tarefas repetitivas ocupam horas que poderiam ir para clientes, análise e execução. Cada cópia também abre espaço para erros.",
   },
   {
     number: "03",
     category: "Informação",
-    statement: "A informação existe, mas continua espalhada.",
+    statement: "Você tem dados, mas precisa juntá-los para decidir.",
     consequence:
-      "A equipe reconstrói o contexto entre ferramentas e pessoas antes de conseguir agir.",
+      "Planilhas, conversas e sistemas guardam versões diferentes. Decisões ficam mais lentas e desvios são percebidos tarde.",
   },
   {
     number: "04",
-    category: "Crescimento",
-    statement: "A empresa cresceu, mas os processos não acompanharam.",
+    category: "Atendimento",
+    statement: "Clientes esperam. Contatos ficam sem próximo passo.",
     consequence:
-      "O que antes era simples começa a gerar atrasos, improviso e pouca visibilidade.",
+      "Sem distribuição e acompanhamento claros, a equipe perde contexto e oportunidades comerciais podem deixar de avançar.",
   },
 ];
 
@@ -42,19 +42,19 @@ export function Problems() {
         <div className="editorial-reveal grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-x-8">
           <div className="lg:col-span-7">
             <p className="editorial-kicker">
-              Onde a operação perde ritmo
+              Reconhece alguma dessas situações?
             </p>
             <h2
               id="problemas-heading"
               className="type-section-title mt-6 max-w-[52rem] text-balance"
             >
-              O que limita uma empresa nem sempre parece urgente.
+              Gargalos aparecem na rotina antes de aparecer no resultado.
             </h2>
           </div>
 
           <p className="type-lead max-w-[32rem] self-end text-azul-nevoa/85 lg:col-span-4 lg:col-start-9">
-            Os sinais aparecem no tempo perdido, no retrabalho e no esforço
-            necessário para manter a rotina funcionando.
+            Isolados, esses problemas parecem pequenos. Repetidos todos os
+            dias, consomem tempo, capacidade e oportunidades de negócio.
           </p>
         </div>
 
@@ -79,6 +79,17 @@ export function Problems() {
             </li>
           ))}
         </ol>
+        <aside className="mt-12 border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16">
+          <p className="editorial-kicker">O custo de deixar como está</p>
+          <h3 className="type-item-title mt-5 max-w-[48rem]">
+            O gargalo não fica do mesmo tamanho quando a empresa cresce.
+          </h3>
+          <p className="mt-4 max-w-[49rem] text-base leading-7 text-azul-nevoa/80">
+            Aumentar a demanda sem ajustar o processo pode ampliar o retrabalho,
+            a espera e a dependência de pessoas-chave. Investigar o impacto
+            ajuda a decidir o que merece mudar agora.
+          </p>
+        </aside>
       </Container>
     </section>
   );

@@ -165,6 +165,7 @@ export async function POST(request: Request) {
   try {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
+      signal: AbortSignal.timeout(10_000),
       headers: {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
@@ -198,9 +199,20 @@ export async function POST(request: Request) {
       );
     }
 
+    const receipt: unknown = await response.json();
+    if (
+      !receipt ||
+      typeof receipt !== "object" ||
+      !("id" in receipt) ||
+      typeof receipt.id !== "string" ||
+      !receipt.id.trim()
+    ) {
+      throw new Error("Missing provider receipt");
+    }
+
     return NextResponse.json({ ok: true });
   } catch {
-    console.error("[contact] falha de conexão com o provedor de e-mail");
+    console.error("[contact] envio não confirmado pelo provedor de e-mail");
     return NextResponse.json(
       {
         ok: false,

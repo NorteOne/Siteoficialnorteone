@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site-config";
 
 export function FinalCTA() {
   return (
@@ -16,13 +17,13 @@ export function FinalCTA() {
           id="cta-final-heading"
           className="type-section-title mt-8 max-w-[72rem] text-balance"
         >
-          Existe algo na sua empresa que poderia funcionar melhor?
+          Onde sua operação está perdendo capacidade?
         </h2>
 
         <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8 lg:pt-12">
           <p className="type-lead max-w-[39rem] text-azul-nevoa/80 lg:col-span-6">
-            Conte o que está acontecendo na sua operação. Antes de propor uma
-            resposta, precisamos entender o contexto.
+            Conte o que trava a rotina, consome tempo ou dificulta o crescimento.
+            Vamos entender o cenário e avaliar um próximo passo concreto.
           </p>
           <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
             <Button
@@ -32,7 +33,7 @@ export function FinalCTA() {
               className="w-full min-[375px]:w-auto"
               data-event="cta_final_click"
             >
-              Conversar sobre um problema
+              {siteConfig.primaryCta}
             </Button>
           </div>
         </div>

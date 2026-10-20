@@ -10,6 +10,8 @@ export function FormField({
   children,
   optional,
   errorId,
+  description,
+  descriptionId,
 }: {
   label: string;
   htmlFor: string;
@@ -17,6 +19,8 @@ export function FormField({
   children: ReactNode;
   optional?: boolean;
   errorId?: string;
+  description?: string;
+  descriptionId?: string;
 }) {
   return (
     <div className="flex flex-col gap-2">
@@ -26,6 +30,11 @@ export function FormField({
           <span className="ml-1 font-normal text-cinza-pedra">(opcional)</span>
         ) : null}
       </label>
+      {description ? (
+        <p id={descriptionId} className="text-sm leading-6 text-cinza-pedra">
+          {description}
+        </p>
+      ) : null}
       {children}
       {error ? (
         <p id={errorId} role="alert" className="text-sm text-red-700">
@@ -37,8 +46,13 @@ export function FormField({
 }
 
 const controlBase =
-  "min-h-12 w-full rounded-none border-0 border-b border-[var(--color-border)] bg-transparent px-0 py-3 text-base text-grafite outline-none placeholder:text-cinza-pedra transition-[border-color,background-color] duration-300 focus:border-cobre focus:bg-white/35";
+  "min-h-12 w-full rounded-[4px] border bg-white px-4 py-3 text-base leading-6 text-grafite placeholder:text-cinza-pedra transition-[border-color,outline-color] duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobre-ink";
 
 export function inputClasses(hasError?: boolean) {
-  return cn(controlBase, hasError ? "border-red-600" : "focus:border-cobre");
+  return cn(
+    controlBase,
+    hasError
+      ? "border-red-700 hover:border-red-800 focus:border-red-700"
+      : "border-cinza-pedra hover:border-grafite focus:border-cobre-ink"
+  );
 }

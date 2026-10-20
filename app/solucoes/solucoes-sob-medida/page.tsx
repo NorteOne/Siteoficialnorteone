@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
 
-const pageTitle = "Quando construir um software próprio";
+const pageTitle = "Desenvolvimento de software e sistemas sob medida";
 const pageDescription =
-  "Entenda quando vale construir uma ferramenta própria, quando uma solução pronta é mais responsável e quais custos precisam entrar na decisão.";
+  "Desenvolvimento de software para processos que ferramentas genéricas não atendem bem. A Norte One conecta análise de negócio, implementação e acompanhamento.";
 const pagePath = "/solucoes/solucoes-sob-medida";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Norte One — quando construir um software próprio",
+        alt: "Norte One — desenvolvimento de software sob medida",
       },
     ],
   },
@@ -38,32 +38,32 @@ export const metadata: Metadata = {
 
 const alternatives = [
   {
-    title: "Adotar uma ferramenta pronta",
+    title: "Fluxos específicos em um mesmo sistema",
     description:
-      "Processos comuns costumam ser atendidos com mais velocidade e menor responsabilidade de manutenção.",
+      "Etapas centrais deixam de depender de planilhas paralelas e passam a seguir as regras da operação.",
   },
   {
-    title: "Configurar o que já existe",
+    title: "Dados organizados para a gestão",
     description:
-      "Uma mudança de regra, permissão ou uso pode resolver a lacuna sem criar outro sistema.",
+      "Registros, permissões e critérios definidos ajudam a acompanhar o trabalho com uma visão consistente.",
   },
   {
-    title: "Simplificar o processo",
+    title: "Menos contornos no trabalho diário",
     description:
-      "A melhor ferramenta para uma etapa desnecessária é retirar a etapa.",
+      "A ferramenta considera como sua equipe executa, decide e trata exceções, em vez de exigir adaptações em cada etapa.",
   },
   {
-    title: "Conectar ferramentas",
+    title: "Continuidade com as ferramentas existentes",
     description:
-      "Quando as partes funcionam, integrar pode preservar investimentos e reduzir a ruptura.",
+      "Integrações conectam o sistema próprio às fontes e aos serviços que continuam fazendo parte do processo.",
   },
 ];
 
-const reasonsNotToBuild = [
-  "Uma ferramenta de mercado já atende ao essencial sem adaptações críticas.",
-  "A causa está no processo, na responsabilidade ou na adoção — não na ferramenta.",
-  "A necessidade é instável, temporária ou não tem responsável por sua manutenção.",
-  "A complexidade e o custo contínuo superam o ganho operacional esperado.",
+const investmentCriteria = [
+  "Definir qual gargalo o software deve resolver e como avaliar a melhoria.",
+  "Comparar configuração, integração e desenvolvimento pelo custo total e pelo impacto esperado.",
+  "Priorizar o fluxo central para começar com um escopo que a equipe consiga usar e validar.",
+  "Estabelecer responsáveis por decisões, adoção e manutenção desde o início.",
 ];
 
 const reasonsToConsider = [
@@ -126,15 +126,15 @@ export default function SolucoesSobMedidaPage() {
             <div className="lg:col-span-9">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Software sob medida</p>
               <h1 id="software-heading" className="type-page-title mt-8 max-w-[68rem] text-balance">
-                Quando vale construir uma ferramenta própria?
+                Um sistema feito para o modo como sua empresa opera.
               </h1>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] pt-7 lg:col-span-5 lg:col-start-8 lg:mt-8">
               <p className="type-lead font-medium">
-                Construir do zero deve ser uma decisão, não um ponto de partida.
+                Quando ferramentas genéricas limitam um processo central, software sob medida pode criar uma base melhor para crescer.
               </p>
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
-                Software próprio transfere para a empresa uma responsabilidade contínua. O benefício precisa justificar essa escolha inteira.
+                A Norte One mapeia a necessidade, define prioridades e desenvolve a solução com quem vai usá-la, considerando integração e manutenção.
               </p>
               <Link
                 href="/contato"
@@ -151,12 +151,12 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Primeira responsabilidade</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Resultado na rotina</p>
               <h2 id="nao-construir-heading" className="type-section-title mt-5 max-w-[43rem] text-balance text-grafite">
-                Tentar não construir.
+                A operação deixa de depender dos limites da ferramenta.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
-                Uma ferramenta própria só ganha valor depois que alternativas menores foram avaliadas com honestidade.
+                Sistemas internos e fluxos sob medida organizam atividades específicas que hoje exigem controles paralelos e conferências manuais.
               </p>
             </div>
 
@@ -179,17 +179,17 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Quando não construir</p>
+              <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Decisão de investimento</p>
               <h2 id="quando-nao-heading" className="type-section-title mt-5 max-w-[42rem] text-balance">
-                Dizer não também protege a operação.
+                Um escopo orientado ao ganho operacional.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-azul-nevoa/80 sm:text-lg sm:leading-8">
-                O entusiasmo com uma ideia não reduz o custo de mantê-la depois que ela se torna parte do trabalho.
+                Nem toda lacuna exige desenvolvimento. Comparamos alternativas e priorizamos o que justifica uma solução própria.
               </p>
             </div>
 
             <ol className="border-t border-[var(--color-border-on-dark)] lg:col-span-6 lg:col-start-7">
-              {reasonsNotToBuild.map((reason, index) => (
+              {investmentCriteria.map((reason, index) => (
                 <li key={reason} className="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-[var(--color-border-on-dark)] py-6">
                   <span className="text-xs font-semibold text-cobre">{String(index + 1).padStart(2, "0")}</span>
                   <p className="text-base leading-7 text-azul-nevoa/90">{reason}</p>
@@ -227,7 +227,7 @@ export default function SolucoesSobMedidaPage() {
             <div className="min-w-0 lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Custo total</p>
               <h2 id="custo-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
-                O desenvolvimento é só o começo da conta.
+                Planejar o uso, a manutenção e a evolução.
               </h2>
               <p className="mt-7 max-w-[35rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
                 A decisão precisa considerar todo o período em que a ferramenta será usada, alterada e protegida.
@@ -268,12 +268,12 @@ export default function SolucoesSobMedidaPage() {
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="software-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
-            Antes de pensar no software, vale explicar o que nenhuma alternativa resolveu.
+            Qual processo sua ferramenta atual não consegue acompanhar?
           </h2>
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-6">A conversa começa pela relevância do processo, pelas tentativas anteriores e pela responsabilidade que a empresa pode assumir.</p>
+            <p className="max-w-[40rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8 lg:col-span-6">Conte o que sua equipe precisa fazer fora dos sistemas. Vamos avaliar a lacuna, as alternativas e o escopo adequado para resolvê-la.</p>
             <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
-              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_custom_software_click">Conversar sobre um problema</Button>
+              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_custom_software_click">{siteConfig.primaryCta}</Button>
             </div>
           </div>
         </Container>

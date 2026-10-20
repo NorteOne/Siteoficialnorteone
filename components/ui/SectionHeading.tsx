@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import type { ElementType } from "react";
 
 export function SectionHeading({
+  id,
   eyebrow,
   title,
   description,
@@ -10,6 +11,7 @@ export function SectionHeading({
   level = "h2",
   className,
 }: {
+  id?: string;
   eyebrow?: string;
   title: string;
   description?: string;
@@ -39,9 +41,10 @@ export function SectionHeading({
         </p>
       ) : null}
       <Heading
+        id={id}
         className={cn(
-          "text-balance font-semibold leading-[1.15]",
-          level === "h1" ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl",
+          "text-balance",
+          level === "h1" ? "type-page-title" : "type-section-title",
           tone === "dark" ? "text-off-white" : "text-grafite"
         )}
       >

@@ -2,14 +2,14 @@ import { Container } from "@/components/ui/Container";
 
 const decisionCriteria = [
   {
-    title: "Simplificar antes de automatizar.",
+    title: "Investir onde o gargalo importa.",
     description:
-      "Primeiro retiramos etapas desnecessárias. Só depois decidimos o que vale automatizar.",
+      "Comparamos impacto, esforço e risco para priorizar a melhoria mais relevante para o momento da empresa.",
   },
   {
-    title: "Usar o que já resolve bem.",
+    title: "Escolher a resposta adequada.",
     description:
-      "Se uma ferramenta pronta atende ao processo, não faz sentido construir outra.",
+      "Reorganizar um processo, configurar uma ferramenta, integrar ou construir: a escolha considera o ganho esperado e a manutenção.",
   },
   {
     title: "Construir para a rotina real.",
@@ -34,7 +34,7 @@ export function Differentiators() {
             id="criterios-heading"
             className="type-section-title max-w-[62rem] text-balance text-grafite lg:col-span-8 lg:col-start-5"
           >
-            Resolver bem é mais importante do que construir mais.
+            Nem todo problema precisa de um novo software. Todo gargalo relevante merece uma resposta.
           </h2>
         </div>
 
@@ -62,7 +62,7 @@ export function Differentiators() {
             Da decisão para a prática
           </p>
           <p className="type-statement mt-4 max-w-[52rem] text-azul-profundo lg:col-span-7 lg:col-start-5 lg:mt-0">
-            Boas escolhas precisam aparecer no que realmente entra em operação.
+            Nosso trabalho inclui escolher o caminho e colocá-lo em operação.
           </p>
         </div>
       </Container>

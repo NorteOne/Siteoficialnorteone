@@ -10,19 +10,16 @@ export function Methodology() {
     >
       <Container>
         <SectionHeading
+          id="metodologia-heading"
           align="center"
           eyebrow="Metodologia"
-          title="Do problema à solução."
+          title="Da prioridade à melhoria em operação."
         />
 
         <div className="mt-14">
           {/* Desktop: horizontal timeline */}
           <div className="hidden lg:block">
-            <div className="relative grid grid-cols-5 gap-6">
-              <div
-                aria-hidden="true"
-                className="absolute left-0 right-0 top-6 h-px bg-[var(--color-border)]"
-              />
+            <div className="relative grid grid-cols-3 gap-x-8 gap-y-12 xl:grid-cols-6 xl:gap-6">
               {methodology.map((item) => (
                 <div
                   key={item.step}
@@ -31,7 +28,7 @@ export function Methodology() {
                   <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cobre bg-off-white text-sm font-semibold text-azul-profundo">
                     {item.step}
                   </span>
-                  <h3 className="mt-5 text-base font-semibold text-grafite">
+                  <h3 className="type-item-title mt-5 text-grafite">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-cinza-pedra">
@@ -58,7 +55,7 @@ export function Methodology() {
                   ) : null}
                 </div>
                 <div className="pb-2">
-                  <h3 className="text-base font-semibold text-grafite">
+                  <h3 className="type-item-title text-grafite">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-cinza-pedra">

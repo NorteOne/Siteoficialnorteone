@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const pageTitle = "Como trabalhamos";
 const pageDescription =
-  "A metodologia da Norte One: entender, diagnosticar, estruturar, implementar e evoluir. Do problema à solução.";
+  "Entender, mapear, priorizar, propor, implementar e acompanhar. Conheça o método da Norte One para conectar investimento e impacto operacional.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -46,8 +46,8 @@ export default function ComoTrabalhamosPage() {
             tone="dark"
             level="h1"
             eyebrow="Metodologia"
-            title="Um caminho claro do problema até a solução."
-            description="Não começamos desenhando telas ou escrevendo especificações técnicas. Começamos entendendo o negócio — e seguimos um processo estruturado até a solução entrar em operação."
+            title="Clareza para investir. Método para executar."
+            description="Nenhuma solução começa pelo código. Definimos o problema e o impacto esperado, combinamos prioridades e acompanhamos a implementação na rotina da equipe."
           />
         </Container>
       </section>
@@ -58,11 +58,11 @@ export default function ComoTrabalhamosPage() {
       <section className="bg-off-white py-16 sm:py-20">
         <Container narrow className="text-center">
           <h2 className="text-2xl font-semibold text-azul-profundo sm:text-3xl">
-            Quer passar pela primeira etapa com a gente?
+            Qual gargalo merece atenção primeiro?
           </h2>
           <div className="mt-7 flex justify-center">
             <Button href="/contato" size="lg" variant="primary">
-              Conte seu desafio
+              {siteConfig.primaryCta}
             </Button>
           </div>
         </Container>

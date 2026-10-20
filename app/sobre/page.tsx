@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
 
-const pageTitle = "Uma empresa próxima do problema";
+const pageTitle = "Sobre: negócio, tecnologia e execução";
 const pageDescription =
-  "Conheça a visão da Norte One: compreender problemas empresariais, decidir com critério e acompanhar cada resposta até a execução.";
+  "Conheça a Norte One: análise da operação, software e automação com participação direta do fundador, do diagnóstico às principais decisões e à execução.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
 
 const companyPrinciples = [
   {
-    title: "Clareza antes da complexidade",
+    title: "Prioridades ligadas ao negócio",
     description:
-      "Tornar o problema compreensível vem antes de ampliar a resposta. Uma direção clara permite escolher melhor o que fazer e o que deixar de fazer.",
+      "Avaliamos onde o gargalo consome tempo, limita capacidade ou compromete atendimento. Essa leitura orienta o escopo e o investimento.",
   },
   {
     title: "Responsabilidade além da recomendação",
@@ -80,9 +80,9 @@ export default function SobrePage() {
                 Uma empresa que permanece perto do problema.
               </h1>
               <p className="type-lead mt-7 max-w-[52rem] text-azul-nevoa/85 sm:mt-8">
-                A Norte One existe para compreender como uma empresa funciona,
-                decidir o que realmente precisa mudar e acompanhar a resposta
-                até ela entrar na rotina.
+                Combinamos análise de negócio, processos e desenvolvimento de
+                software para eliminar gargalos e criar capacidade na operação.
+                Da prioridade à implementação, com responsabilidade direta.
               </p>
             </div>
 
@@ -105,8 +105,7 @@ export default function SobrePage() {
                 id="origem-heading"
                 className="type-section-title mt-6 max-w-[57rem] text-balance text-grafite"
               >
-                Entre o problema e a ferramenta, existe uma decisão que exige
-                contexto.
+                Esforço operacional precisa se transformar em resultado.
               </h2>
             </div>
 
@@ -114,12 +113,13 @@ export default function SobrePage() {
               <p>
                 Empresas costumam compensar falhas de processo com esforço
                 manual, controles paralelos e conhecimento concentrado. O
-                trabalho continua, mas custa mais atenção do que deveria.
+                trabalho continua, mas consome capacidade que poderia apoiar
+                clientes, gestão e crescimento.
               </p>
               <p>
-                A Norte One surgiu para trabalhar nesse intervalo: entender a
-                realidade do negócio antes de indicar uma resposta e permanecer
-                envolvida quando a direção escolhida precisa virar prática.
+                Trabalhamos nesse intervalo: identificamos a causa, avaliamos
+                alternativas e implementamos a melhoria. Visão consultiva e
+                execução técnica fazem parte da mesma responsabilidade.
               </p>
             </div>
           </div>
@@ -182,6 +182,17 @@ export default function SobrePage() {
                 Quem decide também acompanha a resposta até a prática.
               </h2>
             </div>
+            <div className="type-lead max-w-[31rem] space-y-5 self-end text-grafite/70 lg:col-span-4">
+              <p>
+                Os projetos passam diretamente pela direção da Norte One.
+                O diagnóstico e as principais decisões permanecem conectados
+                à implementação.
+              </p>
+              <p>
+                Você conversa com quem entende o problema e acompanha a
+                construção da solução, com acesso e responsabilidade claros.
+              </p>
+            </div>
           </div>
 
           <div id="fundador" className="mt-16 grid scroll-mt-2 border-t border-[var(--color-border)] pt-10 sm:mt-20 sm:scroll-mt-5 sm:pt-12 lg:mt-28 lg:grid-cols-12 lg:scroll-mt-8 lg:gap-x-8 lg:pt-16">
@@ -220,9 +231,8 @@ export default function SobrePage() {
                   </p>
                   <p className="type-lead mt-7 max-w-[44rem] text-grafite/70">
                     Participa diretamente do diagnóstico, das decisões de
-                    produto e da execução. Sua presença nesta página identifica
-                    quem responde pela direção da empresa e pelas escolhas que
-                    orientam o trabalho.
+                    produto e da execução. Acompanha os projetos e responde
+                    pela direção da empresa e pelas principais escolhas do trabalho.
                   </p>
                 </div>
               </div>
@@ -248,8 +258,9 @@ export default function SobrePage() {
 
           <div className="mt-12 grid border-t border-[var(--color-border-on-dark)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
             <p className="type-lead max-w-[41rem] text-azul-nevoa/80 lg:col-span-6">
-              A conversa começa pelo contexto, sem exigir que você chegue com
-              uma tecnologia escolhida.
+              Identificar o gargalo é o início. Nosso trabalho segue pela
+              escolha da resposta, pela implementação e pelo acompanhamento
+              do que mudou na rotina.
             </p>
             <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:items-start lg:justify-end">
               <Button
@@ -259,7 +270,7 @@ export default function SobrePage() {
                 className="w-full px-5 text-sm min-[375px]:w-auto min-[375px]:px-7 min-[375px]:text-base"
                 data-event="cta_about_click"
               >
-                Conversar sobre um problema
+                {siteConfig.primaryCta}
               </Button>
             </div>
           </div>

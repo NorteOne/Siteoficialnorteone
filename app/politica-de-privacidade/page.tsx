@@ -48,7 +48,7 @@ export default function PoliticaDePrivacidadePage() {
             level="h1"
             eyebrow="Legal"
             title="Política de Privacidade"
-            description="Este documento explica como tratamos dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)."
+            description="Este documento explica como tratamos dados pessoais e como entrar em contato sobre privacidade."
           />
         </Container>
       </section>
@@ -144,6 +144,15 @@ export default function PoliticaDePrivacidadePage() {
             </p>
           </Block>
 
+          <Block title="10. Contato sobre privacidade">
+            <p>
+              Para dúvidas ou solicitações sobre seus dados pessoais, escreva
+              para{" "}
+              <a href={`mailto:${siteConfig.contact.email}`} className="underline underline-offset-4">
+                {siteConfig.contact.email}
+              </a>.
+            </p>
+          </Block>
         </Container>
       </section>
     </>

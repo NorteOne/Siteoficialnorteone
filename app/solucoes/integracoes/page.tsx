@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
 
-const pageTitle = "Quando integrar ferramentas e sistemas";
+const pageTitle = "Integração de sistemas para conectar sua operação";
 const pageDescription =
-  "Entenda quando conectar ferramentas é melhor do que trocar tudo, quais alternativas avaliar antes e quais riscos uma integração precisa controlar.";
+  "Reduza cópias manuais e inconsistências com integração de sistemas. A Norte One conecta dados e ações por APIs e fluxos definidos, com controle e monitoramento.";
 const pagePath = "/solucoes/integracoes";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Norte One — quando integrar ferramentas e sistemas",
+        alt: "Norte One — integração de sistemas",
       },
     ],
   },
@@ -106,15 +106,15 @@ export default function IntegracoesPage() {
             <div className="lg:col-span-9">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Integrações</p>
               <h1 id="integracoes-heading" className="type-page-title mt-8 max-w-[68rem] text-balance">
-                Quando conectar ferramentas é melhor do que trocar tudo?
+                Seus sistemas conectados. Sua equipe livre das cópias manuais.
               </h1>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] pt-7 lg:col-span-5 lg:col-start-8 lg:mt-8">
               <p className="type-lead font-medium">
-                Integração resolve continuidade. Não resolve a falta de um processo comum.
+                Informação consistente entre ferramentas permite que o trabalho avance com menos conferência e espera.
               </p>
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
-                Antes de falar em API, é preciso entender qual informação deve atravessar a operação e por quê.
+                Mapeamos a passagem de dados e implementamos conexões por APIs, eventos ou importações, com regras de acesso e tratamento de falhas.
               </p>
               <Link
                 href="/contato"
@@ -159,10 +159,10 @@ export default function IntegracoesPage() {
             <div className="lg:col-span-5">
               <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Antes da integração</p>
               <h2 id="alternativas-heading" className="type-section-title mt-5 max-w-[39rem] text-balance text-grafite">
-                Conectar é apenas uma das respostas possíveis.
+                Conexões desenhadas para o fluxo real da empresa.
               </h2>
               <p className="mt-7 max-w-[34rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
-                A ordem das perguntas evita uma solução tecnicamente correta para um problema que poderia deixar de existir.
+                Avaliamos o que preservar, simplificar ou substituir para reduzir trabalho manual sem criar dependências desnecessárias.
               </p>
             </div>
 
@@ -220,9 +220,9 @@ export default function IntegracoesPage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5">
-              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Riscos</p>
+              <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Confiabilidade</p>
               <h2 id="integracao-riscos-heading" className="type-section-title mt-5 max-w-[42rem] text-balance text-grafite">
-                Uma conexão sem controle multiplica inconsistências.
+                Integrações com controle sobre dados e falhas.
               </h2>
             </div>
             <ol className="border-t border-[var(--color-border)] lg:col-span-6 lg:col-start-7">
@@ -252,12 +252,12 @@ export default function IntegracoesPage() {
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="integracoes-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
-            Antes de conectar sistemas, vale entender onde o contexto se perde.
+            Onde sua equipe ainda faz a ponte entre sistemas?
           </h2>
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">A primeira conversa começa pelas ferramentas existentes, pelo caminho da informação e pelas pessoas que hoje fazem a ponte.</p>
+            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">Conte quais ferramentas usa e onde dados precisam ser copiados ou conferidos. Vamos avaliar uma conexão que reduza esse esforço.</p>
             <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
-              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_integrations_click">Conversar sobre um problema</Button>
+              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_integrations_click">{siteConfig.primaryCta}</Button>
             </div>
           </div>
         </Container>

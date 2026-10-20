@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site-config";
 
-const pageTitle = "Quando automatizar um processo";
+const pageTitle = "Automação de processos para reduzir trabalho manual";
 const pageDescription =
-  "Entenda os sinais, critérios, riscos e pré-requisitos que ajudam a decidir quando automatizar um processo realmente faz sentido.";
+  "Libere capacidade da equipe com automação de processos. A Norte One mapeia tarefas repetitivas e implementa fluxos com regras, alertas e controle de exceções.";
 const pagePath = "/solucoes/automacao-de-processos";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Norte One — quando automatizar um processo",
+        alt: "Norte One — automação de processos",
       },
     ],
   },
@@ -139,15 +139,15 @@ export default function AutomacaoDeProcessosPage() {
                 id="automacao-heading"
                 className="type-page-title mt-8 max-w-[68rem] text-balance"
               >
-                Quando automatizar um processo realmente faz sentido?
+                Menos trabalho repetitivo. Mais capacidade para executar.
               </h1>
             </div>
             <div className="border-t border-[var(--color-border-on-dark)] pt-7 lg:col-span-5 lg:col-start-8 lg:mt-8">
               <p className="type-lead font-medium">
-                Um processo ruim não melhora só porque passou a acontecer sozinho.
+                Registros, encaminhamentos e alertas que seguem regras claras podem avançar sem depender de alguém a cada etapa.
               </p>
               <p className="mt-5 text-base leading-7 text-azul-nevoa/80">
-                A decisão começa pela rotina: o que se repete, o que varia e onde uma pessoa ainda precisa decidir.
+                A Norte One mapeia a rotina, simplifica etapas e implementa automações com acompanhamento de falhas e controle de exceções.
               </p>
               <Link
                 href="/contato"
@@ -170,11 +170,11 @@ export default function AutomacaoDeProcessosPage() {
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Sinais</p>
               <h2 id="sinais-heading" className="type-section-title mt-5 max-w-[49rem] text-balance text-grafite">
-                O trabalho dá pistas antes de pedir automação.
+                Tempo qualificado não precisa ir para tarefas previsíveis.
               </h2>
             </div>
             <p className="type-lead max-w-[31rem] self-end text-grafite/70 lg:col-span-4 lg:col-start-9">
-              Nenhum sinal isolado decide. A combinação entre repetição, volume, regra clara e impacto é o que merece investigação.
+              Registros, conferências e encaminhamentos repetidos tiram espaço de atividades de maior valor. Mapeamos esse esforço para definir onde automatizar.
             </p>
           </div>
 
@@ -202,11 +202,11 @@ export default function AutomacaoDeProcessosPage() {
             <div className="lg:col-span-7">
               <p className="text-xs font-semibold uppercase text-cobre sm:text-sm">Antes de automatizar</p>
               <h2 id="antes-heading" className="type-section-title mt-5 max-w-[52rem] text-balance">
-                Primeiro, o processo precisa merecer continuar.
+                Um fluxo claro para trabalhar com menos intervenção manual.
               </h2>
             </div>
             <p className="type-lead max-w-[31rem] self-end text-azul-nevoa/80 lg:col-span-4 lg:col-start-9">
-              Simplificar pode resolver mais do que automatizar. A tecnologia entra depois de retirar o que não deveria existir.
+              Simplificamos etapas e automatizamos rotinas com regras claras. A equipe mantém controle sobre decisões e casos fora do padrão.
             </p>
           </div>
 
@@ -256,7 +256,7 @@ export default function AutomacaoDeProcessosPage() {
             <div className="lg:col-span-4">
               <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Riscos</p>
               <h2 id="riscos-heading" className="type-section-title mt-5 text-balance text-grafite">
-                O fluxo também precisa saber falhar.
+                Controle para a automação continuar confiável.
               </h2>
             </div>
             <dl className="border-t border-[var(--color-border)] lg:col-span-7 lg:col-start-6">
@@ -297,12 +297,12 @@ export default function AutomacaoDeProcessosPage() {
         <Container>
           <p className="text-xs font-semibold uppercase text-cobre-ink sm:text-sm">Conversa</p>
           <h2 id="automacao-cta-heading" className="type-section-title mt-6 max-w-[67rem] text-balance text-grafite">
-            Antes de automatizar, vale explicar onde o trabalho está travando.
+            Quais tarefas estão consumindo a capacidade da sua equipe?
           </h2>
           <div className="mt-12 grid border-t border-[var(--color-border)] pt-8 sm:mt-16 sm:pt-10 lg:grid-cols-12 lg:gap-x-8">
-            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">A primeira conversa serve para separar repetição, exceção e causa real do problema.</p>
+            <p className="type-lead max-w-[40rem] text-grafite/70 lg:col-span-6">Conte o fluxo, o volume e onde surgem atrasos. Vamos identificar o que pode ser automatizado e qual impacto merece prioridade.</p>
             <div className="mt-8 lg:col-span-4 lg:col-start-9 lg:mt-0 lg:flex lg:justify-end">
-              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_automation_click">Conversar sobre um problema</Button>
+              <Button href="/contato" size="lg" variant="primary" className="w-full min-[375px]:w-auto" data-event="cta_automation_click">{siteConfig.primaryCta}</Button>
             </div>
           </div>
         </Container>

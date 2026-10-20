@@ -43,6 +43,8 @@ export function ContactForm() {
   const [serverMessage, setServerMessage] = useState<string | null>(null);
   const formId = useId();
   const successRef = useRef<HTMLHeadingElement>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
+  const inFlight = useRef(false);
 
   const ids: Record<FieldName, string> = {
     name: `${formId}-name`,
@@ -60,8 +62,10 @@ export function ContactForm() {
 
   function focusFirstError(fieldErrors: FieldErrors) {
     const firstField = fieldOrder.find((field) => fieldErrors[field]);
-    if (!firstField) return;
-    requestAnimationFrame(() => document.getElementById(ids[firstField])?.focus());
+    requestAnimationFrame(() => {
+      if (firstField) document.getElementById(ids[firstField])?.focus();
+      else errorRef.current?.focus();
+    });
   }
 
   function updateValue<Field extends FieldName>(
@@ -76,7 +80,7 @@ export function ContactForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (status === "loading") return;
+    if (inFlight.current) return;
 
     setServerMessage(null);
     setStatus("idle");
@@ -94,12 +98,17 @@ export function ContactForm() {
       return;
     }
 
+    inFlight.current = true;
     setErrors({});
     setStatus("loading");
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 20_000);
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
+        signal: controller.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(result.data),
       });
@@ -109,7 +118,7 @@ export function ContactForm() {
         errors?: Record<string, string[]>;
       };
 
-      if (!response.ok || !data.ok) {
+      if (!response.ok || data.ok !== true) {
         const fieldErrors: FieldErrors = {};
         if (data.errors) {
           for (const [key, messages] of Object.entries(data.errors)) {
@@ -131,8 +140,12 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setServerMessage(
-        "Não foi possível conectar. Verifique sua internet e tente novamente."
+        "Não foi possível confirmar o envio. Verifique sua conexão ou use o WhatsApp."
       );
+      focusFirstError({});
+    } finally {
+      window.clearTimeout(timeout);
+      inFlight.current = false;
     }
   }
 
@@ -148,19 +161,21 @@ export function ContactForm() {
           tabIndex={-1}
           className="type-section-title mt-6 text-grafite"
         >
-          Recebemos seu contexto.
+          Solicitação recebida com sucesso!
         </h2>
         <p className="mt-4 max-w-[36rem] text-base leading-7 text-grafite/70 sm:text-lg sm:leading-8">
-          Vamos ler o que você compartilhou antes de responder. Se precisarmos,
-          faremos algumas perguntas para compreender melhor a situação.
+          A Norte One analisará as informações enviadas para avaliar o próximo passo.
         </p>
         <Button
           variant="secondary"
-          onClick={() => setStatus("idle")}
+          onClick={() => {
+            setStatus("idle");
+            requestAnimationFrame(() => document.getElementById(ids.name)?.focus());
+          }}
           type="button"
           className="mt-8"
         >
-          Enviar outro contexto
+          Enviar outra solicitação
         </Button>
       </div>
     );
@@ -197,6 +212,7 @@ export function ContactForm() {
             id={ids.name}
             name="name"
             autoComplete="name"
+            maxLength={120}
             required
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? `${ids.name}-error` : undefined}
@@ -216,6 +232,7 @@ export function ContactForm() {
             id={ids.company}
             name="company"
             autoComplete="organization"
+            maxLength={160}
             required
             aria-invalid={!!errors.company}
             aria-describedby={errors.company ? `${ids.company}-error` : undefined}
@@ -236,6 +253,7 @@ export function ContactForm() {
             name="email"
             type="email"
             autoComplete="email"
+            maxLength={254}
             required
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? `${ids.email}-error` : undefined}
@@ -258,6 +276,7 @@ export function ContactForm() {
             type="tel"
             inputMode="tel"
             autoComplete="tel"
+            maxLength={20}
             placeholder="DDD + número"
             aria-invalid={!!errors.whatsapp}
             aria-describedby={
@@ -271,7 +290,9 @@ export function ContactForm() {
       </div>
 
       <FormField
-        label="O que está acontecendo?"
+        label="O que você gostaria de melhorar na sua empresa?"
+        description="Descreva brevemente o problema, processo ou dificuldade que motivou seu contato."
+        descriptionId={`${ids.challenge}-help`}
         htmlFor={ids.challenge}
         error={errors.challenge}
         errorId={`${ids.challenge}-error`}
@@ -280,11 +301,12 @@ export function ContactForm() {
           id={ids.challenge}
           name="challenge"
           rows={5}
+          maxLength={2000}
           required
-          placeholder="Conte o que está dificultando o trabalho hoje. Não precisa indicar uma solução."
+          placeholder="Ex.: Nossa equipe perde muito tempo respondendo clientes pelo WhatsApp. Também temos dificuldades para organizar agendamentos e acompanhar os atendimentos."
           aria-invalid={!!errors.challenge}
-          aria-describedby={errors.challenge ? `${ids.challenge}-error` : undefined}
-          className={`${inputClasses(!!errors.challenge)} resize-y`}
+          aria-describedby={`${ids.challenge}-help${errors.challenge ? ` ${ids.challenge}-error` : ""}`}
+          className={`${inputClasses(!!errors.challenge)} min-h-44 resize-y`}
           value={values.challenge}
           onChange={(event) => updateValue("challenge", event.target.value)}
         />
@@ -299,14 +321,14 @@ export function ContactForm() {
             required
             aria-invalid={!!errors.consent}
             aria-describedby={errors.consent ? `${ids.consent}-error` : undefined}
-            className="mt-1 h-5 w-5 shrink-0 rounded border-[var(--color-border)] text-azul-profundo focus:ring-cobre"
+            className="mt-1 h-5 w-5 shrink-0 rounded border-cinza-pedra accent-cobre-ink focus-visible:outline-cobre-ink"
             checked={values.consent}
             onChange={(event) => updateValue("consent", event.target.checked)}
           />
           <label
             htmlFor={ids.consent}
             id={`${formId}-privacy`}
-            className="text-sm leading-6 text-grafite/65"
+            className="min-h-11 cursor-pointer text-sm leading-6 text-cinza-pedra"
           >
             Autorizo a Norte One a usar estes dados para responder a esta
             conversa, conforme a{" "}
@@ -333,6 +355,8 @@ export function ContactForm() {
       <div aria-live="polite" aria-atomic="true">
         {status === "error" && serverMessage ? (
           <div
+            ref={errorRef}
+            tabIndex={-1}
             role="alert"
             className="flex items-start gap-3 border-y border-red-200 bg-red-50 px-4 py-4 text-sm leading-6 text-red-800"
           >
@@ -350,7 +374,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         variant="primary"
-        className="w-full sm:w-auto"
+        className="w-full focus-visible:outline-cobre-ink sm:w-auto"
         disabled={status === "loading"}
         aria-busy={status === "loading"}
         data-event="contact_form_submit"
@@ -358,10 +382,10 @@ export function ContactForm() {
         {status === "loading" ? (
           <>
             <Loader2 size={18} className="animate-spin" aria-hidden="true" />
-            Enviando contexto...
+            Enviando solicitação...
           </>
         ) : (
-          "Enviar contexto"
+          "Enviar minha solicitação"
         )}
       </Button>
     </form>

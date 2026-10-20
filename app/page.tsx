@@ -6,9 +6,9 @@ import { SolutionsOverview } from "@/components/sections/SolutionsOverview";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
-const homeTitle = "Norte One — Soluções para empresas funcionarem melhor";
+const homeTitle = "Norte One — Software, automação e eficiência operacional";
 const homeDescription =
-  "A Norte One entende processos, identifica gargalos e constrói soluções para ajudar empresas a operar melhor, usando tecnologia quando ela realmente faz sentido.";
+  "Identifique gargalos e crie capacidade de crescimento com a Norte One. Visão de negócio, software sob medida, automação e integrações para melhorar sua operação.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
@@ -31,9 +31,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Positioning />
       <Problems />
       <SolutionsOverview />
+      <Positioning />
       <AboutTeaser />
       <FinalCTA />
     </>

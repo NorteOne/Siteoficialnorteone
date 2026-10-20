@@ -46,7 +46,7 @@ export default async function OpengraphImage() {
             maxWidth: 800,
           }}
         >
-          Entender o negócio vem antes de escolher a tecnologia.
+          Menos gargalos. Mais fôlego para crescer.
         </div>
       </div>
     ),
